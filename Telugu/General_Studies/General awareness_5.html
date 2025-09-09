@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>General Awareness Quiz — English + Telugu</title>
+<style>
+  /* Portrait-friendly canvas for YT Shorts */
+  :root{
+    --bg1:#fdfbfb; --bg2:#ebedee;
+    --card:#ffffff;
+    --ink:#0f172a;
+    --muted:#475569;
+    --accent:#7c3aed;
+    --accent2:#06b6d4;
+    --ok:#16a34a;
+    --rumble:#ef4444;
+  }
+  html,body{margin:0}
+  body{
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, "Noto Sans Telugu", "Noto Sans", Arial, sans-serif;
+    color:var(--ink);
+    background: linear-gradient(180deg,var(--bg1),var(--bg2));
+    display:flex; justify-content:center;
+  }
+  .page{
+    width:100%; max-width:480px;  /* portrait phone width */
+    padding:18px 14px 80px;
+  }
+  .title{
+    text-align:center;
+    background: linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    font-weight:800; line-height:1.15;
+    margin:4px 0 8px; font-size:28px;
+  }
+  .subtitle{
+    text-align:center; color:var(--muted); margin:0 0 16px; font-size:14px;
+  }
+  .legend{font-size:12px; color:var(--muted); text-align:center; margin-bottom:12px}
+  .qcard{
+    background:var(--card);
+    border-radius:18px; padding:14px 14px 12px; margin:12px 0;
+    box-shadow: 0 8px 24px rgba(2,6,23,.08);
+    border:1px solid rgba(2,6,23,.06);
+  }
+  .qhead{display:flex; align-items:center; gap:10px; margin-bottom:6px}
+  .qnum{
+    min-width:40px; height:40px; border-radius:12px;
+    display:grid; place-items:center; font-weight:800; color:#fff;
+    background: linear-gradient(135deg,var(--accent),var(--accent2));
+  }
+  .qtitle{font-weight:700; font-size:16px; line-height:1.2}
+  .qtel{font-size:15px; margin-top:4px; color:#1f2937; line-height:1.25}
+  .opts{margin:10px 0 0 0; font-size:15px; line-height:1.35}
+  .opt{margin:6px 0}
+  .opt b{width:22px; display:inline-block}
+  .reveal{
+    display:flex; gap:10px; align-items:center; margin-top:12px;
+  }
+  .reveal input{display:none}
+  .btn{
+    display:inline-block; padding:10px 14px; font-weight:700; font-size:14px;
+    border-radius:999px; cursor:pointer; user-select:none;
+    background:linear-gradient(90deg,var(--accent),var(--accent2)); color:#fff;
+    box-shadow: 0 6px 14px rgba(124,58,237,.25);
+  }
+  .answer{
+    max-height:0; overflow:hidden; transition:max-height .35s ease, opacity .35s ease;
+    opacity:0; border-left:4px solid var(--ok);
+    background:rgba(22,163,74,.08); padding:0 10px; border-radius:12px; margin-top:8px;
+  }
+  .answer p{margin:10px 6px; font-size:15px}
+  /* Checkbox reveal (Quick Edit friendly) */
+  .reveal input:checked ~ .answer{ max-height:160px; opacity:1; padding:10px 10px }
+  /* Footer */
+  .foot{margin-top:16px; text-align:center; font-size:12px; color:var(--muted)}
+</style>
+</head>
+<body>
+  <main class="page">
+    <h1 class="title">General Awareness Quiz</h1>
+    <p class="subtitle">English + Telugu • Click to reveal answers • No JavaScript</p>
+    <p class="legend"><b>Note:</b> Options show English first, then Telugu in ( ).</p>
+
+    <!-- Q1 -->
+    <section class="qcard">
+      <div class="qhead">
+        <div class="qnum">1</div>
+        <div>
+          <div class="qtitle">In India, National Nutrition Week is observed every year during which period?</div>
+          <div class="qtel">భారతదేశంలో ప్రతి సంవత్సరం జాతీయ పోషణ వారాన్ని ఏ కాలంలో జరుపుకుంటారు?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> 1st – 7th September (1–7 సెప్టెంబర్)</div>
+        <div class="opt"><b>B)</b> 15th – 21st August (15–21 ఆగస్టు)</div>
+        <div class="opt"><b>C)</b> 10th – 16th October (10–16 అక్టోబర్)</div>
+        <div class="opt"><b>D)</b> 5th – 11th July (5–11 జూలై)</div>
+      </div>
+      <div class="reveal">
+        <input id="a1" type="checkbox">
+        <label class="btn" for="a1">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> A — 1st–7th September • <b>సమాధానం:</b> A — 1–7 సెప్టెంబర్</p></div>
+      </div>
+    </section>
+
+    <!-- Q2 -->
+    <section class="qcard">
+      <div class="qhead">
+        <div class="qnum">2</div>
+        <div>
+          <div class="qtitle">Union Minister Ashwini Vaishnaw inaugurated an indigenous tempered glass facility in which state?</div>
+          <div class="qtel">కేంద్ర మంత్రి అశ్విని వైష్ణవ్ స్వదేశీ టెంపర్డ్ గ్లాస్ తయారీ కేంద్రాన్ని ఏ రాష్ట్రంలో ప్రారంభించారు?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> Karnataka (కర్ణాటక)</div>
+        <div class="opt"><b>B)</b> Gujarat (గుజరాత్)</div>
+        <div class="opt"><b>C)</b> Tamil Nadu (తమిళనాడు)</div>
+        <div class="opt"><b>D)</b> Uttar Pradesh (ఉత్తర ప్రదేశ్)</div>
+      </div>
+      <div class="reveal">
+        <input id="a2" type="checkbox">
+        <label class="btn" for="a2">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> D — Uttar Pradesh • <b>సమాధానం:</b> D — ఉత్తర ప్రదేశ్</p></div>
+      </div>
+    </section>
+
+    <!-- Q3 -->
+    <section class="qcard">
+      <div class="qhead">
+        <div class="qnum">3</div>
+        <div>
+          <div class="qtitle">The 17th BioFach India is scheduled to begin in which city?</div>
+          <div class="qtel">బయోఫాక్ ఇండియా 17వ ఎడిషన్ ఏ నగరంలో ప్రారంభం కానుంది?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> Greater Noida (గ్రేటర్ నోయిడా)</div>
+        <div class="opt"><b>B)</b> Gurugram (గురుగ్రామ్)</div>
+        <div class="opt"><b>C)</b> Bengaluru (బెంగళూరు)</div>
+        <div class="opt"><b>D)</b> Hyderabad (హైదరాబాద్)</div>
+      </div>
+      <div class="reveal">
+        <input id="a3" type="checkbox">
+        <label class="btn" for="a3">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> A — Greater Noida • <b>సమాధానం:</b> A — గ్రేటర్ నోయిడా</p></div>
+      </div>
+    </section>
+
+    <!-- Q4 -->
+    <section class="qcard">
+      <div class="qhead"><div class="qnum">4</div>
+        <div>
+          <div class="qtitle">The Matsya Shakti Project (Aug 2025) was launched in which state?</div>
+          <div class="qtel">మత్స్య శక్తి ప్రాజెక్ట్ (ఆగస్టు 2025) ఏ రాష్ట్రంలో ప్రారంభించబడింది?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> Tamil Nadu (తమిళనాడు)</div>
+        <div class="opt"><b>B)</b> Kerala (కేరళ)</div>
+        <div class="opt"><b>C)</b> Karnataka (కర్ణాటక)</div>
+        <div class="opt"><b>D)</b> Andhra Pradesh (ఆంధ్ర ప్రదేశ్)</div>
+      </div>
+      <div class="reveal">
+        <input id="a4" type="checkbox"><label class="btn" for="a4">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> B — Kerala • <b>సమాధానం:</b> B — కేరళ</p></div>
+      </div>
+    </section>
+
+    <!-- Q5 -->
+    <section class="qcard">
+      <div class="qhead"><div class="qnum">5</div>
+        <div>
+          <div class="qtitle">Exercise Achook Prahar 2025 (IA’s Spear Corps + ITBP) was conducted where?</div>
+          <div class="qtel">భారత సైన్యం స్పియర్ కార్ప్స్ మరియు ITBP కలసి నిర్వహించిన ‘అచూక్ ప్రహార్ 2025’ ఎక్కడ జరిగింది?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> Sikkim (సిక్కిం)</div>
+        <div class="opt"><b>B)</b> Ladakh (లడఖ్)</div>
+        <div class="opt"><b>C)</b> Himachal Pradesh (హిమాచల్ ప్రదేశ్)</div>
+        <div class="opt"><b>D)</b> Arunachal Pradesh (అరుణాచల్ ప్రదేశ్)</div>
+      </div>
+      <div class="reveal">
+        <input id="a5" type="checkbox"><label class="btn" for="a5">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> D — Arunachal Pradesh • <b>సమాధానం:</b> D — అరుణాచల్ ప్రదేశ్</p></div>
+      </div>
+    </section>
+
+    <!-- Q6 -->
+    <section class="qcard">
+      <div class="qhead"><div class="qnum">6</div>
+        <div>
+          <div class="qtitle">Luivat Pheizak is a traditional dance of which state?</div>
+          <div class="qtel">‘లూయ్‌వాట్ ఫైజాక్’ (Luivat Pheizak) అనే సాంప్రదాయ నృత్యం ఏ రాష్ట్రానికి చెందింది?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> Nagaland (నాగాలాండ్)</div>
+        <div class="opt"><b>B)</b> Manipur (మణిపూర్)</div>
+        <div class="opt"><b>C)</b> Mizoram (మిజోరాం)</div>
+        <div class="opt"><b>D)</b> Arunachal Pradesh (అరుణాచల్ ప్రదేశ్)</div>
+      </div>
+      <div class="reveal">
+        <input id="a6" type="checkbox"><label class="btn" for="a6">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> B — Manipur • <b>సమాధానం:</b> B — మణిపూర్</p></div>
+      </div>
+    </section>
+
+    <!-- Q7 -->
+    <section class="qcard">
+      <div class="qhead"><div class="qnum">7</div>
+        <div>
+          <div class="qtitle">Annapurna Devi was celebrated for playing which instrument?</div>
+          <div class="qtel">అన్నపూర్ణా దేవి ఏ వాద్యానికి ప్రసిద్ధి చెందారు?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> Surbahar (సూర్బహార్)</div>
+        <div class="opt"><b>B)</b> Sitar (సితార్)</div>
+        <div class="opt"><b>C)</b> Sarangi (సారంగి)</div>
+        <div class="opt"><b>D)</b> Santoor (సంతూర్)</div>
+      </div>
+      <div class="reveal">
+        <input id="a7" type="checkbox"><label class="btn" for="a7">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> A — Surbahar • <b>సమాధానం:</b> A — సూర్బహార్</p></div>
+      </div>
+    </section>
+
+    <!-- Q8 -->
+    <section class="qcard">
+      <div class="qhead"><div class="qnum">8</div>
+        <div>
+          <div class="qtitle">The Tulip Festival is held annually at which location in J&K?</div>
+          <div class="qtel">జమ్మూ & కశ్మీరులో ప్రసిద్ధ ట్యులిప్ ఉత్సవం ప్రతి సంవత్సరం ఏ ప్రదేశంలో జరుగుతుంది?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> Shalimar Bagh, Srinagar (శాలిమార్ బాగ్, శ్రీనగర్)</div>
+        <div class="opt"><b>B)</b> Nishat Garden, Srinagar (నిషాత్ గార్డెన్, శ్రీనగర్)</div>
+        <div class="opt"><b>C)</b> Indira Gandhi Memorial Tulip Garden, Srinagar (ఇందిరా గాంధీ స్మారక ట్యులిప్ గార్డెన్, శ్రీనగర్)</div>
+        <div class="opt"><b>D)</b> Mughal Garden, Srinagar (ముగల్ గార్డెన్, శ్రీనగర్)</div>
+      </div>
+      <div class="reveal">
+        <input id="a8" type="checkbox"><label class="btn" for="a8">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> C — Indira Gandhi Memorial Tulip Garden • <b>సమాధానం:</b> C — ఇందిరా గాంధీ స్మారక ట్యులిప్ గార్డెన్</p></div>
+      </div>
+    </section>
+
+    <!-- Q9 -->
+    <section class="qcard">
+      <div class="qhead"><div class="qnum">9</div>
+        <div>
+          <div class="qtitle">Who is the author of “The Accidental Prime Minister” (2014)?</div>
+          <div class="qtel">“ది యాక్సిడెంటల్ ప్రైమ్ మినిస్టర్” (2014) పుస్తకం రచయిత ఎవరు?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> P. Chidambaram (పి. చిదంబరం)</div>
+        <div class="opt"><b>B)</b> Pranab Mukherjee (ప్రణబ్ ముఖర్జీ)</div>
+        <div class="opt"><b>C)</b> Shashi Tharoor (శశి థరూర్)</div>
+        <div class="opt"><b>D)</b> Sanjaya Baru (సంజయ బారు)</div>
+      </div>
+      <div class="reveal">
+        <input id="a9" type="checkbox"><label class="btn" for="a9">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> D — Sanjaya Baru • <b>సమాధానం:</b> D — సంజయ బారు</p></div>
+      </div>
+    </section>
+
+    <!-- Q10 -->
+    <section class="qcard">
+      <div class="qhead"><div class="qnum">10</div>
+        <div>
+          <div class="qtitle">Mehrgarh was discovered in 1974 by which archaeologist?</div>
+          <div class="qtel">మెహర్‌గఢ్‌ను 1974లో ఏ పురావస్తు శాస్త్రవేత్త కనుగొన్నారు?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> Jean-François Jarrige (జీన్-ఫ్రాన్స్వా జారిజ్)</div>
+        <div class="opt"><b>B)</b> Mortimer Wheeler (మార్టిమర్ వీలర్)</div>
+        <div class="opt"><b>C)</b> Rakhaldas Banerji (రకల్‌దాస్ బెనర్జీ)</div>
+        <div class="opt"><b>D)</b> Alexander Cunningham (అలెగ్జాండర్ కనింగ్హాం)</div>
+      </div>
+      <div class="reveal">
+        <input id="a10" type="checkbox"><label class="btn" for="a10">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> A — Jean-François Jarrige • <b>సమాధానం:</b> A — జీన్-ఫ్రాన్స్వా జారిజ్</p></div>
+      </div>
+    </section>
+
+    <!-- Q11 -->
+    <section class="qcard">
+      <div class="qhead"><div class="qnum">11</div>
+        <div>
+          <div class="qtitle">What was the Greek name used for Chandragupta Maurya?</div>
+          <div class="qtel">చంద్రగుప్త మౌర్యుడిని గ్రీకులు ఏ పేరుతో పేర్కొన్నారు?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> Seleucus (సెల్యూకస్)</div>
+        <div class="opt"><b>B)</b> Sandrocottos (సాండ్రోకోట్టోస్)</div>
+        <div class="opt"><b>C)</b> Megasthenes (మెగస్థనీస్)</div>
+        <div class="opt"><b>D)</b> Antiochus (ఆంటియోకస్)</div>
+      </div>
+      <div class="reveal">
+        <input id="a11" type="checkbox"><label class="btn" for="a11">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> B — Sandrocottos • <b>సమాధానం:</b> B — సాండ్రోకోట్టోస్</p></div>
+      </div>
+    </section>
+
+    <!-- Q12 -->
+    <section class="qcard">
+      <div class="qhead"><div class="qnum">12</div>
+        <div>
+          <div class="qtitle">Ashvamedha was associated with which Vedic tradition?</div>
+          <div class="qtel">అశ్వమెధ యజ్ఞం వేద ధర్మంలోని ఏ సంప్రదాయానికి చెందినది?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> Grihya tradition (గృహ్య సంప్రదాయం)</div>
+        <div class="opt"><b>B)</b> Upanishadic tradition (ఉపనిషద్ సంప్రదాయం)</div>
+        <div class="opt"><b>C)</b> Śrauta tradition (శ్రౌత సంప్రదాయం)</div>
+        <div class="opt"><b>D)</b> Smriti tradition (స్మృతి సంప్రదాయం)</div>
+      </div>
+      <div class="reveal">
+        <input id="a12" type="checkbox"><label class="btn" for="a12">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> C — Śrauta tradition • <b>సమాధానం:</b> C — శ్రౌత సంప్రదాయం</p></div>
+      </div>
+    </section>
+
+    <!-- Q13 -->
+    <section class="qcard">
+      <div class="qhead"><div class="qnum">13</div>
+        <div>
+          <div class="qtitle">Which provision was introduced under the Charter Act of 1813?</div>
+          <div class="qtel">1813 చార్టర్ చట్టం ద్వారా ఏ నిబంధన ప్రవేశపెట్టబడింది?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> Board of Control established in India (బోర్డ్ ఆఫ్ కంట్రోల్ స్థాపన)</div>
+        <div class="opt"><b>B)</b> Competitive civil services exams (పోటీ సివిల్ సర్వీసెస్ పరీక్షలు)</div>
+        <div class="opt"><b>C)</b> EIC free trade in all commodities (ఈస్ట్ ఇండియా కంపెనీకి అన్ని వస్తువుల్లో స్వేచ్ఛా వాణిజ్యం)</div>
+        <div class="opt"><b>D)</b> Ended EIC trade monopoly except tea & China trade (టీ మరియు చైనా వాణిజ్యాన్ని మినహాయించి కంపెనీ ఏకాధికారానికి ముగింపు)</div>
+      </div>
+      <div class="reveal">
+        <input id="a13" type="checkbox"><label class="btn" for="a13">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> D — Monopoly ended (except tea & China) • <b>సమాధానం:</b> D — టీ మరియు చైనా వాణిజ్యాన్ని మినహా ఏకాధికారానికి ముగింపు</p></div>
+      </div>
+    </section>
+
+    <!-- Q14 -->
+    <section class="qcard">
+      <div class="qhead"><div class="qnum">14</div>
+        <div>
+          <div class="qtitle">Which Amendment bifurcated the National Commission for SCs & STs (2004)?</div>
+          <div class="qtel">ఎస్సీలు & ఎస్టీల జాతీయ కమిషన్‌ను (2004) రెండు వేరు సంస్థలుగా ఏ సవరణ చట్టం చేసింది?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> 89th Amendment, 2003 (89వ సవరణ, 2003)</div>
+        <div class="opt"><b>B)</b> 86th Amendment, 2002 (86వ సవరణ, 2002)</div>
+        <div class="opt"><b>C)</b> 91st Amendment, 2003 (91వ సవరణ, 2003)</div>
+        <div class="opt"><b>D)</b> 92nd Amendment, 2003 (92వ సవరణ, 2003)</div>
+      </div>
+      <div class="reveal">
+        <input id="a14" type="checkbox"><label class="btn" for="a14">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> A — 89th Amendment, 2003 • <b>సమాధానం:</b> A — 89వ సవరణ, 2003</p></div>
+      </div>
+    </section>
+
+    <!-- Q15 -->
+    <section class="qcard">
+      <div class="qhead"><div class="qnum">15</div>
+        <div>
+          <div class="qtitle">Which was the first country to make and adopt a written constitution?</div>
+          <div class="qtel">వ్రాతపూర్వక రాజ్యాంగాన్ని రూపొందించి ఆమోదించిన తొలి దేశం ఏది?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> France (ఫ్రాన్స్)</div>
+        <div class="opt"><b>B)</b> United States of America (అమెరికా సంయుక్త రాష్ట్రాలు)</div>
+        <div class="opt"><b>C)</b> United Kingdom (యునైటెడ్ కింగ్‌డమ్)</div>
+        <div class="opt"><b>D)</b> Canada (కెనడా)</div>
+      </div>
+      <div class="reveal">
+        <input id="a15" type="checkbox"><label class="btn" for="a15">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> B — United States of America • <b>సమాధానం:</b> B — అమెరికా సంయుక్త రాష్ట్రాలు</p></div>
+      </div>
+    </section>
+
+    <!-- Q16 -->
+    <section class="qcard">
+      <div class="qhead"><div class="qnum">16</div>
+        <div>
+          <div class="qtitle">Which Article transfers the jurisdiction & powers of the Federal Court to the Supreme Court?</div>
+          <div class="qtel">ఫెడరల్ కోర్టు అధికారాలు, అధికార పరిధిని సుప్రీంకోర్టుకు బదిలీ చేసిన భారత రాజ్యాంగ అధికరణ ఏది?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> Article 131 (అధికరణ 131)</div>
+        <div class="opt"><b>B)</b> Article 136 (అధికరణ 136)</div>
+        <div class="opt"><b>C)</b> Article 135 (అధికరణ 135)</div>
+        <div class="opt"><b>D)</b> Article 137 (అధికరణ 137)</div>
+      </div>
+      <div class="reveal">
+        <input id="a16" type="checkbox"><label class="btn" for="a16">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> C — Article 135 • <b>సమాధానం:</b> C — అధికరణ 135</p></div>
+      </div>
+    </section>
+
+    <!-- Q17 -->
+    <section class="qcard">
+      <div class="qhead"><div class="qnum">17</div>
+        <div>
+          <div class="qtitle">The Right to Property was removed from Fundamental Rights and made a legal right under Article 300A by which Amendment?</div>
+          <div class="qtel">సంపత్తి హక్కును మౌలిక హక్కుల జాబితా నుంచి తొలగించి, అధికరణ 300A కింద చట్టపరమైన హక్కుగా చేసిన సవరణ ఏది?</div>
+        </div>
+      </div>
+      <div class="opts">
+        <div class="opt"><b>A)</b> 42nd Amendment Act, 1976 (42వ సవరణ చట్టం, 1976)</div>
+        <div class="opt"><b>B)</b> 43rd Amendment Act, 1977 (43వ సవరణ చట్టం, 1977)</div>
+        <div class="opt"><b>C)</b> 45th Amendment Act, 1980 (45వ సవరణ చట్టం, 1980)</div>
+        <div class="opt"><b>D)</b> 44th Amendment Act, 1978 (44వ సవరణ చట్టం, 1978)</div>
+      </div>
+      <div class="reveal">
+        <input id="a17" type="checkbox"><label class="btn" for="a17">Reveal Answer</label>
+        <div class="answer"><p><b>Answer:</b> D — 44th Amendment Act, 1978 • <b>సమాధానం:</b> D — 44వ సవరణ చట్టం, 1978</p></div>
+      </div>
+    </section>
+
+    <p class="foot">© Rekham Academy — Bilingual Quiz (English + Telugu)</p>
+  </main>
+</body>
+</html>
