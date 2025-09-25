@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rekham Academy – General Awareness Quiz (English + Hindi)</title>
+<style>
+  :root{
+    --bg1:#1a2a6c; --bg2:#fdbb2d; --bg3:#b21f1f;
+    --card:#ffffff; --ink:#111;
+    --accent:#7c4dff; --accent2:#00bcd4; --accent3:#ff4081;
+  }
+  body{
+    margin:0; font-family:"Noto Sans","Noto Sans Devanagari",system-ui,sans-serif;
+    background: linear-gradient(140deg,var(--bg1),var(--bg3),var(--bg2));
+    background-attachment: fixed; color:#fff;
+    display:flex; justify-content:center; min-height:100svh;
+  }
+  .page{width:min(680px,92vw); aspect-ratio:9/16; max-height:96svh; overflow:auto;
+    padding:18px 14px 28px; box-sizing:border-box;}
+  .brand{text-align:center; margin:6px 0 14px;}
+  .brand .tag{display:inline-block; padding:6px 12px; border-radius:999px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3));
+    color:#fff; font-weight:800; font-size:1.05rem;}
+  .title{text-align:center; margin:10px 0 16px; font-size:1.5rem; font-weight:900;}
+  .section{margin-top:14px; font-weight:900; font-size:1.1rem; color:#ffe;}
+  .card{background:#fff; color:var(--ink); border-radius:18px; padding:14px;
+    margin:12px 2px; box-shadow:0 10px 22px rgba(0,0,0,.25);}
+  .qno{font-weight:800; color:var(--accent3); margin-right:6px;}
+  .question{font-weight:700; font-size:1.02rem;}
+  .subq{color:#444; font-size:.95rem; margin-top:3px;}
+  .opts{list-style:none; padding-left:0; margin:10px 0 6px;}
+  .opts li{background:#f4f2ff; border-radius:12px; padding:6px 10px; margin:6px 0;
+    font-size:.96rem; color:#2b235a;}
+  .reveal{display:flex; align-items:center; gap:10px; margin-top:8px;}
+  .toggle{appearance:none; width:0; height:0; position:absolute;}
+  .btn{cursor:pointer; font-weight:800; font-size:.9rem; padding:7px 12px;
+    border-radius:999px; color:#fff;
+    background:linear-gradient(90deg,var(--accent2),var(--accent3));}
+  .answer{max-height:0; overflow:hidden; transition:max-height .35s ease;
+    font-weight:700; color:#0d652d; background:#e6ffef; border-radius:10px;
+    padding:0 10px; margin-top:4px;}
+  .toggle:checked ~ .answer{max-height:150px; padding:8px 10px;}
+  .ans-key{font-size:.92rem; color:#fff; margin-top:12px;}
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="brand"><span class="tag">Rekham Academy</span></div>
+    <div class="title">General Awareness Quiz (English + Hindi)</div>
+
+    <div class="section">Current Affairs / समसामयिक घटनाएँ</div>
+
+    <!-- Q1 -->
+    <article class="card"><div class="question"><span class="qno">1.</span> The International Day to Protect Education from Attack is observed every year on which date?</div>
+      <div class="subq">शिक्षा को हमले से बचाने का अंतर्राष्ट्रीय दिवस हर वर्ष किस तिथि को मनाया जाता है?</div>
+      <ul class="opts"><li>A) 5 September</li><li>B) 21 September</li><li>C) 12 October</li><li>D) 9 September</li></ul>
+      <div class="reveal"><input id="t1" class="toggle" type="checkbox"/>
+        <label class="btn" for="t1">Reveal / उत्तर देखें</label>
+        <div class="answer">Correct: <b>D) 9 September</b></div>
+      </div></article>
+
+    <!-- Q2 -->
+    <article class="card"><div class="question"><span class="qno">2.</span> Who has been appointed as the new Chairman & MD of NHPC Limited?</div>
+      <div class="subq">एनएचपीसी लिमिटेड के नए अध्यक्ष एवं प्रबंध निदेशक कौन बने?</div>
+      <ul class="opts"><li>A) R. K. Singh</li><li>B) Bhupender Gupta</li><li>C) Alok Kumar</li><li>D) S. N. Goel</li></ul>
+      <div class="reveal"><input id="t2" class="toggle" type="checkbox"/>
+        <label class="btn" for="t2">Reveal / उत्तर देखें</label>
+        <div class="answer">Correct: <b>B) Bhupender Gupta</b></div>
+      </div></article>
+
+    <!-- Q3 -->
+    <article class="card"><div class="question"><span class="qno">3.</span> Which country will host the 28th ITTF-ATTU Asian Table Tennis Team Championships?</div>
+      <div class="subq">28वीं एशियाई टेबल टेनिस टीम चैम्पियनशिप की मेजबानी कौन करेगा?</div>
+      <ul class="opts"><li>A) India</li><li>B) China</li><li>C) Japan</li><li>D) South Korea</li></ul>
+      <div class="reveal"><input id="t3" class="toggle" type="checkbox"/>
+        <label class="btn" for="t3">Reveal / उत्तर देखें</label>
+        <div class="answer">Correct: <b>A) India</b></div>
+      </div></article>
+
+    <!-- Q4 -->
+    <article class="card"><div class="question"><span class="qno">4.</span> India defeated which country 4-1 to win Asia Cup Hockey?</div>
+      <div class="subq">भारत ने 4-1 से किस देश को हराकर एशिया कप हॉकी जीता?</div>
+      <ul class="opts"><li>A) Japan</li><li>B) Malaysia</li><li>C) South Korea</li><li>D) Pakistan</li></ul>
+      <div class="reveal"><input id="t4" class="toggle" type="checkbox"/>
+        <label class="btn" for="t4">Reveal / उत्तर देखें</label>
+        <div class="answer">Correct: <b>C) South Korea</b></div>
+      </div></article>
+
+    <!-- Q5 -->
+    <article class="card"><div class="question"><span class="qno">5.</span> Who won his 3rd Emmy Award for narrating Netflix documentary *Our Oceans*?</div>
+      <div class="subq">*Our Oceans* डॉक्यूमेंट्री का वाचन कर तीसरा एमी किसने जीता?</div>
+      <ul class="opts"><li>A) Barack Obama</li><li>B) Morgan Freeman</li><li>C) David Attenborough</li><li>D) Tom Hanks</li></ul>
+      <div class="reveal"><input id="t5" class="toggle" type="checkbox"/>
+        <label class="btn" for="t5">Reveal / उत्तर देखें</label>
+        <div class="answer">Correct: <b>A) Barack Obama</b></div>
+      </div></article>
+
+    <!-- Q6 -->
+    <article class="card"><div class="question"><span class="qno">6.</span> World Duchenne Awareness Day is observed on?</div>
+      <div class="subq">विश्व ड्युचेन जागरूकता दिवस कब मनाया जाता है?</div>
+      <ul class="opts"><li>A) 9 September</li><li>B) 7 September</li><li>C) 5 October</li><li>D) 15 August</li></ul>
+      <div class="reveal"><input id="t6" class="toggle" type="checkbox"/>
+        <label class="btn" for="t6">Reveal / उत्तर देखें</label>
+        <div class="answer">Correct: <b>B) 7 September</b></div>
+      </div></article>
+
+    <!-- Q7 -->
+    <article class="card"><div class="question"><span class="qno">7.</span> Who has been sworn in as Chief Justice of Bombay HC?</div>
+      <div class="subq">बॉम्बे हाईकोर्ट के मुख्य न्यायाधीश के रूप में किसने शपथ ली?</div>
+      <ul class="opts"><li>A) Justice Ranjan Gogoi</li><li>B) Justice D. Y. Chandrachud</li><li>C) Justice Sanjib Banerjee</li><li>D) Justice Shree Chandrashekhar</li></ul>
+      <div class="reveal"><input id="t7" class="toggle" type="checkbox"/>
+        <label class="btn" for="t7">Reveal / उत्तर देखें</label>
+        <div class="answer">Correct: <b>D) Justice Shree Chandrashekhar</b></div>
+      </div></article>
+
+    <div class="section">Geography / भूगोल</div>
+
+    <!-- Q8 -->
+    <article class="card"><div class="question"><span class="qno">8.</span> Which state has 2nd highest literacy rate after Kerala?</div>
+      <div class="subq">केरल के बाद साक्षरता दर में दूसरा स्थान किस राज्य का है?</div>
+      <ul class="opts"><li>A) Goa</li><li>B) Mizoram</li><li>C) Tripura</li><li>D) Himachal Pradesh</li></ul>
+      <div class="reveal"><input id="t8" class="toggle" type="checkbox"/>
+        <label class="btn" for="t8">Reveal / उत्तर देखें</label>
+        <div class="answer">Correct: <b>B) Mizoram</b></div>
+      </div></article>
+
+    <!-- Q9 -->
+    <article class="card"><div class="question"><span class="qno">9.</span> In geology, what is the up-thrown block between two faults called?</div>
+      <div class="subq">भूविज्ञान में दो भ्रंशों के बीच ऊपर उठे खंड को क्या कहते हैं?</div>
+      <ul class="opts"><li>A) Horst</li><li>B) Graben</li><li>C) Rift Valley</li><li>D) Plateau</li></ul>
+      <div class="reveal"><input id="t9" class="toggle" type="checkbox"/>
+        <label class="btn" for="t9">Reveal / उत्तर देखें</label>
+        <div class="answer">Correct: <b>A) Horst</b></div>
+      </div></article>
+
+    <!-- Q10 -->
+    <article class="card"><div class="question"><span class="qno">10.</span> The Bosporus Strait connects Black Sea with which sea?</div>
+      <div class="subq">बॉस्फोरस जलडमरूमध्य काला सागर को किस समुद्र से जोड़ता है?</div>
+      <ul class="opts"><li>A) Aegean Sea</li><li>B) Mediterranean Sea</li><li>C) Sea of Marmara</li><li>D) Adriatic Sea</li></ul>
+      <div class="reveal"><input id="t10" class="toggle" type="checkbox"/>
+        <label class="btn" for="t10">Reveal / उत्तर देखें</label>
+        <div class="answer">Correct: <b>C) Sea of Marmara</b></div>
+      </div></article>
+
+    <!-- Q11 -->
+    <article class="card"><div class="question"><span class="qno">11.</span> The Tundra biome is found in?</div>
+      <div class="subq">टुंड्रा जैव-क्षेत्र कहाँ पाया जाता है?</div>
+      <ul class="opts"><li>A) Tropical rainforests</li><li>B) Deserts</li><li>C) Coastal plains</li><li>D) Arctic regions and mountain tops</li></ul>
+      <div class="reveal"><input id="t11" class="toggle" type="checkbox"/>
+        <label class="btn" for="t11">Reveal / उत्तर देखें</label>
+        <div class="answer">Correct: <b>D) Arctic regions and mountain tops</b></div>
+      </div></article>
+
+    <div class="section">General Knowledge / सामान्य ज्ञान</div>
+
+    <!-- Q12 -->
+    <article class="card"><div class="question"><span class="qno">12.</span> In which year was the Border Roads Organisation (BRO) established?</div>
+      <div class="subq">सीमा सड़क संगठन (BRO) की स्थापना किस वर्ष हुई?</div>
+      <ul class="opts"><li>A) 1960</li><li>B) 1955</li><li>C) 1965</li><li>D) 1971</li></ul>
+      <div class="reveal"><input id="t12" class="toggle" type="checkbox"/>
+        <label class="btn" for="t12">Reveal / उत्तर देखें</label>
+        <div class="answer">Correct: <b>A) 1960</b></div>
+      </div></article>
+
+    <!-- Q13 -->
+    <article class="card"><div class="question"><span class="qno">13.</span> Which artist gained international fame for *The London Jungle Book* (2004)?</div>
+      <div class="subq">*द लंदन जंगल बुक* (2004) से अंतरराष्ट्रीय ख्याति किस कलाकार को मिली?</div>
+      <ul class="opts"><li>A) Jangarh Singh Shyam</li><li>B) Bhajju Shyam</li><li>C) Durga Bai Vyam</li><li>D) Ram Singh Urveti</li></ul>
+      <div class="reveal"><input id="t13" class="toggle" type="checkbox"/>
+        <label class="btn" for="t13">Reveal / उत्तर देखें</label>
+        <div class="answer">Correct: <b>B) Bhajju Shyam</b></div>
+      </div></article>
+
+    <!-- Q14 -->
+    <article class="card"><div class="question"><span class="qno">14.</span> India first participated in Olympic Games in?</div>
+      <div class="subq">भारत ने पहली बार ओलंपिक खेलों में कब भाग लिया?</div>
+      <ul class="opts"><li>A) 1920</li><li>B) 1904</li><li>C) 1912</li><li>D) 1900</li></ul>
+      <div class="reveal"><input id="t14" class="toggle" type="checkbox"/>
+        <label class="btn" for="t14">Reveal / उत्तर देखें</label>
+        <div class="answer">Correct: <b>D) 1900</b></div>
+      </div></article>
+
+    <!-- Q15 -->
+    <article class="card"><div class="question"><span class="qno">15.</span> Shambhu Maharaj was a guru of which Kathak gharana?</div>
+      <div class="subq">शंभू महाराज किस कथक घराने के गुरु थे?</div>
+      <ul class="opts"><li>A) Lucknow gharana</li><li>B) Jaipur gharana</li><li>C) Banaras gharana</li><li>D) Raigarh gharana</li></ul>
+      <div class="reveal"><input id="t15" class="toggle" type="checkbox"/>
+        <label class="btn" for="t15">Reveal / उत्तर देखें</label>
+        <div class="answer">Correct: <b>A) Lucknow gharana</b></div>
+      </div></article>
+
+    <!-- Q16 -->
+    <article class="card"><div class="question"><span class="qno">16.</span> Who was the Sultan of Delhi when Vijayanagara empire was founded?</div>
+      <div class="subq">विजयनगर साम्राज्य की स्थापना के समय दिल्ली का सुल्तान कौन था?</div>
+      <ul class="opts"><li>A) Qutbuddin Aibak</li><li>B) Muhammad bin Tughlaq</li><li>C) Ghiyasuddin Tughlaq</li><li>D) Alauddin Khilji</li></ul>
+      <div class="reveal"><input id="t16" class="toggle" type="checkbox"/>
+        <label class="btn" for="t16">Reveal / उत्तर देखें</label>
+        <div class="answer">Correct: <b>B) Muhammad bin Tughlaq</b></div>
+      </div></article>
+
+    <div class="section">General Science / सामान्य विज्ञान</div>
+
+    <!-- Q17 -->
+    <article class="card"><div class="question"><span class="qno">17.</span> Pumice rock is formed due to?</div>
+      <div class="subq">प्यूमिस चट्टान किस प्रक्रिया से बनती है?</div>
+      <ul class="opts"><li>A) River sedimentation</li><li>B) Metamorphism of limestone</li><li>C) Explosive volcanic eruptions</li><li>D) Slow cooling of magma</li></ul>
+      <div class="reveal"><input id="t17" class="toggle" type
