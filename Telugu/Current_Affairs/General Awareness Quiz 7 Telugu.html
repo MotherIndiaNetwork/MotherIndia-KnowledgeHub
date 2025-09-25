@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rekham Academy – సాధారణ అవగాహన క్విజ్ (తెలుగు)</title>
+<style>
+  :root{
+    --bg1:#1a2a6c; --bg2:#fdbb2d; --bg3:#b21f1f;
+    --card:#ffffff; --ink:#111;
+    --accent:#7c4dff; --accent2:#00bcd4; --accent3:#ff4081;
+  }
+  body{
+    margin:0; font-family: "Noto Sans Telugu","Noto Sans",system-ui,sans-serif;
+    background: linear-gradient(140deg,var(--bg1),var(--bg3),var(--bg2));
+    background-attachment: fixed; color:#fff;
+    display:flex; justify-content:center; min-height:100svh;
+  }
+  .page{
+    width:min(680px,92vw);
+    aspect-ratio:9/16;
+    max-height:96svh; overflow:auto;
+    padding:18px 14px 28px; box-sizing:border-box;
+  }
+  .brand{text-align:center; margin:6px 0 14px;}
+  .brand .tag{
+    display:inline-block; padding:6px 12px; border-radius:999px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3));
+    color:#fff; font-weight:800; font-size:1.05rem;
+  }
+  .title{ text-align:center; margin:10px 0 16px; font-size:1.5rem; font-weight:900; }
+  .section{ margin-top:14px; font-weight:900; font-size:1.1rem; color:#ffe; }
+  .card{
+    background:#fff; color:var(--ink); border-radius:18px; padding:14px;
+    margin:12px 2px; box-shadow:0 10px 22px rgba(0,0,0,.25);
+  }
+  .qno{font-weight:800; color:var(--accent3); margin-right:6px;}
+  .question{ font-weight:700; font-size:1.05rem; }
+  .opts{ list-style:none; padding-left:0; margin:10px 0 6px; }
+  .opts li{
+    background:#f4f2ff; border-radius:12px;
+    padding:8px 10px; margin:7px 0; font-size:1rem; color:#2b235a;
+  }
+  .reveal{ display:flex; align-items:center; gap:10px; margin-top:8px; }
+  .toggle{ appearance:none; width:0; height:0; position:absolute; }
+  .btn{
+    cursor:pointer; font-weight:800; font-size:.95rem;
+    padding:8px 12px; border-radius:999px; color:#fff;
+    background:linear-gradient(90deg,var(--accent2),var(--accent3));
+  }
+  .answer{
+    max-height:0; overflow:hidden; transition:max-height .35s ease;
+    font-weight:700; color:#0d652d; background:#e6ffef; border-radius:10px;
+    padding:0 10px; margin-top:4px;
+  }
+  .toggle:checked ~ .answer{ max-height:150px; padding:8px 10px; }
+  .ans-key{ font-size:.92rem; color:#fff; margin-top:12px; }
+</style>
+</head>
+<body>
+  <main class="page">
+    <div class="brand"><span class="tag">Rekham Academy</span></div>
+    <div class="title">సాధారణ అవగాహన క్విజ్ (తెలుగు)</div>
+
+    <div class="section">ప్రస్తుత వ్యవహారాలు</div>
+
+    <!-- Q1 -->
+    <article class="card">
+      <div class="question"><span class="qno">1.</span> దాడి నుండి విద్యను రక్షించడానికి అంతర్జాతీయ దినోత్సవం ప్రతి సంవత్సరం ఏ తేదీన జరుపుకుంటారు?</div>
+      <ul class="opts">
+        <li>A) 5 సెప్టెంబర్</li><li>B) 21 సెప్టెంబర్</li><li>C) 12 అక్టోబర్</li><li>D) 9 సెప్టెంబర్</li>
+      </ul>
+      <div class="reveal">
+        <input id="t1" class="toggle" type="checkbox" />
+        <label class="btn" for="t1">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>D) 9 సెప్టెంబర్</b></div>
+      </div>
+    </article>
+
+    <!-- Q2 -->
+    <article class="card">
+      <div class="question"><span class="qno">2.</span> ఎన్‌హెచ్‌పిసీ లిమిటెడ్ కొత్త ఛైర్మన్ మరియు మేనేజింగ్ డైరెక్టర్ (CMD) గా ఎవరు నియమించబడ్డారు?</div>
+      <ul class="opts">
+        <li>A) ఆర్. కె. సింగ్</li><li>B) భూపేందర్ గుప్తా</li><li>C) ఆలోక్ కుమార్</li><li>D) ఎస్. ఎన్. గోయెల్</li>
+      </ul>
+      <div class="reveal">
+        <input id="t2" class="toggle" type="checkbox" />
+        <label class="btn" for="t2">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>B) భూపేందర్ గుప్తా</b></div>
+      </div>
+    </article>
+
+    <!-- Q3 -->
+    <article class="card">
+      <div class="question"><span class="qno">3.</span> 28వ ITTF-ATTU ఆసియా టేబుల్ టెన్నిస్ టీమ్ ఛాంపియన్‌షిప్‌లు అక్టోబర్ 11 నుండి ఏ దేశం ఆతిథ్యమిస్తుంది?</div>
+      <ul class="opts">
+        <li>A) భారత్</li><li>B) చైనా</li><li>C) జపాన్</li><li>D) దక్షిణ కొరియా</li>
+      </ul>
+      <div class="reveal">
+        <input id="t3" class="toggle" type="checkbox" />
+        <label class="btn" for="t3">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>A) భారత్</b></div>
+      </div>
+    </article>
+
+    <!-- Q4 -->
+    <article class="card">
+      <div class="question"><span class="qno">4.</span> భారతదేశం 4-1 తేడాతో ఏ దేశాన్ని ఓడించి ఆసియా కప్ హాకీ టైటిల్ గెలుచుకుంది?</div>
+      <ul class="opts">
+        <li>A) జపాన్</li><li>B) మలేషియా</li><li>C) దక్షిణ కొరియా</li><li>D) పాకిస్తాన్</li>
+      </ul>
+      <div class="reveal">
+        <input id="t4" class="toggle" type="checkbox" />
+        <label class="btn" for="t4">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>C) దక్షిణ కొరియా</b></div>
+      </div>
+    </article>
+
+    <!-- Q5 -->
+    <article class="card">
+      <div class="question"><span class="qno">5.</span> 2025 క్రియేటివ్ ఆర్ట్స్ ఎమీస్‌లో నెట్‌ఫ్లిక్స్ డాక్యుమెంటరీ <i>Our Oceans</i> కు వ్యాఖ్యానం చేసి తన మూడో ఎమీ గెలుచుకున్న వ్యక్తి ఎవరు?</div>
+      <ul class="opts">
+        <li>A) బరాక్ ఒబామా</li><li>B) మోర్గాన్ ఫ్రీమాన్</li><li>C) డేవిడ్ అటెన్‌బరో</li><li>D) టామ్ హాంక్స్</li>
+      </ul>
+      <div class="reveal">
+        <input id="t5" class="toggle" type="checkbox" />
+        <label class="btn" for="t5">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>A) బరాక్ ఒబామా</b></div>
+      </div>
+    </article>
+
+    <!-- Q6 -->
+    <article class="card">
+      <div class="question"><span class="qno">6.</span> ప్రపంచ డుచేన్ అవగాహన దినోత్సవం ప్రతి సంవత్సరం ఎప్పుడు జరుపుకుంటారు?</div>
+      <ul class="opts">
+        <li>A) 9 సెప్టెంబర్</li><li>B) 7 సెప్టెంబర్</li><li>C) 5 అక్టోబర్</li><li>D) 15 ఆగస్టు</li>
+      </ul>
+      <div class="reveal">
+        <input id="t6" class="toggle" type="checkbox" />
+        <label class="btn" for="t6">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>B) 7 సెప్టెంబర్</b></div>
+      </div>
+    </article>
+
+    <!-- Q7 -->
+    <article class="card">
+      <div class="question"><span class="qno">7.</span> బాంబే హైకోర్టు కొత్త ప్రధాన న్యాయమూర్తిగా ప్రమాణ స్వీకారం చేసినవారు ఎవరు?</div>
+      <ul class="opts">
+        <li>A) జస్టిస్ రంజన్ గోగోయ్</li><li>B) జస్టిస్ డి. వై. చంద్రచూడ్</li><li>C) జస్టిస్ సంజిబ్ బెనర్జీ</li><li>D) జస్టిస్ శ్రీ చంద్రశేఖర్</li>
+      </ul>
+      <div class="reveal">
+        <input id="t7" class="toggle" type="checkbox" />
+        <label class="btn" for="t7">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>D) జస్టిస్ శ్రీ చంద్రశేఖర్</b></div>
+      </div>
+    </article>
+
+    <div class="section">భూగోళ శాస్త్రం</div>
+
+    <!-- Q8 -->
+    <article class="card">
+      <div class="question"><span class="qno">8.</span> జనగణన డేటా ప్రకారం, కేరళ తర్వాత అక్షరాస్యత రేటులో రెండవస్థానంలో ఉన్న రాష్ట్రం ఏది?</div>
+      <ul class="opts">
+        <li>A) గోవా</li><li>B) మిజోరాం</li><li>C) త్రిపుర</li><li>D) హిమాచల్ ప్రదేశ్</li>
+      </ul>
+      <div class="reveal">
+        <input id="t8" class="toggle" type="checkbox" />
+        <label class="btn" for="t8">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>B) మిజోరాం</b></div>
+      </div>
+    </article>
+
+    <!-- Q9 -->
+    <article class="card">
+      <div class="question"><span class="qno">9.</span> భూగర్భ శాస్త్రంలో రెండు దోషాల (faults) మధ్య పైకి ఎత్తబడిన శిలాఖండాన్ని ఏమని పిలుస్తారు?</div>
+      <ul class="opts">
+        <li>A) హోస్ట్ (Horst)</li><li>B) గ్రాబెన్</li><li>C) రిఫ్ట్ లోయ</li><li>D) పీఠభూమి</li>
+      </ul>
+      <div class="reveal">
+        <input id="t9" class="toggle" type="checkbox" />
+        <label class="btn" for="t9">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>A) హోస్ట్ (Horst)</b></div>
+      </div>
+    </article>
+
+    <!-- Q10 -->
+    <article class="card">
+      <div class="question"><span class="qno">10.</span> ప్రపంచంలోనే అతి సంకుచిత జలసంధి అయిన బోస్ఫరస్ జలసంధి, బ్లాక్ సీని ఇంకే సముద్రంతో కలుపుతుంది?</div>
+      <ul class="opts">
+        <li>A) ఏజియన్ సముద్రం</li><li>B) మధ్యధరా సముద్రం</li><li>C) మార్మారా సముద్రం</li><li>D) ఆడ్రియాటిక్ సముద్రం</li>
+      </ul>
+      <div class="reveal">
+        <input id="t10" class="toggle" type="checkbox" />
+        <label class="btn" for="t10">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>C) మార్మారా సముద్రం</b></div>
+      </div>
+    </article>
+
+    <!-- Q11 -->
+    <article class="card">
+      <div class="question"><span class="qno">11.</span> టుండ్రా జీవవైవిధ్య ప్రాంతం సాధారణంగా ఏ ప్రాంతాలలో కనిపిస్తుంది?</div>
+      <ul class="opts">
+        <li>A) ఉష్ణమండల వర్షారణ్యాలు</li><li>B) ఎడారులు</li><li>C) తీర మైదానాలు</li><li>D) ఆర్కిటిక్ ప్రాంతాలు మరియు పర్వత శిఖరాలు</li>
+      </ul>
+      <div class="reveal">
+        <input id="t11" class="toggle" type="checkbox" />
+        <label class="btn" for="t11">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>D) ఆర్కిటిక్ ప్రాంతాలు మరియు పర్వత శిఖరాలు</b></div>
+      </div>
+    </article>
+
+    <div class="section">సాధారణ జ్ఞానం</div>
+
+    <!-- Q12 -->
+    <article class="card">
+      <div class="question"><span class="qno">12.</span> సరిహద్దు రోడ్ల సంస్థ (BRO) ఏ సంవత్సరంలో స్థాపించబడింది?</div>
+      <ul class="opts">
+        <li>A) 1960</li><li>B) 1955</li><li>C) 1965</li><li>D) 1971</li>
+      </ul>
+      <div class="reveal">
+        <input id="t12" class="toggle" type="checkbox" />
+        <label class="btn" for="t12">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>A) 1960</b></div>
+      </div>
+    </article>
+
+    <!-- Q13 -->
+    <article class="card">
+      <div class="question"><span class="qno">13.</span> 2004లో ప్రచురితమైన <i>The London Jungle Book</i> ద్వారా అంతర్జాతీయ ఖ్యాతి పొందిన గోండ్ కళాకారుడు ఎవరు?</div>
+      <ul class="opts">
+        <li>A) జంగర్హ్ సింగ్ శ్యామ్</li><li>B) భజ్జు శ్యామ్</li><li>C) దుర్గా బాయి వ్యామ్</li><li>D) రామ్ సింగ్ ఉర్వేటి</li>
+      </ul>
+      <div class="reveal">
+        <input id="t13" class="toggle" type="checkbox" />
+        <label class="btn" for="t13">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>B) భజ్జు శ్యామ్</b></div>
+      </div>
+    </article>
+
+    <!-- Q14 -->
+    <article class="card">
+      <div class="question"><span class="qno">14.</span> భారతదేశం ఒలింపిక్ క్రీడల్లో మొదటిసారి పాల్గొన్న సంవత్సరం ఏది?</div>
+      <ul class="opts">
+        <li>A) 1920</li><li>B) 1904</li><li>C) 1912</li><li>D) 1900</li>
+      </ul>
+      <div class="reveal">
+        <input id="t14" class="toggle" type="checkbox" />
+        <label class="btn" for="t14">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>D) 1900</b></div>
+      </div>
+    </article>
+
+    <!-- Q15 -->
+    <article class="card">
+      <div class="question"><span class="qno">15.</span> ప్రసిద్ధ కథక్ నర్తకుడు శంభు మహారాజ్, ఏ ఘరానాకు పేరెన్నికగన్న గురువు?</div>
+      <ul class="opts">
+        <li>A) లక్నో ఘరానా</li><li>B) జైపూర్ ఘరానా</li><li>C) బనారస్ ఘరానా</li><li>D) రాయగఢ్ ఘరానా</li>
+      </ul>
+      <div class="reveal">
+        <input id="t15" class="toggle" type="checkbox" />
+        <label class="btn" for="t15">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>A) లక్నో ఘరానా</b></div>
+      </div>
+    </article>
+
+    <!-- Q16 -->
+    <article class="card">
+      <div class="question"><span class="qno">16.</span> విజయనగర సామ్రాజ్యం స్థాపన సమయంలో ఢిల్లీ సుల్తాన్ ఎవరు?</div>
+      <ul class="opts">
+        <li>A) కుత్బుద్దీన్ అయ్‌బక్</li><li>B) మహ్మద్ బిన్ తుగ్లక్</li><li>C) ఘియాస్‌ఉద్దీన్ తుగ్లక్</li><li>D) అలౌద్దీన్ ఖిల్జీ</li>
+      </ul>
+      <div class="reveal">
+        <input id="t16" class="toggle" type="checkbox" />
+        <label class="btn" for="t16">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>B) మహ్మద్ బిన్ తుగ్లక్</b></div>
+      </div>
+    </article>
+
+    <div class="section">సాధారణ విజ్ఞానం</div>
+
+    <!-- Q17 -->
+    <article class="card">
+      <div class="question"><span class="qno">17.</span> తేలికపాటి, రంధ్రాలతో కూడిన ప్యూమిస్ రాయి ఏ భూభౌతిక ప్రక్రియ వల్ల ఏర్పడుతుంది?</div>
+      <ul class="opts">
+        <li>A) నదీ పడకలలో అవక్షేపణ</li><li>B) చునా రాతి రూపాంతరం</li><li>C) పేలుడు స్వభావం గల అగ్నిపర్వత విస్ఫోటనలు</li><li>D) లోతైన భాగంలో మాగ్మా నెమ్మదిగా చల్లబడటం</li>
+      </ul>
+      <div class="reveal">
+        <input id="t17" class="toggle" type="checkbox" />
+        <label class="btn" for="t17">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>C) పేలుడు స్వభావం గల అగ్నిపర్వత విస్ఫోటనలు</b></div>
+      </div>
+    </article>
+
+    <!-- Q18 -->
+    <article class="card">
+      <div class="question"><span class="qno">18.</span> క్రింది మూలకాలలో గ్రూప్-16 (ఆక్సిజన్ సమూహం)కు చెందినది ఏది?</div>
+      <ul class="opts">
+        <li>A) క్లోరిన్</li><li>B) ఆర్గాన్</li><li>C) సోడియం</li><li>D) గంధకం (సల్ఫర్)</li>
+      </ul>
+      <div class="reveal">
+        <input id="t18" class="toggle" type="checkbox" />
+        <label class="btn" for="t18">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>D) గంధకం (సల్ఫర్)</b></div>
+      </div>
+    </article>
+
+    <!-- Q19 -->
+    <article class="card">
+      <div class="question"><span class="qno">19.</span> గ్యాలీనా (లెడ్ గ్లాన్స్) ఏ లోహానికి ముఖ్యమైన ధాతు ఖనిజం?</div>
+      <ul class="opts">
+        <li>A) సీసం (లీడ్)</li><li>B) జింక్</li><li>C) ఇనుము</li><li>D) రాగి</li>
+      </ul>
+      <div class="reveal">
+        <input id="t19" class="toggle" type="checkbox" />
+        <label class="btn" for="t19">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>A) సీసం (లీడ్)</b></div>
+      </div>
+    </article>
+
+    <!-- Q20 -->
+    <article class="card">
+      <div class="question"><span class="qno">20.</span> బోస్-ఐన్‌స్టీన్ కండెన్సేట్ అనే పదార్థ స్థితిని 1924లో ఆల్బర్ట్ ఐన్‌స్టీన్ ఏ భారత శాస్త్రవేత్తతో పాటు సిద్ధాంతపరంగా ఊహించాడు?</div>
+      <ul class="opts">
+        <li>A) సి. వి. రామన్</li><li>B) సత్యేంద్రనాథ్ బోస్</li><li>C) హోమీ జె. భాభా</li><li>D) మేఘనాద్ సహా</li>
+      </ul>
+      <div class="reveal">
+        <input id="t20" class="toggle" type="checkbox" />
+        <label class="btn" for="t20">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>B) సత్యేంద్రనాథ్ బోస్</b></div>
+      </div>
+    </article>
+
+    <!-- Q21 -->
+    <article class="card">
+      <div class="question"><span class="qno">21.</span> క్రింది ద్రావణాలలో ఏది బ్లూ లిట్మస్‌ను ఎర్రగా మార్చదు?</div>
+      <ul class="opts">
+        <li>A) హైడ్రోక్లోరిక్ యాసిడ్</li><li>B) సోడియం హైడ్రాక్సైడ్</li><li>C) నిమ్మరసం</li><li>D) అసిటిక్ యాసిడ్</li>
+      </ul>
+      <div class="reveal">
+        <input id="t21" class="toggle" type="checkbox" />
+        <label class="btn" for="t21">జవాబు చూడండి</label>
+        <div class="answer">సరైన జవాబు: <b>B) సోడియం హైడ్రాక్సైడ్</b></div>
+      </div>
+    </article>
+
+    <div class="ans-key">
+      <b>సమాధానాల సంక్షిప్త జాబితా:</b>
+      1-D, 2-B, 3-A, 4-C, 5-A, 6-B, 7-D, 8-B, 9-A, 10-C,
+      11-D, 12-A, 13-B, 14-D, 15-A, 16-B, 17-C, 18-D, 19-A, 20-B, 21-B.
+    </div>
+  </main>
+</body>
+</html>
