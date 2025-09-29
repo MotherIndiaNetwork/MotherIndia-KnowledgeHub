@@ -47,7 +47,7 @@ To make competitive exam preparation accessible and effective for students acros
 - **YouTube (Hindi)**: [@RekhamAcademy-Hindi](https://www.youtube.com/@RekhamAcademy-Hindi)  
 - **YouTube (Telugu)**: [@RekhamAcademy-Telugu](https://www.youtube.com/@RekhamAcademy-Telugu)
 
-- **Telegram Group**: [Jobs_StudyMaterial](https://t.me/JobsIndia_StudyMaterial)  
+- **Telegram Group**:  https://t.me/Jobs_StudyMaterial
 - **Instagram**: [@sureshrekham](https://www.instagram.com/sureshrekham/)  
 - **Facebook Page**: [Rekham Academy](https://www.facebook.com/share/16iqpv4QPJ/)  
 - **WhatsApp Channel**: [Join Here](https://whatsapp.com/channel/0029VbAhaTi0LKZ4vRhEh31K)
