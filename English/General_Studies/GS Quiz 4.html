@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rekham Academy — General Awareness & Current Affairs Quiz</title>
+<style>
+  :root{
+    --bg: #0f172a;          /* slate-900 */
+    --card: #111827;        /* gray-900 */
+    --muted: #94a3b8;       /* slate-400 */
+    --text: #e5e7eb;        /* gray-200 */
+    --brand: #22d3ee;       /* cyan-400 */
+    --accent: #a78bfa;      /* violet-400 */
+    --ok: #34d399;          /* emerald-400 */
+    --warn: #f59e0b;        /* amber-500 */
+    --pink: #fb7185;        /* rose-400 */
+  }
+  html,body{
+    margin:0;
+    padding:0;
+    background: linear-gradient(135deg, #0b1225 0%, #101827 50%, #0b1225 100%);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+    color: var(--text);
+  }
+
+  /* Portrait-friendly container (good for mobile screens / Shorts) */
+  .page{
+    max-width: 480px;          /* portrait feel */
+    margin: 16px auto;
+    padding: 16px;
+  }
+
+  .banner{
+    border-radius: 20px;
+    padding: 18px 16px;
+    background:
+      radial-gradient(120px 90px at 10% 20%, rgba(34,211,238,.25), transparent 60%),
+      radial-gradient(140px 100px at 90% 15%, rgba(167,139,250,.25), transparent 60%),
+      radial-gradient(160px 120px at 80% 85%, rgba(251,113,133,.20), transparent 55%),
+      linear-gradient(180deg, #0f172a 0%, #0b1020 100%);
+    box-shadow: 0 12px 30px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.06);
+  }
+  .brand{
+    font-weight: 800;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+    color: var(--brand);
+    font-size: 13px;
+  }
+  h1{
+    margin: 8px 0 0 0;
+    font-size: 22px;
+    line-height: 1.25;
+  }
+  .sub{
+    margin: 6px 0 0 0;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .card{
+    background: var(--card);
+    border-radius: 16px;
+    padding: 14px;
+    margin: 14px 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.05);
+  }
+  .section-title{
+    font-weight: 700;
+    font-size: 16px;
+    margin: 6px 0 10px;
+    color: var(--accent);
+    letter-spacing: .2px;
+  }
+
+  ol.qs{
+    list-style: none;
+    counter-reset: q;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 12px;
+  }
+  li.q{
+    counter-increment: q;
+    background: rgba(255,255,255,.03);
+    border-radius: 14px;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,.06);
+  }
+  .qtext::before{
+    content: counter(q) ". ";
+    font-weight: 800;
+    color: var(--brand);
+  }
+  .qtext{
+    font-size: 16px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  .opts{
+    display: grid;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+  .opt{
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.06);
+    font-size: 15px;
+  }
+
+  details{
+    background: #0b1325;
+    border-radius: 12px;
+    border: 1px dashed rgba(255,255,255,.15);
+    padding: 8px 10px;
+  }
+  summary{
+    cursor: pointer;
+    list-style: none;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--warn);
+  }
+  summary::-webkit-details-marker{ display:none; }
+  .answer{
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+  .answer b{ color: var(--ok); }
+
+  /* Answer key at end */
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    font-size: 14px;
+  }
+  .pill{
+    background: rgba(34,211,238,.08);
+    border: 1px solid rgba(34,211,238,.25);
+    color: #d1f5fb;
+    border-radius: 10px;
+    padding: 8px 10px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  /* Small screens */
+  @media (max-width: 360px){
+    h1{ font-size: 20px; }
+    .qtext{ font-size: 15px; }
+    .opt{ font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header class="banner">
+      <div class="brand">Rekham Academy</div>
+      <h1>General Awareness • Current Affairs & GK Quiz</h1>
+      <p class="sub">Click to reveal answers • Works offline • Portrait-friendly</p>
+    </header>
+
+    <!-- Current Affairs -->
+    <section class="card">
+      <div class="section-title">Current Affairs</div>
+      <ol class="qs">
+
+        <li class="q">
+          <div class="qtext">Who was appointed as the Chairperson of the National Human Rights Commission (NHRC)?</div>
+          <div class="opts">
+            <div class="opt">A) Ramasubramanian</div>
+            <div class="opt">B) Surya Prakash</div>
+            <div class="opt">C) Chandra Shekhar</div>
+            <div class="opt">D) Ajith Sharma</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> A) Ramasubramanian</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">Who is also known as the “Drag King” in Indian motorsport?</div>
+          <div class="opts">
+            <div class="opt">A) Hemanth</div>
+            <div class="opt">B) Srihari</div>
+            <div class="opt">C) Laxman</div>
+            <div class="opt">D) Jeevan</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> A) Hemanth</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">Who launched the ‘Viksit Panchayat Karmayogi’ initiative on Good Governance Day?</div>
+          <div class="opts">
+            <div class="opt">A) Vishnu Tej</div>
+            <div class="opt">B) Jitendra Singh</div>
+            <div class="opt">C) Rajendra Varma</div>
+            <div class="opt">D) Prakash Raj</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> B) Jitendra Singh</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">ISRO successfully launched the ______ mission on December 30, 2024, using the PSLV-C60 rocket.</div>
+          <div class="opts">
+            <div class="opt">A) SpaDeX</div>
+            <div class="opt">B) SpaDer</div>
+            <div class="opt">C) RanDr</div>
+            <div class="opt">D) RpaDr</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> A) SpaDeX</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">Who unveiled the “Dalai Lama’s Secret to Happiness”?</div>
+          <div class="opts">
+            <div class="opt">A) Shankar Ananad</div>
+            <div class="opt">B) Kartik</div>
+            <div class="opt">C) Dinesh Shahra</div>
+            <div class="opt">D) Rahul Viraj</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> C) Dinesh Shahra</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">AICTE and ______ introduced India’s first UG minor in Quantum Technologies.</div>
+          <div class="opts">
+            <div class="opt">A) BDI</div>
+            <div class="opt">B) HWO</div>
+            <div class="opt">C) CHN</div>
+            <div class="opt">D) NQM</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> D) NQM</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">What is the full form of SAIL?</div>
+          <div class="opts">
+            <div class="opt">A) Steel Authenticate of India Limited</div>
+            <div class="opt">B) Steel Authorised of India Limited</div>
+            <div class="opt">C) Steel Array of India Limited</div>
+            <div class="opt">D) Steel Authority of India Limited</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> D) Steel Authority of India Limited</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">The International Day of Epidemic Preparedness is observed on:</div>
+          <div class="opts">
+            <div class="opt">A) January 2</div>
+            <div class="opt">B) December 2</div>
+            <div class="opt">C) December 27</div>
+            <div class="opt">D) January 27</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> C) December 27</div></details>
+        </li>
+      </ol>
+    </section>
+
+    <!-- General Knowledge -->
+    <section class="card">
+      <div class="section-title">General Knowledge</div>
+      <ol class="qs" start="9">
+        <li class="q">
+          <div class="qtext">Who is the author of <i>Nalacharitham</i>?</div>
+          <div class="opts">
+            <div class="opt">A) Ezhuthachan</div>
+            <div class="opt">B) Unnai Warrier</div>
+            <div class="opt">C) Kumaran Asan</div>
+            <div class="opt">D) Kalidasa</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> B) Unnai Warrier</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">Which Indian city lies on the banks of the Mahanadi river?</div>
+          <div class="opts">
+            <div class="opt">A) Bhubaneswar</div>
+            <div class="opt">B) Puri</div>
+            <div class="opt">C) Cuttack</div>
+            <div class="opt">D) Rourkela</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> C) Cuttack</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">Where are the Borra Caves located?</div>
+          <div class="opts">
+            <div class="opt">A) Nallamala Hills</div>
+            <div class="opt">B) Ananthagiri Hills</div>
+            <div class="opt">C) Eastern Ghats</div>
+            <div class="opt">D) Aravalli Hills</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> B) Ananthagiri Hills</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">First Indian Grandmaster to become the Women’s Chess World Rapid Champion:</div>
+          <div class="opts">
+            <div class="opt">A) Harika Dronavalli</div>
+            <div class="opt">B) Deepika Kumari</div>
+            <div class="opt">C) Koneru Humpy</div>
+            <div class="opt">D) Tania Sachdev</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> C) Koneru Humpy</div></details>
+        </li>
+      </ol>
+    </section>
+
+    <!-- History -->
+    <section class="card">
+      <div class="section-title">History</div>
+      <ol class="qs" start="13">
+        <li class="q">
+          <div class="qtext">Purpose of the Halvakara tax during the Gupta administration:</div>
+          <div class="opts">
+            <div class="opt">A) Tax on landless laborers</div>
+            <div class="opt">B) Tax on traders and merchants</div>
+            <div class="opt">C) Tax for those who owned a plough</div>
+            <div class="opt">D) Tax on religious institutions</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> C) Tax for those who owned a plough</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">Mangal Pandey (Revolt of 1857) was a sepoy in which regiment?</div>
+          <div class="opts">
+            <div class="opt">A) 19th Bengal Native Infantry</div>
+            <div class="opt">B) 34th Bengal Native Infantry</div>
+            <div class="opt">C) 29th Bengal Native Infantry</div>
+            <div class="opt">D) 45th Bengal Native Infantry</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> B) 34th Bengal Native Infantry</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">How many classes of Indian society are mentioned in Megasthenes’ <i>Indica</i>?</div>
+          <div class="opts">
+            <div class="opt">A) Four</div>
+            <div class="opt">B) Five</div>
+            <div class="opt">C) Seven</div>
+            <div class="opt">D) Eight</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> C) Seven</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">Emblem of the Chera dynasty:</div>
+          <div class="opts">
+            <div class="opt">A) Fish</div>
+            <div class="opt">B) Bow and Arrow</div>
+            <div class="opt">C) Tiger</div>
+            <div class="opt">D) Elephant</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> B) Bow and Arrow</div></details>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Polity -->
+    <section class="card">
+      <div class="section-title">Polity</div>
+      <ol class="qs" start="17">
+        <li class="q">
+          <div class="qtext">Which Commission recommended 27% reservation for OBC candidates in government services?</div>
+          <div class="opts">
+            <div class="opt">A) Kothari Commission</div>
+            <div class="opt">B) Mandal Commission</div>
+            <div class="opt">C) Sarkaria Commission</div>
+            <div class="opt">D) Nanavati Commission</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> B) Mandal Commission</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">Article 96 of the Indian Constitution states:</div>
+          <div class="opts">
+            <div class="opt">A) The speaker cannot be removed from office.</div>
+            <div class="opt">B) The speaker or deputy speaker shall not preside during discussions on their removal.</div>
+            <div class="opt">C) The speaker and deputy speaker have equal authority in the House.</div>
+            <div class="opt">D) The speaker can vote during all proceedings.</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> B) The speaker/deputy speaker shall not preside during discussions on their removal.</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">Article 263 of the Indian Constitution deals with:</div>
+          <div class="opts">
+            <div class="opt">A) Establishment of a Finance Commission</div>
+            <div class="opt">B) Establishment of an Inter-State Council</div>
+            <div class="opt">C) Powers of the President</div>
+            <div class="opt">D) Distribution of powers between Centre and States</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> B) Establishment of an Inter-State Council</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">In which case did the Supreme Court pronounce the ‘Basic Structure’ doctrine?</div>
+          <div class="opts">
+            <div class="opt">A) Golaknath Case</div>
+            <div class="opt">B) Kesavananda Bharati Case</div>
+            <div class="opt">C) Minerva Mills Case</div>
+            <div class="opt">D) Maneka Gandhi Case</div>
+          </div>
+          <details><summary>Reveal Answer</summary><div class="answer"><b>Correct:</b> B) Kesavananda Bharati Case</div></details>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Answer Key -->
+    <section class="card">
+      <div class="section-title">Answer Key</div>
+      <div class="grid">
+        <div class="pill">1-A</div><div class="pill">2-A</div><div class="pill">3-B</div><div class="pill">4-A</div>
+        <div class="pill">5-C</div><div class="pill">6-D</div><div class="pill">7-D</div><div class="pill">8-C</div>
+        <div class="pill">9-B</div><div class="pill">10-C</div><div class="pill">11-B</div><div class="pill">12-C</div>
+        <div class="pill">13-C</div><div class="pill">14-B</div><div class="pill">15-C</div><div class="pill">16-B</div>
+        <div class="pill">17-B</div><div class="pill">18-B</div><div class="pill">19-B</div><div class="pill">20-B</div>
+      </div>
+      <p class="sub" style="margin-top:10px;">Answers are also revealed per question above.</p>
+    </section>
+
+    <footer class="sub" style="text-align:center; margin-top:8px;">
+      © Rekham Academy • All the best!
+    </footer>
+  </div>
+</body>
+</html>
