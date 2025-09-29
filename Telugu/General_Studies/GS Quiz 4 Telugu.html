@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rekham Academy — సామాన్య అవగాహన & ప్రస్తుత వ్యవహారాలు క్విజ్ (తెలుగు)</title>
+<style>
+  :root{
+    --bg: #f7fafc;           /* light */
+    --card: #ffffff;
+    --muted: #475569;        /* slate-600 */
+    --text: #0f172a;         /* slate-900 */
+    --brand: #0ea5e9;        /* sky-500 */
+    --accent: #7c3aed;       /* violet-600 */
+    --ok: #059669;           /* emerald-600 */
+    --warn: #b45309;         /* amber-700 */
+    --border: #e2e8f0;       /* slate-200 */
+    --soft: #eef2ff;         /* indigo-50 */
+  }
+  html,body{
+    margin:0; padding:0; color:var(--text); background: linear-gradient(180deg,#f8fafc 0%, #fff 60%, #f8fafc 100%);
+    font-family: "Noto Sans Telugu", "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  }
+  .page{ max-width: 520px; margin: 16px auto; padding: 16px; }
+
+  .banner{
+    border-radius: 18px; padding: 18px 16px;
+    background:
+      radial-gradient(160px 120px at 12% 20%, rgba(14,165,233,.18), transparent 60%),
+      radial-gradient(160px 120px at 88% 18%, rgba(124,58,237,.14), transparent 60%),
+      linear-gradient(180deg,#ffffff 0%, #f1f5f9 100%);
+    border:1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(2,6,23,.05);
+  }
+  .brand{ font-weight:800; letter-spacing:.3px; text-transform:uppercase; color:var(--brand); font-size:13px;}
+  h1{ margin:8px 0 0 0; font-size:22px; line-height:1.25;}
+  .sub{ margin:6px 0 0 0; color:var(--muted); font-size:13px;}
+
+  .card{
+    background: var(--card); border-radius:16px; padding:14px; margin:14px 0;
+    border:1px solid var(--border); box-shadow: 0 6px 18px rgba(2,6,23,.04);
+  }
+  .section-title{
+    font-weight:800; font-size:16px; margin:6px 0 10px; color:var(--accent); letter-spacing:.2px;
+  }
+
+  ol.qs{ list-style:none; counter-reset:q; padding:0; margin:0; display:grid; gap:12px; }
+  li.q{ counter-increment:q; background: var(--soft); border-radius:14px; padding:12px; border:1px solid var(--border); }
+  .qtext::before{ content: counter(q) ". "; font-weight:800; color:var(--brand); }
+  .qtext{ font-size:16px; line-height:1.35; margin-bottom:8px; }
+
+  .opts{ display:grid; gap:6px; margin-bottom:8px; }
+  .opt{ padding:10px 12px; border-radius:12px; background:#fff; border:1px solid var(--border); font-size:15px; }
+
+  details{ background:#fff; border-radius:12px; border:1px dashed #cbd5e1; padding:8px 10px; }
+  summary{ cursor:pointer; list-style:none; font-weight:800; font-size:14px; color:var(--warn); }
+  summary::-webkit-details-marker{ display:none; }
+  .answer{ margin-top:6px; font-size:14px; line-height:1.35; }
+  .answer b{ color:var(--ok); }
+
+  .grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap:6px; font-size:14px; }
+  .pill{
+    background:#ecfeff; border:1px solid #bae6fd; color:#065f46;
+    border-radius:10px; padding:8px 10px; text-align:center; font-weight:800;
+  }
+
+  @media (max-width:360px){
+    h1{ font-size:20px; }
+    .qtext{ font-size:15px; }
+    .opt{ font-size:14px; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header class="banner">
+      <div class="brand">Rekham Academy</div>
+      <h1>సామాన్య అవగాహన • ప్రస్తుత వ్యవహారాలు & సాధారణ జ్ఞానం — క్విజ్ (తెలుగు)</h1>
+      <p class="sub">క్లిక్ చేసి సమాధానం చూడండి • పోర్ట్రెయిట్ లేఅవుట్</p>
+    </header>
+
+    <!-- Current Affairs -->
+    <section class="card">
+      <div class="section-title">ప్రస్తుత వ్యవహారాలు</div>
+      <ol class="qs">
+        <li class="q">
+          <div class="qtext">జాతీయ మానవ హక్కుల కమిషన్ (NHRC) ఛైర్‌పర్సన్‌గా ఎవరు నియమితులయ్యారు?</div>
+          <div class="opts">
+            <div class="opt">A) Ramasubramanian</div>
+            <div class="opt">B) Surya Prakash</div>
+            <div class="opt">C) Chandra Shekhar</div>
+            <div class="opt">D) Ajith Sharma</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> A) Ramasubramanian</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">భారతీయ మోటార్‌స్పోర్ట్స్‌లో “డ్రాగ్ కింగ్”గా ప్రసిద్ధి చెందినది ఎవరు?</div>
+          <div class="opts">
+            <div class="opt">A) Hemanth</div>
+            <div class="opt">B) Srihari</div>
+            <div class="opt">C) Laxman</div>
+            <div class="opt">D) Jeevan</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> A) Hemanth</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">ఉత్తమ పాలన దినోత్సవం నాడు పంచాయతీ రాజ్ సంస్థలను బలోపేతం చేయడానికి ‘Viksit Panchayat Karmayogi’ పథకాన్ని ఎవరు ప్రారంభించారు?</div>
+          <div class="opts">
+            <div class="opt">A) Vishnu Tej</div>
+            <div class="opt">B) Jitendra Singh</div>
+            <div class="opt">C) Rajendra Varma</div>
+            <div class="opt">D) Prakash Raj</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> B) Jitendra Singh</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">డిసెంబర్ 30, 2024న PSLV-C60 ద్వారా ISRO విజయవంతంగా ప్రవేశపెట్టిన మిషన్ పేరు ఏమిటి?</div>
+          <div class="opts">
+            <div class="opt">A) SpaDeX</div>
+            <div class="opt">B) SpaDer</div>
+            <div class="opt">C) RanDr</div>
+            <div class="opt">D) RpaDr</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> A) SpaDeX</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">‘Dalai Lama’s Secret to Happiness’ ని ఎవరు ఆవిష్కరించారు?</div>
+          <div class="opts">
+            <div class="opt">A) Shankar Ananad</div>
+            <div class="opt">B) Kartik</div>
+            <div class="opt">C) Dinesh Shahra</div>
+            <div class="opt">D) Rahul Viraj</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> C) Dinesh Shahra</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">AICTE మరియు ______ కలిసి క్వాంటమ్ టెక్నాలజీస్‌లో దేశంలోని తొలి UG మైనర్ ప్రోగ్రామ్‌ను ప్రవేశపెట్టాయి.</div>
+          <div class="opts">
+            <div class="opt">A) BDI</div>
+            <div class="opt">B) HWO</div>
+            <div class="opt">C) CHN</div>
+            <div class="opt">D) NQM</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> D) NQM</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">SAIL యొక్క పూర్తి రూపం ఏమిటి?</div>
+          <div class="opts">
+            <div class="opt">A) Steel Authenticate of India Limited</div>
+            <div class="opt">B) Steel Authorised of India Limited</div>
+            <div class="opt">C) Steel Array of India Limited</div>
+            <div class="opt">D) Steel Authority of India Limited</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> D) Steel Authority of India Limited</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">అంతర్జాతీయ మహమ్మారి సిద్ధత దినోత్సవం ఎప్పుడు జరుపుకుంటారు?</div>
+          <div class="opts">
+            <div class="opt">A) January 2</div>
+            <div class="opt">B) December 2</div>
+            <div class="opt">C) December 27</div>
+            <div class="opt">D) January 27</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> C) December 27</div></details>
+        </li>
+      </ol>
+    </section>
+
+    <!-- General Knowledge -->
+    <section class="card">
+      <div class="section-title">సాధారణ జ్ఞానం</div>
+      <ol class="qs" start="9">
+        <li class="q">
+          <div class="qtext"><i>Nalacharitham</i> రచయిత ఎవరు?</div>
+          <div class="opts">
+            <div class="opt">A) Ezhuthachan</div>
+            <div class="opt">B) Unnai Warrier</div>
+            <div class="opt">C) Kumaran Asan</div>
+            <div class="opt">D) Kalidasa</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> B) Unnai Warrier</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">మహానది నది ఒడ్డున ఉన్న భారత నగరం ఏది?</div>
+          <div class="opts">
+            <div class="opt">A) Bhubaneswar</div>
+            <div class="opt">B) Puri</div>
+            <div class="opt">C) Cuttack</div>
+            <div class="opt">D) Rourkela</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> C) Cuttack</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">బొర్రా గుహలు ఎక్కడ ఉన్నాయి?</div>
+          <div class="opts">
+            <div class="opt">A) Nallamala Hills</div>
+            <div class="opt">B) Ananthagiri Hills</div>
+            <div class="opt">C) Eastern Ghats</div>
+            <div class="opt">D) Aravalli Hills</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> B) Ananthagiri Hills</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">మహిళల చెస్ ప్రపంచ రాపిడ్ ఛాంపియన్‌గా కిరీటం దక్కించిన తొలి భారతీయ గ్రాండ్‌మాస్టర్ ఎవరు?</div>
+          <div class="opts">
+            <div class="opt">A) Harika Dronavalli</div>
+            <div class="opt">B) Deepika Kumari</div>
+            <div class="opt">C) Koneru Humpy</div>
+            <div class="opt">D) Tania Sachdev</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> C) Koneru Humpy</div></details>
+        </li>
+      </ol>
+    </section>
+
+    <!-- History -->
+    <section class="card">
+      <div class="section-title">చరిత్ర</div>
+      <ol class="qs" start="13">
+        <li class="q">
+          <div class="qtext">గుప్తుల పరిపాలనలో ‘హల్వకార’ పన్ను ఉద్దేశ్యం ఏమిటి?</div>
+          <div class="opts">
+            <div class="opt">A) భూమిలేని కూలీలపై పన్ను</div>
+            <div class="opt">B) వ్యాపారులు & వ్యాపారస్థులపై పన్ను</div>
+            <div class="opt">C) హలము/నాగలి కలిగిన వారిపై పన్ను</div>
+            <div class="opt">D) ధార్మిక సంస్థలపై పన్ను</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> C) హలము/నాగలి కలిగిన వారిపై పన్ను</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">1857 తిరుగుబాటుతో సంబంధం ఉన్న మంగళ్ పాండే ఏ రేజిమెంట్‌లో సిపాయి?</div>
+          <div class="opts">
+            <div class="opt">A) 19th Bengal Native Infantry</div>
+            <div class="opt">B) 34th Bengal Native Infantry</div>
+            <div class="opt">C) 29th Bengal Native Infantry</div>
+            <div class="opt">D) 45th Bengal Native Infantry</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> B) 34th Bengal Native Infantry</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">మెగస్థెనీస్ రచించిన <i>Indica</i> ప్రకారం భారత సమాజపు వర్గాల సంఖ్య ఎన్ని?</div>
+          <div class="opts">
+            <div class="opt">A) నాలుగు</div>
+            <div class="opt">B) ఐదు</div>
+            <div class="opt">C) ఏడు</div>
+            <div class="opt">D) ఎనిమిది</div>
+          </div>
+          <details><summary>సమాధാനം చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> C) ఏడు</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">చేరుల వంశ చిహ్నం ఏమిటి?</div>
+          <div class="opts">
+            <div class="opt">A) చేప</div>
+            <div class="opt">B) ధనస్సు-బాణం</div>
+            <div class="opt">C) పులి</div>
+            <div class="opt">D) ఏనుగు</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> B) ధనస్సు-బాణం</div></details>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Polity -->
+    <section class="card">
+      <div class="section-title">రాజ్యాంగం & పాలన</div>
+      <ol class="qs" start="17">
+        <li class="q">
+          <div class="qtext">ప్రభుత్వ సేవలలో OBCలకు 27% రిజర్వేషన్‌ను సిఫారసు చేసిన కమిషన్ ఏది?</div>
+          <div class="opts">
+            <div class="opt">A) Kothari Commission</div>
+            <div class="opt">B) Mandal Commission</div>
+            <div class="opt">C) Sarkaria Commission</div>
+            <div class="opt">D) Nanavati Commission</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> B) Mandal Commission</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">భారత రాజ్యాంగంలోని ఆర్టికల్ 96 ప్రకారం—</div>
+          <div class="opts">
+            <div class="opt">A) స్పీకర్‌ను పదవి నుండి తొలగించలేరు</div>
+            <div class="opt">B) స్పీకర్/ఉపస్పీకర్ తొలగింపు తీర్మానంపై చర్చ జరుగుతున్నప్పుడు వారు సభను అధ్యక్షత వహించరాదు</div>
+            <div class="opt">C) స్పీకర్ & ఉపస్పీకర్‌కు సమాన అధికారాలు ఉన్నాయి</div>
+            <div class="opt">D) స్పీకర్ అన్ని ప్రక్రియల్లో ఓటు వేయగలరు</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> B) స్పీకర్/ఉపస్పీకర్ తొలగింపు చర్చలో అధ్యక్షత వహించరాదు</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">ఆర్టికల్ 263 ఏ విషయానికి సంబంధించినది?</div>
+          <div class="opts">
+            <div class="opt">A) ఫైనాన్స్ కమిషన్ స్థాపన</div>
+            <div class="opt">B) అంతర్రాజ్య మండలి (Inter-State Council) స్థాపన</div>
+            <div class="opt">C) రాష్ట్రపతి అధికారాలు</div>
+            <div class="opt">D) కేంద్ర-రాజ్య అధికారాల పంపిణీ</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> B) అంతర్రాజ్య మండలి స్థాపన</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">‘బేసిక్ స్ట్రక్చర్’ సిద్ధాంతాన్ని సుప్రీంకోర్టు ఏ కేసులో ప్రతిపాదించింది?</div>
+          <div class="opts">
+            <div class="opt">A) Golaknath Case</div>
+            <div class="opt">B) Kesavananda Bharati Case</div>
+            <div class="opt">C) Minerva Mills Case</div>
+            <div class="opt">D) Maneka Gandhi Case</div>
+          </div>
+          <details><summary>సమాధానం చూపు</summary><div class="answer"><b>సరైన సమాధానం:</b> B) Kesavananda Bharati Case</div></details>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Answer Key -->
+    <section class="card">
+      <div class="section-title">సమాధానాల సంక్షిప్త పట్టిక</div>
+      <div class="grid">
+        <div class="pill">1-A</div><div class="pill">2-A</div><div class="pill">3-B</div><div class="pill">4-A</div>
+        <div class="pill">5-C</div><div class="pill">6-D</div><div class="pill">7-D</div><div class="pill">8-C</div>
+        <div class="pill">9-B</div><div class="pill">10-C</div><div class="pill">11-B</div><div class="pill">12-C</div>
+        <div class="pill">13-C</div><div class="pill">14-B</div><div class="pill">15-C</div><div class="pill">16-B</div>
+        <div class="pill">17-B</div><div class="pill">18-B</div><div class="pill">19-B</div><div class="pill">20-B</div>
+      </div>
+      <p class="sub" style="margin-top:10px;">ప్రతి ప్రశ్న వద్ద “సమాధానం చూపు” క్లిక్ చేస్తే కూడా కనిపిస్తుంది.</p>
+    </section>
+
+    <footer class="sub" style="text-align:center; margin-top:8px;">
+      © Rekham Academy • All the best!
+    </footer>
+  </div>
+</body>
+</html>
