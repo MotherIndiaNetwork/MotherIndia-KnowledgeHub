@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rekham Academy — सामन्य जागरूकता & वर्तमान घटनाक्रम (हिंदी)</title>
+<style>
+  :root{
+    --bg1: #ecfdf5;          /* emerald-50 */
+    --bg2: #f0fff4;          /* light green tint */
+    --card: #ffffff;
+    --muted: #22543d;        /* green-900-ish */
+    --text: #083344;         /* deep teal */
+    --brand: #059669;        /* emerald-600 */
+    --accent: #047857;       /* emerald-700 */
+    --ok: #065f46;           /* emerald-800 */
+    --warn: #b45309;         /* amber-700 */
+    --border: #bbf7d0;       /* green-200 */
+    --soft: #dcfce7;         /* green-100 */
+  }
+  html,body{
+    margin:0; padding:0;
+    color:var(--text);
+    background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 60%, var(--bg1) 100%);
+    font-family: "Noto Sans Devanagari","Noto Sans","Hind",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  }
+  .page{ max-width:520px; margin:16px auto; padding:16px; }
+
+  .banner{
+    border-radius:18px; padding:18px 16px;
+    background:
+      radial-gradient(160px 120px at 12% 22%, rgba(5,150,105,.15), transparent 60%),
+      radial-gradient(160px 120px at 88% 18%, rgba(4,120,87,.12), transparent 60%),
+      linear-gradient(180deg,#ffffff 0%, #e8fff1 100%);
+    border:1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(2,6,23,.05);
+  }
+  .brand{ font-weight:800; letter-spacing:.3px; text-transform:uppercase; color:var(--brand); font-size:13px;}
+  h1{ margin:8px 0 0 0; font-size:22px; line-height:1.25;}
+  .sub{ margin:6px 0 0 0; color:var(--muted); font-size:13px;}
+
+  .card{
+    background: var(--card); border-radius:16px; padding:14px; margin:14px 0;
+    border:1px solid var(--border); box-shadow: 0 6px 18px rgba(2,6,23,.06);
+  }
+  .section-title{
+    font-weight:800; font-size:16px; margin:6px 0 10px; color:var(--accent); letter-spacing:.2px;
+  }
+
+  ol.qs{ list-style:none; counter-reset:q; padding:0; margin:0; display:grid; gap:12px; }
+  li.q{ counter-increment:q; background: var(--soft); border-radius:14px; padding:12px; border:1px solid var(--border); }
+  .qtext::before{ content: counter(q) ". "; font-weight:800; color:var(--brand); }
+  .qtext{ font-size:16px; line-height:1.35; margin-bottom:8px; }
+
+  .opts{ display:grid; gap:6px; margin-bottom:8px; }
+  .opt{ padding:10px 12px; border-radius:12px; background:#fff; border:1px solid var(--border); font-size:15px; }
+
+  details{ background:#fff; border-radius:12px; border:1px dashed #86efac; padding:8px 10px; }
+  summary{ cursor:pointer; list-style:none; font-weight:800; font-size:14px; color:var(--warn); }
+  summary::-webkit-details-marker{ display:none; }
+  .answer{ margin-top:6px; font-size:14px; line-height:1.35; }
+  .answer b{ color:var(--ok); }
+
+  .grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap:6px; font-size:14px; }
+  .pill{
+    background:#d1fae5; border:1px solid #86efac; color:#064e3b;
+    border-radius:10px; padding:8px 10px; text-align:center; font-weight:800;
+  }
+
+  @media (max-width:360px){
+    h1{ font-size:20px; }
+    .qtext{ font-size:15px; }
+    .opt{ font-size:14px; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header class="banner">
+      <div class="brand">Rekham Academy</div>
+      <h1>सामान्य जागरूकता • वर्तमान घटनाक्रम एवं सामान्य ज्ञान — क्विज़ (हिंदी)</h1>
+      <p class="sub">उत्तर देखने के लिए क्लिक करें • पोर्ट्रेट लेआउट</p>
+    </header>
+
+    <!-- Current Affairs -->
+    <section class="card">
+      <div class="section-title">वर्तमान घटनाक्रम (Current Affairs)</div>
+      <ol class="qs">
+        <li class="q">
+          <div class="qtext">राष्ट्रीय मानवाधिकार आयोग (NHRC) के अध्यक्ष के रूप में किसे नियुक्त किया गया?</div>
+          <div class="opts">
+            <div class="opt">A) Ramasubramanian</div>
+            <div class="opt">B) Surya Prakash</div>
+            <div class="opt">C) Chandra Shekhar</div>
+            <div class="opt">D) Ajith Sharma</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> A) Ramasubramanian</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">भारतीय मोटरस्पोर्ट में “ड्रैग किंग” के रूप में किसे जाना जाता है?</div>
+          <div class="opts">
+            <div class="opt">A) Hemanth</div>
+            <div class="opt">B) Srihari</div>
+            <div class="opt">C) Laxman</div>
+            <div class="opt">D) Jeevan</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> A) Hemanth</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">सुशासन दिवस पर पंचायती राज संस्थाओं को सशक्त करने हेतु ‘Viksit Panchayat Karmayogi’ पहल किसने शुरू की?</div>
+          <div class="opts">
+            <div class="opt">A) Vishnu Tej</div>
+            <div class="opt">B) Jitendra Singh</div>
+            <div class="opt">C) Rajendra Varma</div>
+            <div class="opt">D) Prakash Raj</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> B) Jitendra Singh</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">30 दिसंबर, 2024 को PSLV-C60 से ISRO ने किस मिशन का सफल प्रक्षेपण किया?</div>
+          <div class="opts">
+            <div class="opt">A) SpaDeX</div>
+            <div class="opt">B) SpaDer</div>
+            <div class="opt">C) RanDr</div>
+            <div class="opt">D) RpaDr</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> A) SpaDeX</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">‘दलाई लामा’ के <i>Secret to Happiness</i> का अनावरण किसने किया?</div>
+          <div class="opts">
+            <div class="opt">A) Shankar Ananad</div>
+            <div class="opt">B) Kartik</div>
+            <div class="opt">C) Dinesh Shahra</div>
+            <div class="opt">D) Rahul Viraj</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> C) Dinesh Shahra</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">AICTE और ______ ने क्वांटम टेक्नोलॉजीज़ में देश का पहला स्नातक (UG) माइनर प्रोग्राम शुरू किया।</div>
+          <div class="opts">
+            <div class="opt">A) BDI</div>
+            <div class="opt">B) HWO</div>
+            <div class="opt">C) CHN</div>
+            <div class="opt">D) NQM</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> D) NQM</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">SAIL का पूर्ण रूप क्या है?</div>
+          <div class="opts">
+            <div class="opt">A) Steel Authenticate of India Limited</div>
+            <div class="opt">B) Steel Authorised of India Limited</div>
+            <div class="opt">C) Steel Array of India Limited</div>
+            <div class="opt">D) Steel Authority of India Limited</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> D) Steel Authority of India Limited</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">महामारी तैयारी का अंतरराष्ट्रीय दिवस (International Day of Epidemic Preparedness) कब मनाया जाता है?</div>
+          <div class="opts">
+            <div class="opt">A) 2 जनवरी</div>
+            <div class="opt">B) 2 दिसंबर</div>
+            <div class="opt">C) 27 दिसंबर</div>
+            <div class="opt">D) 27 जनवरी</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> C) 27 दिसंबर</div></details>
+        </li>
+      </ol>
+    </section>
+
+    <!-- General Knowledge -->
+    <section class="card">
+      <div class="section-title">सामान्य ज्ञान (General Knowledge)</div>
+      <ol class="qs" start="9">
+        <li class="q">
+          <div class="qtext"><i>नलचरितम्</i> के लेखक कौन हैं?</div>
+          <div class="opts">
+            <div class="opt">A) Ezhuthachan</div>
+            <div class="opt">B) Unnai Warrier</div>
+            <div class="opt">C) Kumaran Asan</div>
+            <div class="opt">D) Kalidasa</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> B) Unnai Warrier</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">महानदी के तट पर स्थित भारतीय शहर कौन-सा है?</div>
+          <div class="opts">
+            <div class="opt">A) Bhubaneswar</div>
+            <div class="opt">B) Puri</div>
+            <div class="opt">C) Cuttack</div>
+            <div class="opt">D) Rourkela</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> C) Cuttack</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">बोरा गुफाएँ कहाँ स्थित हैं?</div>
+          <div class="opts">
+            <div class="opt">A) Nallamala Hills</div>
+            <div class="opt">B) Ananthagiri Hills</div>
+            <div class="opt">C) Eastern Ghats</div>
+            <div class="opt">D) Aravalli Hills</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> B) Ananthagiri Hills</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">महिला शतरंज विश्व रैपिड चैम्पियन बनने वाली पहली भारतीय ग्रैंडमास्टर कौन हैं?</div>
+          <div class="opts">
+            <div class="opt">A) Harika Dronavalli</div>
+            <div class="opt">B) Deepika Kumari</div>
+            <div class="opt">C) Koneru Humpy</div>
+            <div class="opt">D) Tania Sachdev</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> C) Koneru Humpy</div></details>
+        </li>
+      </ol>
+    </section>
+
+    <!-- History -->
+    <section class="card">
+      <div class="section-title">इतिहास (History)</div>
+      <ol class="qs" start="13">
+        <li class="q">
+          <div class="qtext">गुप्त प्रशासन के दौरान ‘Halvakara’ कर का उद्देश्य क्या था?</div>
+          <div class="opts">
+            <div class="opt">A) भूमिहीन मजदूरों पर कर</div>
+            <div class="opt">B) व्यापारियों एवं सौदागरों पर कर</div>
+            <div class="opt">C) हल/नांगल (हल) रखने वालों पर कर</div>
+            <div class="opt">D) धार्मिक संस्थाओं पर कर</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> C) हल रखने वालों पर कर</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">1857 के विद्रोह से जुड़े मंगल पांडे ब्रिटिश ईस्ट इंडिया कंपनी की किस रेजिमेंट में सिपाही थे?</div>
+          <div class="opts">
+            <div class="opt">A) 19th Bengal Native Infantry</div>
+            <div class="opt">B) 34th Bengal Native Infantry</div>
+            <div class="opt">C) 29th Bengal Native Infantry</div>
+            <div class="opt">D) 45th Bengal Native Infantry</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> B) 34th Bengal Native Infantry</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">मेगस्थनीज़ की <i>Indica</i> में भारतीय समाज के कितने वर्गों का उल्लेख है?</div>
+          <div class="opts">
+            <div class="opt">A) चार</div>
+            <div class="opt">B) पाँच</div>
+            <div class="opt">C) सात</div>
+            <div class="opt">D) आठ</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> C) सात</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">चेरा वंश (केरल का मध्य-उत्तरी भाग एवं तमिलनाडु का कोंगु क्षेत्र) का चिह्न क्या था?</div>
+          <div class="opts">
+            <div class="opt">A) मछली</div>
+            <div class="opt">B) धनुष-बाण</div>
+            <div class="opt">C) बाघ</div>
+            <div class="opt">D) हाथी</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> B) धनुष-बाण</div></details>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Polity -->
+    <section class="card">
+      <div class="section-title">राजव्यवस्था (Polity)</div>
+      <ol class="qs" start="17">
+        <li class="q">
+          <div class="qtext">सरकारी सेवाओं में ओबीसी के लिए 27% आरक्षण की सिफारिश किस आयोग ने की?</div>
+          <div class="opts">
+            <div class="opt">A) Kothari Commission</div>
+            <div class="opt">B) Mandal Commission</div>
+            <div class="opt">C) Sarkaria Commission</div>
+            <div class="opt">D) Nanavati Commission</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> B) Mandal Commission</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">भारतीय संविधान का अनुच्छेद 96 क्या कहता है?</div>
+          <div class="opts">
+            <div class="opt">A) स्पीकर को पद से हटाया नहीं जा सकता</div>
+            <div class="opt">B) स्पीकर/उप-स्पीकर के हटाने पर विचार के दौरान वे सभा की अध्यक्षता नहीं करेंगे</div>
+            <div class="opt">C) स्पीकर और उप-स्पीकर के अधिकार समान हैं</div>
+            <div class="opt">D) स्पीकर सभी कार्यवाहियों में मतदान कर सकते हैं</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> B) हटाने पर चर्चा के समय अध्यक्षता नहीं करेंगे</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">अनुच्छेद 263 किससे संबंधित है?</div>
+          <div class="opts">
+            <div class="opt">A) वित्त आयोग की स्थापना</div>
+            <div class="opt">B) अंतर-राज्य परिषद (Inter-State Council) की स्थापना</div>
+            <div class="opt">C) राष्ट्रपति के अधिकार</div>
+            <div class="opt">D) केंद्र-राज्य शक्तियों का विभाजन</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> B) अंतर-राज्य परिषद की स्थापना</div></details>
+        </li>
+
+        <li class="q">
+          <div class="qtext">‘मूल संरचना सिद्धांत’ (Basic Structure Doctrine) किस मामले में प्रतिपादित किया गया?</div>
+          <div class="opts">
+            <div class="opt">A) Golaknath Case</div>
+            <div class="opt">B) Kesavananda Bharati Case</div>
+            <div class="opt">C) Minerva Mills Case</div>
+            <div class="opt">D) Maneka Gandhi Case</div>
+          </div>
+          <details><summary>उत्तर दिखाएँ</summary><div class="answer"><b>सही उत्तर:</b> B) Kesavananda Bharati Case</div></details>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Answer Key -->
+    <section class="card">
+      <div class="section-title">Answer Key</div>
+      <div class="grid">
+        <div class="pill">1-A</div><div class="pill">2-A</div><div class="pill">3-B</div><div class="pill">4-A</div>
+        <div class="pill">5-C</div><div class="pill">6-D</div><div class="pill">7-D</div><div class="pill">8-C</div>
+        <div class="pill">9-B</div><div class="pill">10-C</div><div class="pill">11-B</div><div class="pill">12-C</div>
+        <div class="pill">13-C</div><div class="pill">14-B</div><div class="pill">15-C</div><div class="pill">16-B</div>
+        <div class="pill">17-B</div><div class="pill">18-B</div><div class="pill">19-B</div><div class="pill">20-B</div>
+      </div>
+      <p class="sub" style="margin-top:10px;">ऊपर प्रत्येक प्रश्न के नीचे “उत्तर दिखाएँ” पर टैप करके भी उत्तर देख सकते हैं।</p>
+    </section>
+
+    <footer class="sub" style="text-align:center; margin-top:8px;">
+      © Rekham Academy • All the best!
+    </footer>
+  </div>
+</body>
+</html>
