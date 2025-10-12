@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>General Awareness Quiz — Bilingual (EN + HI) | Rekham Academy</title>
+<style>
+  /* ===== Theme ===== */
+  :root{
+    --bgA:#fff7fb;
+    --bgB:#eefcff;
+    --ink:#142033;
+    --muted:#5c6375;
+    --card:#ffffffee;
+    --ring:#9b5cff;
+    --ring2:#ff6ec7;
+    --ring3:#00c2ff;
+    --ok:#14a44d;
+    --shadow:0 12px 30px rgba(0,0,0,.10);
+  }
+  html,body{margin:0;padding:0;background:linear-gradient(120deg,var(--bgA),var(--bgB));color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif}
+  .wrap{max-width:1100px;margin:0 auto;padding:20px 16px 60px}
+  /* ===== Header ===== */
+  .hero{
+    position:relative;border-radius:22px;padding:28px 22px;margin:8px 0 18px;
+    background:
+      radial-gradient(600px 140px at 10% 0%, rgba(255,255,255,.4), transparent 40%),
+      radial-gradient(600px 140px at 90% 100%, rgba(255,255,255,.35), transparent 40%),
+      conic-gradient(from 180deg at 50% 50%, #6b5bff, #ff6ec7, #00c2ff, #6b5bff);
+    color:#fff;box-shadow:var(--shadow);overflow:hidden
+  }
+  .hero h1{margin:0 0 6px;font-size:30px;letter-spacing:.2px}
+  .brand{font-weight:900;text-transform:uppercase;letter-spacing:.6px;margin:0 0 6px;font-size:18px;opacity:.95}
+  .subtitle{margin:6px 0 0;font-size:14px;opacity:.95}
+  /* ===== Section Pills ===== */
+  .section{
+    display:flex;align-items:center;gap:10px;margin:24px 0 12px
+  }
+  .pill{
+    font-weight:800;text-transform:uppercase;letter-spacing:.5px;
+    font-size:13px;color:#0b2850;background:#fff;border:2px solid transparent;
+    padding:8px 12px;border-radius:999px;box-shadow:var(--shadow)
+  }
+  .pill.ca{border-color:#6b5bff;background:linear-gradient(90deg,#eceaff,#fff)}
+  .pill.gk{border-color:#ff6ec7;background:linear-gradient(90deg,#ffe7f7,#fff)}
+  .pill.hi{border-color:#00c2ff;background:linear-gradient(90deg,#e7f9ff,#fff)}
+  .pill.gs{border-color:#22c55e;background:linear-gradient(90deg,#eafff2,#fff)}
+  /* ===== Cards ===== */
+  .card{background:var(--card);border-radius:16px;padding:16px 14px;margin:12px 0;
+        box-shadow:var(--shadow);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.6)}
+  .q{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start}
+  .qnum{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;color:#fff;
+        font-weight:900;background:conic-gradient(from 90deg,#6b5bff,#ff6ec7,#00c2ff,#6b5bff);box-shadow:inset 0 -2px 0 rgba(0,0,0,.15)}
+  .qtext{margin:0 0 6px;font-weight:800}
+  .qtext-hi{margin:0 0 10px;color:#1a4f1f;font-weight:700}
+  .opts{display:grid;gap:6px;margin-top:6px}
+  .opt{background:#fff;border-radius:12px;padding:10px 12px;border:1px solid #e6ebf6}
+  .opt b{min-width:20px;display:inline-block}
+  details{margin-top:10px}
+  summary{
+    list-style:none;cursor:pointer;user-select:none;outline:none;
+    padding:11px 12px;border-radius:12px;font-weight:800;
+    color:#0b64a6;background:linear-gradient(135deg,#e8f6ff,#fff);
+    border:1px dashed #b6dffd
+  }
+  summary::-webkit-details-marker{display:none}
+  .ans{
+    margin:8px 2px 2px;border-left:5px solid var(--ok);
+    background:#edfff3;border-radius:10px;padding:10px 12px;
+    font-weight:800;color:#0c5b34
+  }
+  .ans small{display:block;color:#206a42;font-weight:700}
+  .note{font-size:12px;color:var(--muted);margin:12px 2px 18px}
+  .footer{margin-top:28px;text-align:center;color:var(--muted);font-size:12px}
+  /* Tiny accent border for cards */
+  .card{position:relative}
+  .card:before{
+    content:"";position:absolute;inset:-1px;z-index:-1;border-radius:18px;
+    background:linear-gradient(135deg,var(--ring),var(--ring2),var(--ring3));
+    filter:blur(12px);opacity:.22
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="brand">Rekham Academy</div>
+      <h1>General Awareness — Click‑to‑Reveal Quiz (Bilingual EN + हिंदी)</h1>
+      <p class="subtitle">Current Affairs · General Knowledge · History · General Science</p>
+    </header>
+
+    <p class="note">Tap the bar to reveal answers. Bilingual format: <b>English line</b> followed by its <b>Hindi translation</b>. Single‑file HTML; no JavaScript.</p>
+
+    <!-- ===== Current Affairs ===== -->
+    <div class="section"><span class="pill ca">Current Affairs / समसामयिकी</span></div>
+
+    <!-- Q1 -->
+    <div class="card"><div class="q">
+      <div class="qnum">1</div><div>
+        <p class="qtext">Antyodaya Diwas, observed on 25 September every year, commemorates the birth anniversary of which leader?</p>
+        <p class="qtext-hi">हर वर्ष 25 सितंबर को मनाया जाने वाला <b>अंत्योदय दिवस</b> किस नेता की जयंती का स्मरण करता है?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> Syama Prasad Mukherjee — <span>श्यामा प्रसाद मुखर्जी</span></div>
+          <div class="opt"><b>B)</b> Pandit Deendayal Upadhyaya — <span>पंडित दीनदयाल उपाध्याय</span></div>
+          <div class="opt"><b>C)</b> Atal Bihari Vajpayee — <span>अटल बिहारी वाजपेयी</span></div>
+          <div class="opt"><b>D)</b> L. K. Advani — <span>एल. के. आडवाणी</span></div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: B) Pandit Deendayal Upadhyaya <small>सही उत्तर: बी) पंडित दीनदयाल उपाध्याय</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- Q2 -->
+    <div class="card"><div class="q">
+      <div class="qnum">2</div><div>
+        <p class="qtext">Which Hindi drama has been nominated for the Oscar Awards 2026?</p>
+        <p class="qtext-hi">कौन‑सा <b>हिंदी नाटक</b> ऑस्कर पुरस्कार 2026 के लिए नामांकित हुआ है?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> The Disciple (द डिसाइपल)</div>
+          <div class="opt"><b>B)</b> Homebound (होमबाउंड)</div>
+          <div class="opt"><b>C)</b> Gully Boy (गली बॉय)</div>
+          <div class="opt"><b>D)</b> The Lunchbox (द लंचबॉक्स)</div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: B) Homebound <small>सही उत्तर: बी) होमबाउंड</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- Q3 -->
+    <div class="card"><div class="q">
+      <div class="qnum">3</div><div>
+        <p class="qtext">The Union Cabinet approved the ‘Capacity Building and Human Resource Development’ scheme with a financial outlay of how much?</p>
+        <p class="qtext-hi">केंद्र मंत्रिमंडल ने ‘क्षमता निर्माण एवं मानव संसाधन विकास’ योजना को कितनी वित्तीय राशि के साथ मंजूरी दी?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> ₹1,500 crore — <span>₹1,500 करोड़</span></div>
+          <div class="opt"><b>B)</b> ₹3,200 crore — <span>₹3,200 करोड़</span></div>
+          <div class="opt"><b>C)</b> ₹1,000 crore — <span>₹1,000 करोड़</span></div>
+          <div class="opt"><b>D)</b> ₹2,277 crore — <span>₹2,277 करोड़</span></div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: D) ₹2,277 crore <small>सही उत्तर: डी) ₹2,277 करोड़</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- Q4 -->
+    <div class="card"><div class="q">
+      <div class="qnum">4</div><div>
+        <p class="qtext">On which date is World Tourism Day 2025 observed?</p>
+        <p class="qtext-hi"><b>विश्व पर्यटन दिवस 2025</b> किस तिथि को मनाया जा रहा है?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> 27 September — <span>27 सितंबर</span></div>
+          <div class="opt"><b>B)</b> 25 September — <span>25 सितंबर</span></div>
+          <div class="opt"><b>C)</b> 30 September — <span>30 सितंबर</span></div>
+          <div class="opt"><b>D)</b> 1 October — <span>1 अक्टूबर</span></div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: A) 27 September <small>सही उत्तर: ए) 27 सितंबर</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- Q5 -->
+    <div class="card"><div class="q">
+      <div class="qnum">5</div><div>
+        <p class="qtext">Renowned Kannada novelist–philosopher S. L. Bhyrappa, who passed away on 24 September 2025, was from which Indian state?</p>
+        <p class="qtext-hi">कन्नड़ के विख्यात उपन्यासकार‑दार्शनिक <b>एस. एल. भैरप्पा</b> (24 सितंबर 2025 को निधन) किस भारतीय राज्य से थे?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> Karnataka — <span>कर्नाटक</span></div>
+          <div class="opt"><b>B)</b> Andhra Pradesh — <span>आंध्र प्रदेश</span></div>
+          <div class="opt"><b>C)</b> Tamil Nadu — <span>तमिलनाडु</span></div>
+          <div class="opt"><b>D)</b> Kerala — <span>केरल</span></div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: A) Karnataka <small>सही उत्तर: ए) कर्नाटक</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- Q6 -->
+    <div class="card"><div class="q">
+      <div class="qnum">6</div><div>
+        <p class="qtext">Who has become the first woman FIDE Master from Bihar?</p>
+        <p class="qtext-hi">बिहार की पहली महिला <b>FIDE मास्टर</b> कौन बनी हैं?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> Tania Sachdev — <span>तानिया सचदेव</span></div>
+          <div class="opt"><b>B)</b> Koneru Humpy — <span>कोनेरू हम्पी</span></div>
+          <div class="opt"><b>C)</b> Harika Dronavalli — <span>हरीका द्रोणवली</span></div>
+          <div class="opt"><b>D)</b> Marium Fatima — <span>मरियम फ़ातिमा</span></div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: D) Marium Fatima <small>सही उत्तर: डी) मरियम फ़ातिमा</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- ===== General Knowledge ===== -->
+    <div class="section"><span class="pill gk">General Knowledge / सामान्य ज्ञान</span></div>
+
+    <!-- Q7 -->
+    <div class="card"><div class="q">
+      <div class="qnum">7</div><div>
+        <p class="qtext">The Ghatam, a large narrow‑mouthed earthen pot, is traditionally used as which type of musical instrument?</p>
+        <p class="qtext-hi"><b>घटम</b> (संकरी गर्दन वाला बड़ा मिट्टी का घड़ा) पारंपरिक रूप से किस प्रकार का वाद्य है?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> String — <span>तार वाद्य</span></div>
+          <div class="opt"><b>B)</b> Wind — <span>वायु वाद्य</span></div>
+          <div class="opt"><b>C)</b> Keyboard — <span>कीबोर्ड वाद्य</span></div>
+          <div class="opt"><b>D)</b> Percussion — <span>ताल/घात वाद्य</span></div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: D) Percussion <small>सही उत्तर: डी) ताल/घात वाद्य</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- Q8 -->
+    <div class="card"><div class="q">
+      <div class="qnum">8</div><div>
+        <p class="qtext">Who was the first woman to successfully swim across the English Channel?</p>
+        <p class="qtext-hi">इंग्लिश चैनल को सफलतापूर्वक पार करने वाली पहली महिला कौन थीं?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> Florence Chadwick — <span>फ़्लॉरेन्स चैडविक</span></div>
+          <div class="opt"><b>B)</b> Gertrude Ederle — <span>गर्ट्रूड एडरली</span></div>
+          <div class="opt"><b>C)</b> Lynne Cox — <span>लिन कॉक्स</span></div>
+          <div class="opt"><b>D)</b> Arati Saha — <span>आरती साहा</span></div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: B) Gertrude Ederle <small>सही उत्तर: बी) गर्ट्रूड एडरली</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- Q9 -->
+    <div class="card"><div class="q">
+      <div class="qnum">9</div><div>
+        <p class="qtext">The archaeological site of Maski, noted for Ashokan inscriptions, is located in which Indian state?</p>
+        <p class="qtext-hi"><b>मास्की</b> (अशोक शिलालेखों के लिए प्रसिद्ध) पुरातात्त्विक स्थल किस राज्य में है?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> Karnataka — <span>कर्नाटक</span></div>
+          <div class="opt"><b>B)</b> Maharashtra — <span>महाराष्ट्र</span></div>
+          <div class="opt"><b>C)</b> Andhra Pradesh — <span>आंध्र प्रदेश</span></div>
+          <div class="opt"><b>D)</b> Tamil Nadu — <span>तमिलनाडु</span></div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: A) Karnataka <small>सही उत्तर: ए) कर्नाटक</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- Q10 -->
+    <div class="card"><div class="q">
+      <div class="qnum">10</div><div>
+        <p class="qtext">The Sri Jagannath Temple at Puri, Odisha, was constructed by which ruler in the Kalinga style?</p>
+        <p class="qtext-hi">ओडिशा के पुरी स्थित <b>श्री जगन्नाथ मंदिर</b> का निर्माण कलिंग शैली में किस शासक ने कराया?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> Narasimhavarman I — <span>नरसिंहवर्मन प्रथम</span></div>
+          <div class="opt"><b>B)</b> Rajaraja Chola I — <span>राजराज चोल प्रथम</span></div>
+          <div class="opt"><b>C)</b> Anantavarman Chodaganga Deva — <span>अनंतवर्मन चोडगंगदेव</span></div>
+          <div class="opt"><b>D)</b> Krishna Deva Raya — <span>कृ्ष्णदेवराय</span></div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: C) Anantavarman Chodaganga Deva <small>सही उत्तर: सी) अनंतवर्मन चोडगंगदेव</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- ===== History ===== -->
+    <div class="section"><span class="pill hi">History / इतिहास</span></div>
+
+    <!-- Q11 -->
+    <div class="card"><div class="q">
+      <div class="qnum">11</div><div>
+        <p class="qtext">In early South Indian history, the term “Nagaram” referred to which of the following?</p>
+        <p class="qtext-hi">प्रारंभिक दक्षिण भारतीय इतिहास में “<b>नगरम्</b>” शब्द निम्न में से किसके लिए प्रयुक्त होता था?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> Village council of peasants — <span>किसानों की ग्राम परिषद</span></div>
+          <div class="opt"><b>B)</b> Association of temple priests — <span>मंदिर पुरोहितों का संगठन</span></div>
+          <div class="opt"><b>C)</b> Military assembly of warriors — <span>योद्धाओं की सैन्य सभा</span></div>
+          <div class="opt"><b>D)</b> Assembly of merchants, traders & artisans — <span>व्यापारियों‑शिल्पियों का संगठन</span></div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: D) Assembly of merchants, traders & artisans <small>सही उत्तर: डी) व्यापारियों‑शिल्पियों का संगठन</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- Q12 -->
+    <div class="card"><div class="q">
+      <div class="qnum">12</div><div>
+        <p class="qtext">The Sanskrit play <em>Mrichchhakatika</em> was translated into English as “The Little Clay Cart” (1905) by which scholar?</p>
+        <p class="qtext-hi">संस्कृत नाटक <em>मृच्छकटिक</em> का अंग्रेज़ी अनुवाद “The Little Clay Cart” (1905) किस विद्वान ने किया?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> Arthur W. Ryder</div>
+          <div class="opt"><b>B)</b> Max Müller</div>
+          <div class="opt"><b>C)</b> William Jones</div>
+          <div class="opt"><b>D)</b> H. H. Wilson</div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: A) Arthur W. Ryder <small>सही उत्तर: ए) आर्थर डब्ल्यू. राइडर</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- Q13 -->
+    <div class="card"><div class="q">
+      <div class="qnum">13</div><div>
+        <p class="qtext">The Khudai Khidmatgar (Red Shirt) movement was founded in which year?</p>
+        <p class="qtext-hi"><b>खुदाई ख़िदमतगार</b> (रेड शर्ट) आंदोलन की शुरुआत किस वर्ष हुई?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> 1925</div>
+          <div class="opt"><b>B)</b> 1929</div>
+          <div class="opt"><b>C)</b> 1935</div>
+          <div class="opt"><b>D)</b> 1942</div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: B) 1929 <small>सही उत्तर: बी) 1929</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- Q14 -->
+    <div class="card"><div class="q">
+      <div class="qnum">14</div><div>
+        <p class="qtext">Jyotiba Phule, a prominent social reformer and educationist, was born on 11 April 1827 in which place?</p>
+        <p class="qtext-hi">प्रमुख समाज सुधारक‑शिक्षाविद <b>ज्योति बा फुले</b> का जन्म 11 अप्रैल 1827 को कहाँ हुआ था?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> Karnataka — <span>कर्नाटक</span></div>
+          <div class="opt"><b>B)</b> Uttar Pradesh — <span>उत्तर प्रदेश</span></div>
+          <div class="opt"><b>C)</b> Madhya Pradesh — <span>मध्य प्रदेश</span></div>
+          <div class="opt"><b>D)</b> Maharashtra — <span>महाराष्ट्र</span></div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: D) Maharashtra <small>सही उत्तर: डी) महाराष्ट्र</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- ===== General Science ===== -->
+    <div class="section"><span class="pill gs">General Science / सामान्य विज्ञान</span></div>
+
+    <!-- Q15 -->
+    <div class="card"><div class="q">
+      <div class="qnum">15</div><div>
+        <p class="qtext">Who was the first to transmit radio waves across the English Channel?</p>
+        <p class="qtext-hi">इंग्लिश चैनल के पार रेडियो तरंगें प्रसारित करने वाले प्रथम व्यक्ति कौन थे?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> Alexander Graham Bell</div>
+          <div class="opt"><b>B)</b> Guglielmo Marconi — <span>गुइलियेल्मो मार्कोनी</span></div>
+          <div class="opt"><b>C)</b> Nikola Tesla</div>
+          <div class="opt"><b>D)</b> Thomas Edison</div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: B) Guglielmo Marconi <small>सही उत्तर: बी) गुइलियेल्मो मार्कोनी</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- Q16 -->
+    <div class="card"><div class="q">
+      <div class="qnum">16</div><div>
+        <p class="qtext">Who proposed the Law of Octaves stating that every eighth element shows similar properties?</p>
+        <p class="qtext-hi">“ऑक्टेव का नियम” (हर आठवाँ तत्त्व समान गुण दर्शाता है) किसने प्रस्तावित किया?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> Dmitri Mendeleev — <span>दिमित्री मेंडेलीव</span></div>
+          <div class="opt"><b>B)</b> John Newlands — <span>जॉन न्यूलैंड्स</span></div>
+          <div class="opt"><b>C)</b> Antoine Lavoisier — <span>एंटोनी लैवोज़ियर</span></div>
+          <div class="opt"><b>D)</b> Henry Moseley — <span>हेनरी मॉस्ली</span></div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: B) John Newlands <small>सही उत्तर: बी) जॉन न्यूलैंड्स</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- Q17 -->
+    <div class="card"><div class="q">
+      <div class="qnum">17</div><div>
+        <p class="qtext">Glyoxysomes, specialized forms of peroxisomes, are mainly found in which organisms?</p>
+        <p class="qtext-hi"><b>ग्लायॉक्सीसोम</b> (पेरॉक्सीसोम का विशेष रूप) मुख्यतः किन जीवों में पाए जाते हैं?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> Plants & filamentous fungi — <span>पौधों तथा तन्तुमय कवकों में</span></div>
+          <div class="opt"><b>B)</b> Animals & protozoa — <span>जन्तुओं व प्रोटोज़ोआ में</span></div>
+          <div class="opt"><b>C)</b> Algae & bacteria — <span>शैवाल व जीवाणुओं में</span></div>
+          <div class="opt"><b>D)</b> Archaea & cyanobacteria — <span>आर्किया व नीलहरित जीवाणु</span></div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: A) Plants & filamentous fungi <small>सही उत्तर: ए) पौधों तथा तन्तुमय कवकों में</small></div>
+        </details>
+      </div></div></div>
+
+    <!-- Q18 -->
+    <div class="card"><div class="q">
+      <div class="qnum">18</div><div>
+        <p class="qtext">Relative density is the ratio of the density of a substance to the density of which reference substance (commonly used)?</p>
+        <p class="qtext-hi">सापेक्ष घनत्व किसी पदार्थ के घनत्व का अनुपात किस संदर्भ पदार्थ (सामान्यतः प्रयुक्त) के घनत्व से है?</p>
+        <div class="opts">
+          <div class="opt"><b>A)</b> Air — <span>वायु</span></div>
+          <div class="opt"><b>B)</b> Mercury — <span>पारा</span></div>
+          <div class="opt"><b>C)</b> Water — <span>जल</span></div>
+          <div class="opt"><b>D)</b> Alcohol — <span>अल्कोहल</span></div>
+        </div>
+        <details><summary>Reveal Answer / उत्तर देखें</summary>
+          <div class="ans">Correct: C) Water <small>सही उत्तर: सी) जल</small></div>
+        </details>
+      </div></div></div>
+
+    <div class="footer">© Rekham Academy — Bilingual Click‑to‑Reveal Quiz · Mobile friendly · Print ready</div>
+  </div>
+</body>
+</html>
