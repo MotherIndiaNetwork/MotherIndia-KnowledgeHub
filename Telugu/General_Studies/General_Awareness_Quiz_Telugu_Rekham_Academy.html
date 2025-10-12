@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>సామాన్య అవగాహన క్విజ్ — Rekham Academy (Telugu)</title>
+<style>
+  :root{
+    --bg1:#fff7fb;
+    --bg2:#eefcff;
+    --ink:#141a2a;
+    --muted:#5b6375;
+    --card:#ffffffee;
+    --ring:#6b5bff;
+    --ring2:#ff6ec7;
+    --ring3:#00c2ff;
+    --ok:#17a34a;
+    --shadow:0 12px 30px rgba(0,0,0,.10);
+  }
+  html,body{margin:0;padding:0;background:linear-gradient(120deg,var(--bg1),var(--bg2));color:var(--ink);
+            font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans Telugu","Noto Sans",sans-serif}
+  .wrap{max-width:1100px;margin:0 auto;padding:20px 16px 60px}
+  .hero{
+    position:relative;border-radius:22px;padding:28px 22px;margin:8px 0 18px;
+    background:
+      radial-gradient(600px 140px at 10% 0%, rgba(255,255,255,.4), transparent 40%),
+      radial-gradient(600px 140px at 90% 100%, rgba(255,255,255,.35), transparent 40%),
+      conic-gradient(from 180deg at 50% 50%, #6b5bff, #ff6ec7, #00c2ff, #6b5bff);
+    color:#fff;box-shadow:var(--shadow);overflow:hidden
+  }
+  .brand{font-weight:900;text-transform:uppercase;letter-spacing:.6px;margin:0 0 6px;font-size:18px;opacity:.95}
+  .hero h1{margin:0 0 6px;font-size:30px;letter-spacing:.2px}
+  .subtitle{margin:6px 0 0;font-size:14px;opacity:.95}
+  .section{display:flex;align-items:center;gap:10px;margin:24px 0 12px}
+  .pill{font-weight:800;text-transform:uppercase;letter-spacing:.5px;font-size:13px;color:#0b2850;background:#fff;
+        border:2px solid transparent;padding:8px 12px;border-radius:999px;box-shadow:var(--shadow)}
+  .pill.ca{border-color:#6b5bff;background:linear-gradient(90deg,#eceaff,#fff)}
+  .pill.gk{border-color:#ff6ec7;background:linear-gradient(90deg,#ffe7f7,#fff)}
+  .pill.hi{border-color:#00c2ff;background:linear-gradient(90deg,#e7f9ff,#fff)}
+  .pill.gs{border-color:#22c55e;background:linear-gradient(90deg,#eafff2,#fff)}
+  .card{background:var(--card);border-radius:16px;padding:16px 14px;margin:12px 0;
+        box-shadow:var(--shadow);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.6);position:relative}
+  .card:before{content:"";position:absolute;inset:-1px;z-index:-1;border-radius:18px;
+               background:linear-gradient(135deg,var(--ring),var(--ring2),var(--ring3));filter:blur(12px);opacity:.22}
+  .q{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start}
+  .qnum{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;color:#fff;
+        font-weight:900;background:conic-gradient(from 90deg,#6b5bff,#ff6ec7,#00c2ff,#6b5bff);box-shadow:inset 0 -2px 0 rgba(0,0,0,.15)}
+  .qtext{margin:0 0 8px;font-weight:800}
+  .opts{display:grid;gap:6px;margin-top:6px}
+  .opt{background:#fff;border-radius:12px;padding:10px 12px;border:1px solid #e6ebf6}
+  .opt b{min-width:22px;display:inline-block}
+  details{margin-top:10px}
+  summary{list-style:none;cursor:pointer;user-select:none;outline:none;padding:11px 12px;border-radius:12px;font-weight:800;
+          color:#0b64a6;background:linear-gradient(135deg,#e8f6ff,#fff);border:1px dashed #b6dffd}
+  summary::-webkit-details-marker{display:none}
+  .ans{margin:8px 2px 2px;border-left:5px solid var(--ok);background:#edfff3;border-radius:10px;padding:10px 12px;
+       font-weight:800;color:#0c5b34}
+  .note{font-size:12px;color:var(--muted);margin:12px 2px 18px}
+  .footer{margin-top:28px;text-align:center;color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="brand">Rekham Academy</div>
+      <h1>సామాన్య అవగాహన — Click‑to‑Reveal క్విజ్ (తెలుగు)</h1>
+      <p class="subtitle">Current Affairs · General Knowledge · History · General Science</p>
+    </header>
+
+    <p class="note">సూచన: “ఉత్తరం చూపు” పట్టు పై ట్యాప్ చేస్తే సమాధానం కనిపిస్తుంది. ఒకే HTML ఫైల్; JavaScript అవసరం లేదు.</p>
+
+    <!-- ===== Current Affairs ===== -->
+    <div class="section"><span class="pill ca">సమకాలీన అంశాలు</span></div>
+
+    <!-- Q1 -->
+    <div class="card"><div class="q"><div class="qnum">1</div><div>
+      <p class="qtext">ప్రతి సంవత్సరం సెప్టెంబర్ 25న జరుపుకునే <b>అంత్యోదయ దినోత్సవం</b> ఏ నాయకుడి జయంతిని స్మరించుకుంటుంది?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> శ్యామా ప్రసాద్ ముఖర్జీ</div>
+        <div class="opt"><b>B)</b> పండిట్ దীনదయాళ్ ఉపాధ్యాయ</div>
+        <div class="opt"><b>C)</b> అటల్ బిహారి వాజపేయి</div>
+        <div class="opt"><b>D)</b> ఎల్. కె. అద్వానీ</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: B) పండిట్ దীনదయాళ్ ఉపాధ్యాయ</div></details>
+    </div></div></div>
+
+    <!-- Q2 -->
+    <div class="card"><div class="q"><div class="qnum">2</div><div>
+      <p class="qtext">ఆస్కార్ అవార్డ్స్ 2026కు నామినేట్ అయిన హిందీ నాటకం ఏది?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> ది డిసైపిల్ (The Disciple)</div>
+        <div class="opt"><b>B)</b> హోంబౌండ్ (Homebound)</div>
+        <div class="opt"><b>C)</b> గల్లీ బాయ్ (Gully Boy)</div>
+        <div class="opt"><b>D)</b> ది లంచ్‌బాక్స్ (The Lunchbox)</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: B) హోంబౌండ్ (Homebound)</div></details>
+    </div></div></div>
+
+    <!-- Q3 -->
+    <div class="card"><div class="q"><div class="qnum">3</div><div>
+      <p class="qtext">కేంద్ర మంత్రిసభ ‘కెపాసిటీ బిల్డింగ్ & హ్యూమన్ రిసోర్స్ డెవలప్‌మెంట్’ పథకాన్ని ఎంత మొత్తంతో ఆమోదించింది?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> ₹1,500 కోట్లు</div>
+        <div class="opt"><b>B)</b> ₹3,200 కోట్లు</div>
+        <div class="opt"><b>C)</b> ₹1,000 కోట్లు</div>
+        <div class="opt"><b>D)</b> ₹2,277 కోట్లు</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: D) ₹2,277 కోట్లు</div></details>
+    </div></div></div>
+
+    <!-- Q4 -->
+    <div class="card"><div class="q"><div class="qnum">4</div><div>
+      <p class="qtext">ప్రపంచ పర్యాటక దినోత్సవం 2025 ఏ తేదీన నిర్వహిస్తారు?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> 27 సెప్టెంబర్</div>
+        <div class="opt"><b>B)</b> 25 సెప్టెంబర్</div>
+        <div class="opt"><b>C)</b> 30 సెప్టెంబర్</div>
+        <div class="opt"><b>D)</b> 1 అక్టోబర్</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: A) 27 సెప్టెంబర్</div></details>
+    </div></div></div>
+
+    <!-- Q5 -->
+    <div class="card"><div class="q"><div class="qnum">5</div><div>
+      <p class="qtext">కన్నడ నవలా రచయిత‑తాత్వికుడు <b>ఎస్. ఎల్. భైరప్ప</b> (24 సెప్టెంబర్ 2025న కన్నుమూశారు) ఏ భారత రాష్ట్రానికి చెందినవారు?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> కర్ణాటక</div>
+        <div class="opt"><b>B)</b> ఆంధ్రప్రదేశ్</div>
+        <div class="opt"><b>C)</b> తమిళనాడు</div>
+        <div class="opt"><b>D)</b> కేరళ</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: A) కర్ణాటక</div></details>
+    </div></div></div>
+
+    <!-- Q6 -->
+    <div class="card"><div class="q"><div class="qnum">6</div><div>
+      <p class="qtext">బీహార్ నుంచి తొలి మహిళా <b>FIDE మాస్టర్</b> ఎవరు అయ్యారు?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> తాన్యా సచ్దేవ్</div>
+        <div class="opt"><b>B)</b> కోనేరు హంపి</div>
+        <div class="opt"><b>C)</b> హరీకా ద్రోణవల్లి</div>
+        <div class="opt"><b>D)</b> మారియమ్ ఫాతిమా</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: D) మారియమ్ ఫాతిమా</div></details>
+    </div></div></div>
+
+    <!-- ===== General Knowledge ===== -->
+    <div class="section"><span class="pill gk">సాధారణ జ్ఞానం</span></div>
+
+    <!-- Q7 -->
+    <div class="card"><div class="q"><div class="qnum">7</div><div>
+      <p class="qtext">సన్నజాజి నోటి పెద్ద మట్టి పాత్రైన <b>ఘటం</b> సంప్రదాయంగా ఏ రకమైన వాద్యంగా వాడుతారు?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> తీగ వాద్యం (స్ట్రింగ్)</div>
+        <div class="opt"><b>B)</b> గాలి వాద్యం (విండ్)</div>
+        <div class="opt"><b>C)</b> కీబోర్డ్ వాద్యం</div>
+        <div class="opt"><b>D)</b> తాళ వాద్యం (పర్కషన్)</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: D) తాళ వాద్యం (పర్కషన్)</div></details>
+    </div></div></div>
+
+    <!-- Q8 -->
+    <div class="card"><div class="q"><div class="qnum">8</div><div>
+      <p class="qtext">ఇంగ్లీష్ చానల్‌ను విజయవంతంగా ఈదిన తొలి మహిళ ఎవరు?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> ఫ్లోరెన్స్ చాడ్విక్</div>
+        <div class="opt"><b>B)</b> గెర్ట్రూడ్ ఎడర్లే</div>
+        <div class="opt"><b>C)</b> లిన్ కాక్‌സ്</div>
+        <div class="opt"><b>D)</b> ఆర్తి సహా</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: B) గెర్ట్రూడ్ ఎడర్లే</div></details>
+    </div></div></div>
+
+    <!-- Q9 -->
+    <div class="card"><div class="q"><div class="qnum">9</div><div>
+      <p class="qtext">అశోకుల శాసనాల కోసం ప్రసిద్ధి చెందిన పురావస్తు స్థలం <b>మాస్కీ</b> ఏ రాష్ట్రంలో ఉంది?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> కర్ణాటక</div>
+        <div class="opt"><b>B)</b> మహారాష్ట్ర</div>
+        <div class="opt"><b>C)</b> ఆంధ్రప్రదేశ్</div>
+        <div class="opt"><b>D)</b> తమిళనాడు</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: A) కర్ణాటక</div></details>
+    </div></div></div>
+
+    <!-- Q10 -->
+    <div class="card"><div class="q"><div class="qnum">10</div><div>
+      <p class="qtext">ఒడిశా, పూరీలోని <b>శ్రీ జగన్నాథ ఆలయం</b>ను కలింగ నిర్మాణశైలిలో నిర్మించిన రాజు ఎవరు?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> నరసింహవర్మన్‑I</div>
+        <div class="opt"><b>B)</b> రాజరాజ చోళ‑I</div>
+        <div class="opt"><b>C)</b> అనంతవర్మన్ చోడగంగదేవ</div>
+        <div class="opt"><b>D)</b> శ్రీకృష్ణదేవరాయలు</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: C) అనంతవర్మన్ చోడగంగదేవ</div></details>
+    </div></div></div>
+
+    <!-- ===== History ===== -->
+    <div class="section"><span class="pill hi">చరిత్ర</span></div>
+
+    <!-- Q11 -->
+    <div class="card"><div class="q"><div class="qnum">11</div><div>
+      <p class="qtext">దక్షిణ భారత ప్రాచీన చరిత్రలో “<b>నగరమ్</b>” అనే పదం దేనిని సూచిస్తుంది?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> రైతుల గ్రామ సభ</div>
+        <div class="opt"><b>B)</b> దేవాలయ పూజారుల సంఘం</div>
+        <div class="opt"><b>C)</b> యోధుల సైనిక సభ</div>
+        <div class="opt"><b>D)</b> వ్యాపారులు‑వర్తకులు‑శిల్పకారుల సంఘం</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: D) వ్యాపారులు‑వర్తకులు‑శిల్పకారుల సంఘం</div></details>
+    </div></div></div>
+
+    <!-- Q12 -->
+    <div class="card"><div class="q"><div class="qnum">12</div><div>
+      <p class="qtext">సంస్కృత నాటకం <em>మృచ్చకటిక</em>కు “The Little Clay Cart” (1905) అనే ఆంగ్ల అనువాదం చేసిన పండితుడు ఎవరు?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> ఆర్థర్ డబ్ల్యూ. రైడర్</div>
+        <div class="opt"><b>B)</b> మ్యాక్స్ మ్యూలర్</div>
+        <div class="opt"><b>C)</b> విలియం జోన్స్</div>
+        <div class="opt"><b>D)</b> హెచ్. హెచ్. విల్సన్</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: A) ఆర్థర్ డబ్ల్యూ. రైడర్</div></details>
+    </div></div></div>
+
+    <!-- Q13 -->
+    <div class="card"><div class="q"><div class="qnum">13</div><div>
+      <p class="qtext"><b>ఖుదాయి ఖిద్మత్‌గార్</b> (రెడ్ షర్ట్) ఉద్యమం ఏ సంవత్సరంలో ప్రారంభమైంది?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> 1925</div>
+        <div class="opt"><b>B)</b> 1929</div>
+        <div class="opt"><b>C)</b> 1935</div>
+        <div class="opt"><b>D)</b> 1942</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: B) 1929</div></details>
+    </div></div></div>
+
+    <!-- Q14 -->
+    <div class="card"><div class="q"><div class="qnum">14</div><div>
+      <p class="qtext">ప్రఖ్యాత సామాజిక సంస్కర్త‑విద్యావేత్త <b>జ్యోతిరావు ఫూలే</b> జననం 11 ఏప్రిల్ 1827న ఎక్కడ జరిగింది?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> కర్ణాటక</div>
+        <div class="opt"><b>B)</b> ఉత్తర ప్రదేశ్</div>
+        <div class="opt"><b>C)</b> మధ్య ప్రదేశ్</div>
+        <div class="opt"><b>D)</b> మహారాష్ట్ర</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: D) మహారాష్ట్ర</div></details>
+    </div></div></div>
+
+    <!-- ===== General Science ===== -->
+    <div class="section"><span class="pill gs">సాధారణ శాస్త్రం</span></div>
+
+    <!-- Q15 -->
+    <div class="card"><div class="q"><div class="qnum">15</div><div>
+      <p class="qtext">ఇంగ్లీష్ చానల్ పైగా రేడియో తరంగాలను తొలిసారిగా ప్రసారం చేసినవారు ఎవరు?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> అలెగ్జాండర్ గ్రాహామ్ బెల్</div>
+        <div class="opt"><b>B)</b> గులీల్మో మార్కోని</div>
+        <div class="opt"><b>C)</b> నికోలా టెస్లా</div>
+        <div class="opt"><b>D)</b> థామస్ ఎడిసన్</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: B) గులీల్మో మార్కోని</div></details>
+    </div></div></div>
+
+    <!-- Q16 -->
+    <div class="card"><div class="q"><div class="qnum">16</div><div>
+      <p class="qtext">“ఆక్టేవ్ నియమం” (ఎనిమిదో మూలకం సమాన లక్షణాలు చూపుతుంది) ప్రతిపాదించిన శాస్త్రవేత్త ఎవరు?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> దిమిత్రి మెండెలీవ్</div>
+        <div class="opt"><b>B)</b> జాన్ న్యూ‌ల్యాండ్స్</div>
+        <div class="opt"><b>C)</b> ఆంటోయిన్ లావోజియర్</div>
+        <div class="opt"><b>D)</b> హెన్రీ మోస్లీ</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: B) జాన్ న్యూ‌ల్యాండ్స్</div></details>
+    </div></div></div>
+
+    <!-- Q17 -->
+    <div class="card"><div class="q"><div class="qnum">17</div><div>
+      <p class="qtext"><b>గ్లయాక్సిసోమ్</b>లు (పెరాక్సిసోమ్‌ల ప్రత్యేక రూపాలు) ముఖ్యంగా ఎక్కడ కనిపిస్తాయి?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> మొక్కలు మరియు తంతుమయ శిలీంద్రాలలో</div>
+        <div class="opt"><b>B)</b> జంతువులు మరియు ప్రోటోజోవాల్లో</div>
+        <div class="opt"><b>C)</b> ఆల్గీ మరియు బ్యాక్టీరియాలలో</div>
+        <div class="opt"><b>D)</b> ఆర్కియా మరియు సయనోబ్యాక్టీరియాలలో</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: A) మొక్కలు మరియు తంతుమయ శిలీంద్రాలలో</div></details>
+    </div></div></div>
+
+    <!-- Q18 -->
+    <div class="card"><div class="q"><div class="qnum">18</div><div>
+      <p class="qtext">సాపేక్ష ఘనత్వం = ఒక పదార్థం ఘనత్వాన్ని సాధారణంగా ఏ ప్రమాణ పదార్థం ఘనత్వంతో పోల్చిన నిష్పత్తి?</p>
+      <div class="opts">
+        <div class="opt"><b>A)</b> గాలి</div>
+        <div class="opt"><b>B)</b> పాదరసం</div>
+        <div class="opt"><b>C)</b> నీరు</div>
+        <div class="opt"><b>D)</b> ఆల్కహాల్</div>
+      </div>
+      <details><summary>ఉత్తరం చూపు</summary><div class="ans">సరైన ఉత్తరం: C) నీరు</div></details>
+    </div></div></div>
+
+    <div class="footer">© Rekham Academy — తెలుగు Click‑to‑Reveal క్విజ్ · మొబైల్ ఫ్రెండ్లీ · ప్రింట్ రెడీ</div>
+  </div>
+</body>
+</html>
