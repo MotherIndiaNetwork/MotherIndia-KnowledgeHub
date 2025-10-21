@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rekham Academy – General Awareness Interactive Quiz</title>
+<style>
+  :root{
+    --bg: #0f172a;          /* slate-900 */
+    --card: #111827;        /* gray-900 */
+    --accent: #f59e0b;      /* amber-500 */
+    --accent-2:#06b6d4;     /* cyan-500 */
+    --accent-3:#a78bfa;     /* violet-400 */
+    --text: #f8fafc;        /* slate-50 */
+    --muted:#cbd5e1;        /* slate-300 */
+    --correct:#10b981;      /* emerald-500 */
+    --border:#334155;       /* slate-700 */
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    background: linear-gradient(135deg, #0ea5e9 0%, #0f172a 40%, #7c3aed 100%);
+    color: var(--text);
+  }
+  header{
+    text-align:center;
+    padding:22px 14px 12px;
+  }
+  header h1{
+    margin:0 0 8px;
+    font-size: clamp(26px, 4.5vw, 44px);
+    letter-spacing:.5px;
+    text-shadow: 0 4px 14px rgba(0,0,0,.35);
+  }
+  header p{
+    margin:0;
+    color: var(--muted);
+    font-size: clamp(12px, 2.7vw, 16px);
+  }
+  .wrap{
+    max-width: 980px;
+    margin: 18px auto 48px;
+    padding: 0 14px 28px;
+  }
+  .toolbar{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin: 0 auto 18px;
+  }
+  button{
+    border:1px solid var(--border);
+    background: linear-gradient(135deg, var(--accent), #ef4444);
+    color:#111827;
+    font-weight:700;
+    padding:10px 14px;
+    border-radius:999px;
+    cursor:pointer;
+    transition: transform .08s ease, box-shadow .2s ease, filter .2s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,.25);
+  }
+  button.secondary{
+    background: linear-gradient(135deg, var(--accent-2), var(--accent-3));
+    color:#0b1220;
+  }
+  button:active{ transform: scale(.98); }
+  .card{
+    background: linear-gradient(160deg, rgba(17,24,39,.9), rgba(2,6,23,.9));
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:18px 16px;
+    margin:12px 0;
+    box-shadow: 0 8px 26px rgba(0,0,0,.25);
+  }
+  .badge{
+    display:inline-block;
+    padding:4px 10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+    color:#0b1220;
+    background: linear-gradient(135deg, var(--accent-2), var(--accent));
+    margin-bottom:8px;
+  }
+  .q{
+    font-size: clamp(15px, 2.5vw, 20px);
+    margin:8px 0 10px;
+    line-height:1.4;
+  }
+  ol.options{
+    list-style: upper-alpha;
+    padding-left: 22px;
+    margin: 8px 0 10px;
+  }
+  ol.options li{
+    margin: 6px 0;
+    padding: 6px 8px;
+    border-radius: 10px;
+    border:1px dashed #334155;
+    background: rgba(2,6,23,.35);
+  }
+  .answer{
+    display:none;
+    margin-top:10px;
+    border-left:4px solid var(--correct);
+    background: rgba(16,185,129,.12);
+    padding:10px 12px;
+    border-radius: 10px;
+    color:#ecfdf5;
+  }
+  .reveal{
+    margin-top:8px;
+    background: linear-gradient(135deg, #34d399, #22d3ee);
+    color:#0b1220;
+  }
+  footer{
+    text-align:center;
+    color: var(--muted);
+    margin-top: 26px;
+    font-size: 12px;
+  }
+</style>
+<script>
+  function toggleAnswer(id){
+    const el = document.getElementById(id);
+    el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+  }
+  function showAll(){
+    document.querySelectorAll('.answer').forEach(a=>a.style.display='block');
+  }
+  function hideAll(){
+    document.querySelectorAll('.answer').forEach(a=>a.style.display='none');
+  }
+</script>
+</head>
+<body>
+  <header>
+    <h1>Rekham Academy</h1>
+    <p>General Awareness – Interactive Quiz (Click to reveal answers)</p>
+  </header>
+
+  <div class="wrap">
+    <div class="toolbar">
+      <button onclick="showAll()">Show All Answers</button>
+      <button class="secondary" onclick="hideAll()">Hide All Answers</button>
+    </div>
+
+    <!-- Questions -->
+    <!-- Q1 -->
+    <div class="card">
+      <span class="badge">Current Affairs</span>
+      <div class="q"><strong>1.</strong> Who has been appointed as the Ambassador of the Viksit Bharat Buildathon?</div>
+      <ol class="options">
+        <li>Captain Anshuman Singh</li>
+        <li>Wing Commander Deepika Mishra</li>
+        <li>Group Captain Varun Singh</li>
+        <li>Group Captain Shubansh Sukla</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a1')">Click to reveal</button>
+      <div id="a1" class="answer"><strong>Answer:</strong> D) Group Captain Shubansh Sukla</div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="card">
+      <div class="q"><strong>2.</strong> Who among the following won the Nobel Prize in Physiology or Medicine 2025?</div>
+      <ol class="options">
+        <li>Shimon Sakaguchi, Mary E. Brunkow, and Fred Ramsdell</li>
+        <li>Katalin Karikó and Drew Weissman</li>
+        <li>Svante Pääbo</li>
+        <li>David Julius and Ardem Patapoutian</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a2')">Click to reveal</button>
+      <div id="a2" class="answer"><strong>Answer:</strong> A) Shimon Sakaguchi, Mary E. Brunkow, and Fred Ramsdell</div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="card">
+      <div class="q"><strong>3.</strong> World Cerebral Palsy Day (WCPD) is observed every year on which date to raise awareness and promote inclusion for people living with cerebral palsy?</div>
+      <ol class="options">
+        <li>October 2</li>
+        <li>October 5</li>
+        <li>October 7</li>
+        <li>October 6</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a3')">Click to reveal</button>
+      <div id="a3" class="answer"><strong>Answer:</strong> D) October 6</div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="card">
+      <div class="q"><strong>4.</strong> Who launched the ‘Mhaje Ghar Yojana’, a scheme aimed at granting ownership rights to residents?</div>
+      <ol class="options">
+        <li>Rajnath Singh</li>
+        <li>Amit Shah</li>
+        <li>Nitin Gadkari</li>
+        <li>Narendra Modi</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a4')">Click to reveal</button>
+      <div id="a4" class="answer"><strong>Answer:</strong> B) Amit Shah</div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="card">
+      <div class="q"><strong>5.</strong> The Navi Mumbai International Airport will officially be named after which leader, as announced by Maharashtra CM Devendra Fadnavis in October 2025?</div>
+      <ol class="options">
+        <li>Loknete Dinkar Balu (DB) Patil</li>
+        <li>Yashwantrao Chavan</li>
+        <li>Balasaheb Thackeray</li>
+        <li>Shankarrao Chavan</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a5')">Click to reveal</button>
+      <div id="a5" class="answer"><strong>Answer:</strong> A) Loknete Dinkar Balu (DB) Patil</div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="card">
+      <span class="badge">Sports & Policy</span>
+      <div class="q"><strong>6.</strong> Which state government has partnered with Borussia Dortmund to launch India’s first Sports Tech Incubation Centre?</div>
+      <ol class="options">
+        <li>Karnataka</li>
+        <li>Maharashtra</li>
+        <li>Tamil Nadu</li>
+        <li>Kerala</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a6')">Click to reveal</button>
+      <div id="a6" class="answer"><strong>Answer:</strong> C) Tamil Nadu</div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="card">
+      <div class="q"><strong>7.</strong> Where was the 42nd Session of the International Civil Aviation Organization (ICAO) Assembly 2025 held?</div>
+      <ol class="options">
+        <li>Geneva, Switzerland</li>
+        <li>Paris, France</li>
+        <li>New York, USA</li>
+        <li>Montréal, Canada</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a7')">Click to reveal</button>
+      <div id="a7" class="answer"><strong>Answer:</strong> D) Montréal, Canada</div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="card">
+      <span class="badge">History</span>
+      <div class="q"><strong>8.</strong> Who painted the iconic image of Bharat Mata in 1905, depicting her as an ascetic woman draped in saffron?</div>
+      <ol class="options">
+        <li>Raja Ravi Varma</li>
+        <li>Abanindranath Tagore</li>
+        <li>Nandalal Bose</li>
+        <li>Jamini Roy</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a8')">Click to reveal</button>
+      <div id="a8" class="answer"><strong>Answer:</strong> B) Abanindranath Tagore</div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="card">
+      <div class="q"><strong>9.</strong> Which temple, considered the National Temple of Bangladesh, was built in the 12th century by King Ballal Sen of the Sena dynasty?</div>
+      <ol class="options">
+        <li>Dhakeshwari Temple</li>
+        <li>Kamakhya Temple</li>
+        <li>Jagannath Temple</li>
+        <li>Dakshineswar Temple</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a9')">Click to reveal</button>
+      <div id="a9" class="answer"><strong>Answer:</strong> A) Dhakeshwari Temple</div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="card">
+      <div class="q"><strong>10.</strong> The Barabar and Nagarjuni caves, among the oldest surviving rock-cut caves in India, were constructed by which Mauryan ruler for the Ajivika sect?</div>
+      <ol class="options">
+        <li>Chandragupta Maurya</li>
+        <li>Ashoka</li>
+        <li>Bindusara</li>
+        <li>Dasharatha Maurya</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a10')">Click to reveal</button>
+      <div id="a10" class="answer"><strong>Answer:</strong> B) Ashoka</div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="card">
+      <div class="q"><strong>11.</strong> Who was the first Muslim woman to rule over the Delhi Sultanate?</div>
+      <ol class="options">
+        <li>Noor Jahan</li>
+        <li>Mumtaz Mahal</li>
+        <li>Rani Durgavati</li>
+        <li>Razia Sultan</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a11')">Click to reveal</button>
+      <div id="a11" class="answer"><strong>Answer:</strong> D) Razia Sultan</div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="card">
+      <span class="badge">General Knowledge</span>
+      <div class="q"><strong>12.</strong> Which was the first Indian product to receive a Geographical Indication (GI) tag in October 2004?</div>
+      <ol class="options">
+        <li>Darjeeling Tea</li>
+        <li>Kanchipuram Silk</li>
+        <li>Alphonso Mango</li>
+        <li>Mysore Sandalwood</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a12')">Click to reveal</button>
+      <div id="a12" class="answer"><strong>Answer:</strong> A) Darjeeling Tea</div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="card">
+      <div class="q"><strong>13.</strong> The Reserve Bank of India (RBI) was established based on the recommendations of which commission?</div>
+      <ol class="options">
+        <li>Narasimham Commission</li>
+        <li>Sarkaria Commission</li>
+        <li>Simon Commission</li>
+        <li>Hilton Young Commission</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a13')">Click to reveal</button>
+      <div id="a13" class="answer"><strong>Answer:</strong> D) Hilton Young Commission</div>
+    </div>
+
+    <!-- Q14 -->
+    <div class="card">
+      <div class="q"><strong>14.</strong> Jayanthi Kumaresh is a renowned Indian musician known for her expertise in playing which classical instrument?</div>
+      <ol class="options">
+        <li>Saraswati Veena</li>
+        <li>Santoor</li>
+        <li>Sitar</li>
+        <li>Violin</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a14')">Click to reveal</button>
+      <div id="a14" class="answer"><strong>Answer:</strong> A) Saraswati Veena</div>
+    </div>
+
+    <!-- Q15 -->
+    <div class="card">
+      <span class="badge">Geography</span>
+      <div class="q"><strong>15.</strong> The distance between two parallels of latitude on Earth is approximately how much for 1°?</div>
+      <ol class="options">
+        <li>100 km</li>
+        <li>120 km</li>
+        <li>90 km</li>
+        <li>111 km</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a15')">Click to reveal</button>
+      <div id="a15" class="answer"><strong>Answer:</strong> D) 111 km</div>
+    </div>
+
+    <!-- Q16 -->
+    <div class="card">
+      <div class="q"><strong>16.</strong> Which Indian city, known for its leather and textile industries, is often referred to as the “Manchester of the East”?</div>
+      <ol class="options">
+        <li>Ahmedabad</li>
+        <li>Coimbatore</li>
+        <li>Kanpur</li>
+        <li>Hyderabad</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a16')">Click to reveal</button>
+      <div id="a16" class="answer"><strong>Answer:</strong> C) Kanpur</div>
+    </div>
+
+    <!-- Q17 -->
+    <div class="card">
+      <div class="q"><strong>17.</strong> Zaid crops in India are typically grown during which period?</div>
+      <ol class="options">
+        <li>Between June and October</li>
+        <li>Between March and June</li>
+        <li>Between November and February</li>
+        <li>Between December and April</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a17')">Click to reveal</button>
+      <div id="a17" class="answer"><strong>Answer:</strong> B) Between March and June</div>
+    </div>
+
+    <!-- Q18 -->
+    <div class="card">
+      <div class="q"><strong>18.</strong> According to the 2011 Census of India, what was the overall literacy rate of the country?</div>
+      <ol class="options">
+        <li>74.04%</li>
+        <li>70.11%</li>
+        <li>65.46%</li>
+        <li>77.13%</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a18')">Click to reveal</button>
+      <div id="a18" class="answer"><strong>Answer:</strong> A) 74.04%</div>
+    </div>
+
+    <footer>© Rekham Academy • Click each button to reveal the correct answer.</footer>
+  </div>
+</body>
+</html>
