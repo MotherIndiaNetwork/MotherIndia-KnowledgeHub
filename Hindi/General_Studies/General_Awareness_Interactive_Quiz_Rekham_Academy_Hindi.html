@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rekham Academy – सामान्य जागरूकता इंटरएक्टिव क्विज़ (हिंदी)</title>
+<style>
+  :root{
+    --bg: #0f172a;
+    --card: #111827;
+    --accent: #f59e0b;
+    --accent-2:#06b6d4;
+    --accent-3:#a78bfa;
+    --text: #f8fafc;
+    --muted:#cbd5e1;
+    --correct:#10b981;
+    --border:#334155;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: "Noto Sans Devanagari", "Hind", "Mukta", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #0ea5e9 0%, #0f172a 40%, #7c3aed 100%);
+    color: var(--text);
+  }
+  header{ text-align:center; padding:22px 14px 12px; }
+  header h1{
+    margin:0 0 8px;
+    font-size: clamp(26px, 4.5vw, 44px);
+    letter-spacing:.5px;
+    text-shadow: 0 4px 14px rgba(0,0,0,.35);
+  }
+  header p{ margin:0; color: var(--muted); font-size: clamp(12px, 2.7vw, 16px); }
+  .wrap{ max-width: 980px; margin: 18px auto 48px; padding: 0 14px 28px; }
+  .toolbar{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin: 0 auto 18px; }
+  button{
+    border:1px solid var(--border);
+    background: linear-gradient(135deg, var(--accent), #ef4444);
+    color:#111827;
+    font-weight:700;
+    padding:10px 14px;
+    border-radius:999px;
+    cursor:pointer;
+    transition: transform .08s ease, box-shadow .2s ease, filter .2s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,.25);
+  }
+  button.secondary{ background: linear-gradient(135deg, var(--accent-2), var(--accent-3)); color:#0b1220; }
+  button:active{ transform: scale(.98); }
+  .card{
+    background: linear-gradient(160deg, rgba(17,24,39,.9), rgba(2,6,23,.9));
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:18px 16px;
+    margin:12px 0;
+    box-shadow: 0 8px 26px rgba(0,0,0,.25);
+  }
+  .badge{
+    display:inline-block;
+    padding:4px 10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+    color:#0b1220;
+    background: linear-gradient(135deg, var(--accent-2), var(--accent));
+    margin-bottom:8px;
+  }
+  .q{ font-size: clamp(15px, 2.5vw, 20px); margin:8px 0 10px; line-height:1.5; }
+  ol.options{ list-style: upper-alpha; padding-left: 22px; margin: 8px 0 10px; }
+  ol.options li{
+    margin: 6px 0;
+    padding: 6px 8px;
+    border-radius: 10px;
+    border:1px dashed #334155;
+    background: rgba(2,6,23,.35);
+  }
+  .answer{
+    display:none;
+    margin-top:10px;
+    border-left:4px solid var(--correct);
+    background: rgba(16,185,129,.12);
+    padding:10px 12px;
+    border-radius: 10px;
+    color:#ecfdf5;
+  }
+  .reveal{ margin-top:8px; background: linear-gradient(135deg, #34d399, #22d3ee); color:#0b1220; }
+  footer{ text-align:center; color: var(--muted); margin-top: 26px; font-size: 12px; }
+</style>
+<script>
+  function toggleAnswer(id){
+    const el = document.getElementById(id);
+    el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+  }
+  function showAll(){ document.querySelectorAll('.answer').forEach(a=>a.style.display='block'); }
+  function hideAll(){ document.querySelectorAll('.answer').forEach(a=>a.style.display='none'); }
+</script>
+</head>
+<body>
+  <header>
+    <h1>Rekham Academy</h1>
+    <p>सामान्य जागरूकता – इंटरएक्टिव क्विज़ (उत्तर देखने के लिए क्लिक करें)</p>
+  </header>
+
+  <div class="wrap">
+    <div class="toolbar">
+      <button onclick="showAll()">सभी उत्तर दिखाएँ</button>
+      <button class="secondary" onclick="hideAll()">सभी उत्तर छिपाएँ</button>
+    </div>
+
+    <!-- प्रश्न 1 -->
+    <div class="card">
+      <span class="badge">समसामयिक घटनाएँ</span>
+      <div class="q"><strong>1.</strong> विकसित भारत बिल्डाथॉन के राजदूत के रूप में किसे नियुक्त किया गया है?</div>
+      <ol class="options">
+        <li>Captain Anshuman Singh</li>
+        <li>Wing Commander Deepika Mishra</li>
+        <li>Group Captain Varun Singh</li>
+        <li>Group Captain Shubansh Sukla</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a1')">उत्तर देखें</button>
+      <div id="a1" class="answer"><strong>उत्तर:</strong> D) Group Captain Shubansh Sukla</div>
+    </div>
+
+    <!-- प्रश्न 2 -->
+    <div class="card">
+      <div class="q"><strong>2.</strong> निम्नलिखित में से किसने 2025 का शरीर क्रिया विज्ञान/चिकित्सा का नोबेल पुरस्कार जीता?</div>
+      <ol class="options">
+        <li>Shimon Sakaguchi, Mary E. Brunkow, and Fred Ramsdell</li>
+        <li>Katalin Karikó and Drew Weissman</li>
+        <li>Svante Pääbo</li>
+        <li>David Julius and Ardem Patapoutian</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a2')">उत्तर देखें</button>
+      <div id="a2" class="answer"><strong>उत्तर:</strong> A) Shimon Sakaguchi, Mary E. Brunkow, and Fred Ramsdell</div>
+    </div>
+
+    <!-- प्रश्न 3 -->
+    <div class="card">
+      <div class="q"><strong>3.</strong> विश्व सेरेब्रल पाल्सी दिवस (WCPD) हर वर्ष जागरूकता बढ़ाने के लिए किस तिथि को मनाया जाता है?</div>
+      <ol class="options">
+        <li>2 अक्टूबर</li>
+        <li>5 अक्टूबर</li>
+        <li>7 अक्टूबर</li>
+        <li>6 अक्टूबर</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a3')">उत्तर देखें</button>
+      <div id="a3" class="answer"><strong>उत्तर:</strong> D) 6 अक्टूबर</div>
+    </div>
+
+    <!-- प्रश्न 4 -->
+    <div class="card">
+      <div class="q"><strong>4.</strong> ‘माझे घर योजना’, जो निवासियों को स्वामित्व अधिकार देने के उद्देश्य से शुरू की गई है, किसने लॉन्च की?</div>
+      <ol class="options">
+        <li>Rajnath Singh</li>
+        <li>Amit Shah</li>
+        <li>Nitin Gadkari</li>
+        <li>Narendra Modi</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a4')">उत्तर देखें</button>
+      <div id="a4" class="answer"><strong>उत्तर:</strong> B) Amit Shah</div>
+    </div>
+
+    <!-- प्रश्न 5 -->
+    <div class="card">
+      <div class="q"><strong>5.</strong> अक्टूबर 2025 में महाराष्ट्र के CM देवेंद्र फडणवीस द्वारा घोषित अनुसार, नवी मुंबई अंतरराष्ट्रीय हवाई अड्डे का आधिकारिक नाम किस नेता के नाम पर रखा जाएगा?</div>
+      <ol class="options">
+        <li>Loknete Dinkar Balu (DB) Patil</li>
+        <li>Yashwantrao Chavan</li>
+        <li>Balasaheb Thackeray</li>
+        <li>Shankarrao Chavan</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a5')">उत्तर देखें</button>
+      <div id="a5" class="answer"><strong>उत्तर:</strong> A) Loknete Dinkar Balu (DB) Patil</div>
+    </div>
+
+    <!-- प्रश्न 6 -->
+    <div class="card">
+      <span class="badge">खेल एवं नीति</span>
+      <div class="q"><strong>6.</strong> भारत के पहले स्पोर्ट्स टेक इन्क्युबेशन सेंटर को शुरू करने के लिए किस राज्य सरकार ने बोरूसिया डॉर्टमंड के साथ साझेदारी की है?</div>
+      <ol class="options">
+        <li>Karnataka</li>
+        <li>Maharashtra</li>
+        <li>Tamil Nadu</li>
+        <li>Kerala</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a6')">उत्तर देखें</button>
+      <div id="a6" class="answer"><strong>उत्तर:</strong> C) Tamil Nadu</div>
+    </div>
+
+    <!-- प्रश्न 7 -->
+    <div class="card">
+      <div class="q"><strong>7.</strong> अंतरराष्ट्रीय नागर विमानन संगठन (ICAO) की 42वीं महासभा 2025 कहाँ आयोजित हुई?</div>
+      <ol class="options">
+        <li>Geneva, Switzerland</li>
+        <li>Paris, France</li>
+        <li>New York, USA</li>
+        <li>Montréal, Canada</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a7')">उत्तर देखें</button>
+      <div id="a7" class="answer"><strong>उत्तर:</strong> D) Montréal, Canada</div>
+    </div>
+
+    <!-- प्रश्न 8 -->
+    <div class="card">
+      <span class="badge">इतिहास</span>
+      <div class="q"><strong>8.</strong> 1905 में ‘भारत माता’ की प्रसिद्ध पेंटिंग, जिसमें उन्हें केसरिया वस्त्रों में एक साध्वी स्त्री के रूप में दिखाया गया, किसने बनाई?</div>
+      <ol class="options">
+        <li>Raja Ravi Varma</li>
+        <li>Abanindranath Tagore</li>
+        <li>Nandalal Bose</li>
+        <li>Jamini Roy</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a8')">उत्तर देखें</button>
+      <div id="a8" class="answer"><strong>उत्तर:</strong> B) Abanindranath Tagore</div>
+    </div>
+
+    <!-- प्रश्न 9 -->
+    <div class="card">
+      <div class="q"><strong>9.</strong> कौन‑सा मंदिर, जिसे बांग्लादेश का राष्ट्रीय मंदिर माना जाता है, 12वीं शताब्दी में सेना वंश के राजा बल्लाल सेन द्वारा बनवाया गया था?</div>
+      <ol class="options">
+        <li>Dhakeshwari Temple</li>
+        <li>Kamakhya Temple</li>
+        <li>Jagannath Temple</li>
+        <li>Dakshineswar Temple</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a9')">उत्तर देखें</button>
+      <div id="a9" class="answer"><strong>उत्तर:</strong> A) Dhakeshwari Temple</div>
+    </div>
+
+    <!-- प्रश्न 10 -->
+    <div class="card">
+      <div class="q"><strong>10.</strong> बाराबर और नागार्जुनी गुफाएँ, जो भारत की सबसे प्राचीन शैल‑कटी गुफाओं में हैं, आजीविक संप्रदाय के लिए किस मौर्य शासक ने बनवाई थीं?</div>
+      <ol class="options">
+        <li>Chandragupta Maurya</li>
+        <li>Ashoka</li>
+        <li>Bindusara</li>
+        <li>Dasharatha Maurya</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a10')">उत्तर देखें</button>
+      <div id="a10" class="answer"><strong>उत्तर:</strong> B) Ashoka</div>
+    </div>
+
+    <!-- प्रश्न 11 -->
+    <div class="card">
+      <div class="q"><strong>11.</strong> दिल्ली सल्तनत पर शासन करने वाली पहली मुस्लिम महिला शासक कौन थीं?</div>
+      <ol class="options">
+        <li>Noor Jahan</li>
+        <li>Mumtaz Mahal</li>
+        <li>Rani Durgavati</li>
+        <li>Razia Sultan</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a11')">उत्तर देखें</button>
+      <div id="a11" class="answer"><strong>उत्तर:</strong> D) Razia Sultan</div>
+    </div>
+
+    <!-- प्रश्न 12 -->
+    <div class="card">
+      <span class="badge">सामान्य ज्ञान</span>
+      <div class="q"><strong>12.</strong> अक्टूबर 2004 में भारत का पहला कौन‑सा उत्पाद भौगोलिक संकेतक (GI) टैग प्राप्त करने वाला बना?</div>
+      <ol class="options">
+        <li>Darjeeling Tea</li>
+        <li>Kanchipuram Silk</li>
+        <li>Alphonso Mango</li>
+        <li>Mysore Sandalwood</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a12')">उत्तर देखें</button>
+      <div id="a12" class="answer"><strong>उत्तर:</strong> A) Darjeeling Tea</div>
+    </div>
+
+    <!-- प्रश्न 13 -->
+    <div class="card">
+      <div class="q"><strong>13.</strong> भारतीय रिज़र्व बैंक (RBI) की स्थापना किस आयोग की सिफारिशों के आधार पर की गई थी?</div>
+      <ol class="options">
+        <li>Narasimham Commission</li>
+        <li>Sarkaria Commission</li>
+        <li>Simon Commission</li>
+        <li>Hilton Young Commission</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a13')">उत्तर देखें</button>
+      <div id="a13" class="answer"><strong>उत्तर:</strong> D) Hilton Young Commission</div>
+    </div>
+
+    <!-- प्रश्न 14 -->
+    <div class="card">
+      <div class="q"><strong>14.</strong> जयन्ती कुमारेश किस भारतीय शास्त्रीय वाद्य में निपुणता के लिए जानी जाती हैं?</div>
+      <ol class="options">
+        <li>सरस्वती वीणा</li>
+        <li>संतूर</li>
+        <li>सितार</li>
+        <li>वायलिन</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a14')">उत्तर देखें</button>
+      <div id="a14" class="answer"><strong>उत्तर:</strong> A) सरस्वती वीणा</div>
+    </div>
+
+    <!-- प्रश्न 15 -->
+    <div class="card">
+      <span class="badge">भूगोल</span>
+      <div class="q"><strong>15.</strong> पृथ्वी पर अक्षांश के दो समानांतरों के बीच 1° का लगभग कितना अंतर होता है?</div>
+      <ol class="options">
+        <li>100 किमी</li>
+        <li>120 किमी</li>
+        <li>90 किमी</li>
+        <li>111 किमी</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a15')">उत्तर देखें</button>
+      <div id="a15" class="answer"><strong>उत्तर:</strong> D) 111 किमी</div>
+    </div>
+
+    <!-- प्रश्न 16 -->
+    <div class="card">
+      <div class="q"><strong>16.</strong> चमड़े और वस्त्र उद्योगों के लिए प्रसिद्ध भारत का कौन‑सा शहर अक्सर “मैनचेस्टर ऑफ द ईस्ट” कहलाता है?</div>
+      <ol class="options">
+        <li>Ahmedabad</li>
+        <li>Coimbatore</li>
+        <li>Kanpur</li>
+        <li>Hyderabad</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a16')">उत्तर देखें</button>
+      <div id="a16" class="answer"><strong>उत्तर:</strong> C) Kanpur</div>
+    </div>
+
+    <!-- प्रश्न 17 -->
+    <div class="card">
+      <div class="q"><strong>17.</strong> भारत में ज़ैद फ़सलें सामान्यतः किस अवधि के दौरान उगाई जाती हैं?</div>
+      <ol class="options">
+        <li>जून से अक्तूबर के बीच</li>
+        <li>मार्च से जून के बीच</li>
+        <li>नवंबर से फ़रवरी के बीच</li>
+        <li>दिसंबर से अप्रैल के बीच</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a17')">उत्तर देखें</button>
+      <div id="a17" class="answer"><strong>उत्तर:</strong> B) मार्च से जून के बीच</div>
+    </div>
+
+    <!-- प्रश्न 18 -->
+    <div class="card">
+      <div class="q"><strong>18.</strong> भारत की 2011 की जनगणना के अनुसार, देश की कुल साक्षरता दर कितनी थी?</div>
+      <ol class="options">
+        <li>74.04%</li>
+        <li>70.11%</li>
+        <li>65.46%</li>
+        <li>77.13%</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a18')">उत्तर देखें</button>
+      <div id="a18" class="answer"><strong>उत्तर:</strong> A) 74.04%</div>
+    </div>
+
+    <footer>© Rekham Academy • प्रत्येक प्रश्न के नीचे दिए बटन पर क्लिक कर उत्तर देखें।</footer>
+  </div>
+</body>
+</html>
