@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rekham Academy – సాధారణ అవగాహన ఇంటరాక్టివ్ క్విజ్ (తెలుగు)</title>
+<style>
+  :root{
+    --bg: #0f172a;
+    --card: #111827;
+    --accent: #f59e0b;
+    --accent-2:#06b6d4;
+    --accent-3:#a78bfa;
+    --text: #f8fafc;
+    --muted:#cbd5e1;
+    --correct:#10b981;
+    --border:#334155;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: "Noto Sans Telugu", "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #0ea5e9 0%, #0f172a 40%, #7c3aed 100%);
+    color: var(--text);
+  }
+  header{ text-align:center; padding:22px 14px 12px; }
+  header h1{ margin:0 0 8px; font-size: clamp(26px, 4.5vw, 44px); text-shadow: 0 4px 14px rgba(0,0,0,.35); }
+  header p{ margin:0; color: var(--muted); font-size: clamp(12px, 2.7vw, 16px); }
+  .wrap{ max-width: 980px; margin: 18px auto 48px; padding: 0 14px 28px; }
+  .toolbar{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin: 0 auto 18px; }
+  button{
+    border:1px solid var(--border);
+    background: linear-gradient(135deg, var(--accent), #ef4444);
+    color:#111827;
+    font-weight:700;
+    padding:10px 14px;
+    border-radius:999px;
+    cursor:pointer;
+    transition: transform .08s ease, box-shadow .2s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,.25);
+  }
+  button.secondary{ background: linear-gradient(135deg, var(--accent-2), var(--accent-3)); color:#0b1220; }
+  button:active{ transform: scale(.98); }
+  .card{
+    background: linear-gradient(160deg, rgba(17,24,39,.9), rgba(2,6,23,.9));
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:18px 16px;
+    margin:12px 0;
+    box-shadow: 0 8px 26px rgba(0,0,0,.25);
+  }
+  .badge{
+    display:inline-block;
+    padding:4px 10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+    color:#0b1220;
+    background: linear-gradient(135deg, var(--accent-2), var(--accent));
+    margin-bottom:8px;
+  }
+  .q{ font-size: clamp(15px, 2.5vw, 20px); margin:8px 0 10px; line-height:1.55; }
+  ol.options{ list-style: upper-alpha; padding-left: 22px; margin: 8px 0 10px; }
+  ol.options li{ margin: 6px 0; padding: 6px 8px; border-radius: 10px; border:1px dashed #334155; background: rgba(2,6,23,.35); }
+  .answer{ display:none; margin-top:10px; border-left:4px solid var(--correct); background: rgba(16,185,129,.12); padding:10px 12px; border-radius: 10px; color:#ecfdf5; }
+  .reveal{ margin-top:8px; background: linear-gradient(135deg, #34d399, #22d3ee); color:#0b1220; }
+  footer{ text-align:center; color: var(--muted); margin-top: 26px; font-size: 12px; }
+</style>
+<script>
+  function toggleAnswer(id){
+    const el = document.getElementById(id);
+    el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+  }
+  function showAll(){ document.querySelectorAll('.answer').forEach(a=>a.style.display='block'); }
+  function hideAll(){ document.querySelectorAll('.answer').forEach(a=>a.style.display='none'); }
+</script>
+</head>
+<body>
+  <header>
+    <h1>Rekham Academy</h1>
+    <p>సాధారణ అవగాహన – ఇంటరాక్టివ్ క్విజ్ (జవాబు చూడటానికి క్లిక్ చేయండి)</p>
+  </header>
+
+  <div class="wrap">
+    <div class="toolbar">
+      <button onclick="showAll()">అన్ని జవాబులు చూపించు</button>
+      <button class="secondary" onclick="hideAll()">అన్ని జవాబులు దాచు</button>
+    </div>
+
+    <!-- Q1 -->
+    <div class="card">
+      <span class="badge">ప్రస్తుత వ్యవహారాలు</span>
+      <div class="q"><strong>1.</strong> వికసిత్ భారత్ బిల్డాథాన్ రాయబారిగా ఎవరు నియమితులయ్యారు?</div>
+      <ol class="options">
+        <li>Captain Anshuman Singh</li>
+        <li>Wing Commander Deepika Mishra</li>
+        <li>Group Captain Varun Singh</li>
+        <li>Group Captain Shubansh Sukla</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a1')">జవాబు చూడండి</button>
+      <div id="a1" class="answer"><strong>జవాబు:</strong> D) Group Captain Shubansh Sukla</div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="card">
+      <div class="q"><strong>2.</strong> క్రింది వారిలో ఎవరు 2025 శరీర క్రియావిద్య/మెడిసిన్ నోబెల్ బహుమతిని గెలుచుకున్నారు?</div>
+      <ol class="options">
+        <li>Shimon Sakaguchi, Mary E. Brunkow, and Fred Ramsdell</li>
+        <li>Katalin Karikó and Drew Weissman</li>
+        <li>Svante Pääbo</li>
+        <li>David Julius and Ardem Patapoutian</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a2')">జవాబు చూడండి</button>
+      <div id="a2" class="answer"><strong>జవాబు:</strong> A) Shimon Sakaguchi, Mary E. Brunkow, and Fred Ramsdell</div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="card">
+      <div class="q"><strong>3.</strong> ప్రపంచ సెరెబ్రల్ పాల్సీ దినోత్సవం (WCPD) ప్రతి సంవత్సరం ఎప్పుడు జరుపుకుంటారు?</div>
+      <ol class="options">
+        <li>అక్టోబర్ 2</li>
+        <li>అక్టోబర్ 5</li>
+        <li>అక్టోబర్ 7</li>
+        <li>అక్టోబర్ 6</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a3')">జవాబు చూడండి</button>
+      <div id="a3" class="answer"><strong>జవాబు:</strong> D) అక్టోబర్ 6</div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="card">
+      <div class="q"><strong>4.</strong> నివాసితులకు యాజమాన్య హక్కులు కల్పించే లక్ష్యంతో ‘మाझे घर యోజన’ను ఎవరు ప్రారంభించారు?</div>
+      <ol class="options">
+        <li>Rajnath Singh</li>
+        <li>Amit Shah</li>
+        <li>Nitin Gadkari</li>
+        <li>Narendra Modi</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a4')">జవాబు చూడండి</button>
+      <div id="a4" class="answer"><strong>జవాబు:</strong> B) Amit Shah</div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="card">
+      <div class="q"><strong>5.</strong> అక్టోబర్ 2025లో మహారాష్ట్ర సీఎం దేవేంద్ర ఫడ్నవీస్ ప్రకటించినట్లు, నవి ముంబై అంతర్జాతీయ విమానాశ్రయానికి ఎవరి పేరు ఇస్తారు?</div>
+      <ol class="options">
+        <li>Loknete Dinkar Balu (DB) Patil</li>
+        <li>Yashwantrao Chavan</li>
+        <li>Balasaheb Thackeray</li>
+        <li>Shankarrao Chavan</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a5')">జవాబు చూడండి</button>
+      <div id="a5" class="answer"><strong>జవాబు:</strong> A) Loknete Dinkar Balu (DB) Patil</div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="card">
+      <span class="badge">క్రీడలు & విధానం</span>
+      <div class="q"><strong>6.</strong> భారత తొలి స్పోర్ట్స్ టెక్ ఇంక్యుబేషన్ సెంటర్‌ను ప్రారంభించేందుకు ఏ రాష్ట్ర ప్రభుత్వం బొరుసియా డార్ట్ముండ్‌తో భాగస్వామ్యం చేసింది?</div>
+      <ol class="options">
+        <li>Karnataka</li>
+        <li>Maharashtra</li>
+        <li>Tamil Nadu</li>
+        <li>Kerala</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a6')">జవాబు చూడండి</button>
+      <div id="a6" class="answer"><strong>జవాబు:</strong> C) Tamil Nadu</div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="card">
+      <div class="q"><strong>7.</strong> అంతర్జాతీయ పౌర విమానయాన సంస్థ (ICAO) 42వ మహాసభ 2025 ఎక్కడ జరిగింది?</div>
+      <ol class="options">
+        <li>Geneva, Switzerland</li>
+        <li>Paris, France</li>
+        <li>New York, USA</li>
+        <li>Montréal, Canada</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a7')">జవాబు చూడండి</button>
+      <div id="a7" class="answer"><strong>జవాబు:</strong> D) Montréal, Canada</div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="card">
+      <span class="badge">చరిత్ర</span>
+      <div class="q"><strong>8.</strong> 1905లో కాషాయ వస్త్రాలు ధరించిన సంయమిత స్త్రీ రూపంలో ‘భారత్ మాత’ను చిత్రించిన కళాకారుడు ఎవరు?</div>
+      <ol class="options">
+        <li>Raja Ravi Varma</li>
+        <li>Abanindranath Tagore</li>
+        <li>Nandalal Bose</li>
+        <li>Jamini Roy</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a8')">జవాబు చూడండి</button>
+      <div id="a8" class="answer"><strong>జవాబు:</strong> B) Abanindranath Tagore</div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="card">
+      <div class="q"><strong>9.</strong> బంగ్లాదేశ్ జాతీయ దేవాలయంగా పరిగణించే, 12వ శతాబ్దంలో సేనా వంశపు రాజు బాలాల్ సేన్ నిర్మించిన ఆలయం ఏది?</div>
+      <ol class="options">
+        <li>Dhakeshwari Temple</li>
+        <li>Kamakhya Temple</li>
+        <li>Jagannath Temple</li>
+        <li>Dakshineswar Temple</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a9')">జవాబు చూడండి</button>
+      <div id="a9" class="answer"><strong>జవాబు:</strong> A) Dhakeshwari Temple</div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="card">
+      <div class="q"><strong>10.</strong> భారతదేశంలోని అతి పాత శిలా-కట్ట గుహలైన బారాబర్, నగార్జుని గుహలను ఆజీవిక మతానికి ఏ మౌర్య చక్రవర్తి కట్టించారు?</div>
+      <ol class="options">
+        <li>Chandragupta Maurya</li>
+        <li>Ashoka</li>
+        <li>Bindusara</li>
+        <li>Dasharatha Maurya</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a10')">జవాబు చూడండి</button>
+      <div id="a10" class="answer"><strong>జవాబు:</strong> B) Ashoka</div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="card">
+      <div class="q"><strong>11.</strong> ఢిల్లీ సుల్తానతుపై పాలించిన తొలి ముస్లిం మహిళా పాలకురాలు ఎవరు?</div>
+      <ol class="options">
+        <li>Noor Jahan</li>
+        <li>Mumtaz Mahal</li>
+        <li>Rani Durgavati</li>
+        <li>Razia Sultan</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a11')">జవాబు చూడండి</button>
+      <div id="a11" class="answer"><strong>జవాబు:</strong> D) Razia Sultan</div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="card">
+      <span class="badge">సామాన్య జ్ఞానం</span>
+      <div class="q"><strong>12.</strong> అక్టోబర్ 2004లో భారతదేశంలో మొట్టమొదట GI (భౌగోళిక సంకేతం) ట్యాగ్ పొందిన ఉత్పత్తి ఏది?</div>
+      <ol class="options">
+        <li>Darjeeling Tea</li>
+        <li>Kanchipuram Silk</li>
+        <li>Alphonso Mango</li>
+        <li>Mysore Sandalwood</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a12')">జవాబు చూడండి</button>
+      <div id="a12" class="answer"><strong>జవాబు:</strong> A) Darjeeling Tea</div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="card">
+      <div class="q"><strong>13.</strong> భారతీయ రిజర్వ్ బ్యాంక్ (RBI) ఏర్పాటు ఏ కమిషన్ సిఫారసులపై జరిగింది?</div>
+      <ol class="options">
+        <li>Narasimham Commission</li>
+        <li>Sarkaria Commission</li>
+        <li>Simon Commission</li>
+        <li>Hilton Young Commission</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a13')">జవాబు చూడండి</button>
+      <div id="a13" class="answer"><strong>జవాబు:</strong> D) Hilton Young Commission</div>
+    </div>
+
+    <!-- Q14 -->
+    <div class="card">
+      <div class="q"><strong>14.</strong> జయంతి కుమారేష్ గారు ఏ భారతీయ శాస్త్రీయ వాద్యంలో నిపుణురాలు?</div>
+      <ol class="options">
+        <li>సరస్వతి వీణ</li>
+        <li>సంతూర్</li>
+        <li>సితార్</li>
+        <li>వయోలిన్</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a14')">జవాబు చూడండి</button>
+      <div id="a14" class="answer"><strong>జవాబు:</strong> A) సరస్వతి వీణ</div>
+    </div>
+
+    <!-- Q15 -->
+    <div class="card">
+      <span class="badge">భూగోళ శాస్త్రం</span>
+      <div class="q"><strong>15.</strong> భూమిపై రెండు సమాంతర అక్షాంశ రేఖల మధ్య 1°కి సుమారు ఎంత దూరం ఉంటుంది?</div>
+      <ol class="options">
+        <li>100 కి.మీ.</li>
+        <li>120 కి.మీ.</li>
+        <li>90 కి.మీ.</li>
+        <li>111 కి.మీ.</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a15')">జవాబు చూడండి</button>
+      <div id="a15" class="answer"><strong>జవాబు:</strong> D) 111 కి.మీ.</div>
+    </div>
+
+    <!-- Q16 -->
+    <div class="card">
+      <div class="q"><strong>16.</strong> చర్మం మరియు నూలు పరిశ్రమలకు ప్రసిద్ధి గాంచిన భారత నగరం “మ్యాన్చెస్టర్ ఆఫ్ ది ఈస్ట్”ként కూడా పిలవబడేది ఏది?</div>
+      <ol class="options">
+        <li>Ahmedabad</li>
+        <li>Coimbatore</li>
+        <li>Kanpur</li>
+        <li>Hyderabad</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a16')">జవాబు చూడండి</button>
+      <div id="a16" class="answer"><strong>జవాబు:</strong> C) Kanpur</div>
+    </div>
+
+    <!-- Q17 -->
+    <div class="card">
+      <div class="q"><strong>17.</strong> ఇండియాలో జైద్ పంటలు సాధారణంగా ఏ కాలంలో పండిస్తారు?</div>
+      <ol class="options">
+        <li>జూన్ – అక్టోబర్ మధ్య</li>
+        <li>మార్చి – జూన్ మధ్య</li>
+        <li>నవంబర్ – ఫిబ్రవరి మధ్య</li>
+        <li>డిసెంబర్ – ఏప్రిల్ మధ్య</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a17')">జవాబు చూడండి</button>
+      <div id="a17" class="answer"><strong>జవాబు:</strong> B) మార్చి – జూన్ మధ్య</div>
+    </div>
+
+    <!-- Q18 -->
+    <div class="card">
+      <div class="q"><strong>18.</strong> 2011 భారత జనగణన ప్రకారం, దేశంలోని మొత్తం సాక్షరత రేటు ఎంత?</div>
+      <ol class="options">
+        <li>74.04%</li>
+        <li>70.11%</li>
+        <li>65.46%</li>
+        <li>77.13%</li>
+      </ol>
+      <button class="reveal" onclick="toggleAnswer('a18')">జవాబు చూడండి</button>
+      <div id="a18" class="answer"><strong>జవాబు:</strong> A) 74.04%</div>
+    </div>
+
+    <footer>© Rekham Academy • ప్రతి ప్రశ్నకు కింది బటన్‌పై నొక్కి సరైన జవాబును చూడండి.</footer>
+  </div>
+</body>
+</html>
