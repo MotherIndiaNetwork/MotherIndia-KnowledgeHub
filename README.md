@@ -1,73 +1,68 @@
-# 📚 Rekham Academy
+🌍 MotherIndia Network
 
-**Rekham Academy** is a digital education initiative dedicated to providing high-quality, multilingual study materials for competitive exams such as UPSC, SSC, RRB, DSC, AP TET, and other state-level exams. We focus on creating well-researched, student-friendly content in **English**, **Hindi**, and **Telugu**.
 
----
 
-## 🎯 Our Mission
+A Multilingual Educational & Cultural Initiative
 
-To make competitive exam preparation accessible and effective for students across India through:
-- Bilingual study materials
-- Interactive MCQ quizzes
-- Daily current affairs
-- Educational YouTube content
-- Telegram/WhatsApp study groups
+Empowering learners through:
 
----
+Prajna (English)  🇬🇧  – Knowledge and Awareness
 
-## 📌 Features
+Tejas (Hindi) 🇮🇳  – उज्ज्वल भविष्य की शिक्षा
 
-- 📝 HTML-based interactive quizzes (Click-to-Reveal format)
-- 🌐 Bilingual PDFs (English-Hindi / English-Telugu)
-- 🧠 Word studies with synonyms, antonyms, usage (in Word + chart format)
-- 📅 Daily current affairs posters + summaries
-- 📽️ Video content with thumbnails, reels, and PowerPoint slides
-- 💬 Student support via Telegram, WhatsApp, and Instagram
+Gyan Jyothi (Telugu) 🇮🇳  – జ్ఞాన జ్యోతి విద్యా ప్రబోధం
+
+
 
 ---
 
-## 📎 Project Structure
+🎓 About Us
 
-```
-/RekhamAcademy
-│
-├── quizzes/                → MCQ HTML & Word quizzes
-├── word_studies/          → Synonym/Antonym bilingual sets
-├── current_affairs/       → Daily posters, summaries
-├── thumbnails/            → YouTube/Instagram/Facebook thumbnails
-├── presentations/         → Portrait-mode PPTs
-└── bio_links/             → Social media and contact page
-```
+MotherIndia Network is a collaborative platform dedicated to education, general awareness, and cultural enrichment across languages. We create free and structured learning materials for aspirants of competitive exams and lifelong learners.
 
----
+Key Focus Areas:
 
-## 📲 Join Us Online
+General Studies, GK, and Current Affairs
 
-- **YouTube (English)**: [@RekhamAcademy-English](https://www.youtube.com/@RekhamAcademy-English)  
-- **YouTube (Hindi)**: [@RekhamAcademy-Hindi](https://www.youtube.com/@RekhamAcademy-Hindi)  
-- **YouTube (Telugu)**: [@RekhamAcademy-Telugu](https://www.youtube.com/@RekhamAcademy-Telugu)
+General English / Hindi / Telugu Language Studies
 
-- **Telegram Group**:  https://t.me/Jobs_StudyMaterial
-- **Instagram**: [@sureshrekham](https://www.instagram.com/sureshrekham/)  
-- **Facebook Page**: [Rekham Academy](https://www.facebook.com/share/16iqpv4QPJ/)  
-- **WhatsApp Channel**: [Join Here](https://whatsapp.com/channel/0029VbAhaTi0LKZ4vRhEh31K)
+Teaching Jobs & Educational Updates
 
-- **Twitter (English)**: [@RekhamAcademy_E](https://twitter.com/RekhamAcademy_E)  
-- **Twitter (Hindi)**: [@RekhamAcademy_H](https://twitter.com/RekhamAcademy_H)  
-- **Twitter (Telugu)**: [@RekhamAcademy_T](https://twitter.com/RekhamAcademy_T)
+Indian Heritage & Cultural Awareness
+
+
 
 ---
 
-## 🤝 Contribute
+📂 Our Repository
 
-If you’re passionate about education or want to collaborate (as a translator, designer, content creator, or quiz compiler), feel free to contact us via Telegram or Instagram.
+📘 MotherIndia-KnowledgeHub
+A multilingual repository of quizzes, word studies, notes, and educational resources organized by subject and language.
 
----
-
-## 🪪 License
-
-All content is © Rekham Academy. Educational use only. For commercial use or distribution, please contact us.
 
 ---
 
+🌐 Connect with Us
+
+ 
+
+    
+
+
+---
+
+💫 Motto
+
+> One Nation • Many Languages • Knowledge for All 🇮🇳
+
+
+
+
+---
+
+🧩 Our Vision
+
+To create a unified, accessible platform where education transcends language barriers — celebrating India’s diversity through learning and culture.
+
+📚 "Educate • Enlighten • Empower"
 📌 _"Education is the most powerful weapon which you can use to change the world." – Nelson Mandela_
