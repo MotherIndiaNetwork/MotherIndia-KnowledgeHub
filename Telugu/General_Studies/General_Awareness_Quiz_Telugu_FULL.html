@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>సామాన్య జ్ఞానం — Interactive MCQ Quiz (Telugu)</title>
+<style>
+:root{
+  --bg:#f6f9ff;
+  --card:#ffffff;
+  --ink:#1f2937;
+  --muted:#64748b;
+  --accent1:#60a5fa;
+  --accent2:#a78bfa;
+  --accent3:#34d399;
+  --accent4:#f59e0b;
+  --good:#10b981;
+  --bad:#ef4444;
+}
+*{box-sizing:border-box}
+body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;
+      background:linear-gradient(180deg,#eef4ff 0%, #fdfcff 100%); color:var(--ink);}
+.header{ padding:20px 16px 8px; text-align:center; }
+.title{ font-size:1.8rem; font-weight:800;
+        background:linear-gradient(90deg,var(--accent1),var(--accent2),var(--accent3),var(--accent4));
+        -webkit-background-clip:text; background-clip:text; color:transparent; letter-spacing:.3px; }
+.meta{ color:var(--muted); font-size:.9rem; }
+.container{max-width:900px; margin:0 auto; padding:16px;}
+.toolbar{ position:sticky; top:0; z-index:5; background:#ffffffcc; backdrop-filter:blur(8px);
+          border:1px solid #e6e9f4; border-radius:16px; padding:10px; display:flex; gap:8px; align-items:center; justify-content:space-between; margin:8px 0 16px;}
+.btn{ border:0; border-radius:999px; padding:10px 16px; font-weight:700; cursor:pointer;
+      background:linear-gradient(90deg,var(--accent3),var(--accent1)); color:#fff; box-shadow:0 6px 16px rgba(59,130,246,.25);}
+.btn.secondary{ background:linear-gradient(90deg,var(--accent2),var(--accent4)); }
+.btn.ghost{ background:#eef2ff; color:#374151; box-shadow:none; }
+.cards{ display:grid; gap:14px; grid-template-columns:1fr; }
+@media(min-width:760px){ .cards{ grid-template-columns:1fr 1fr; } }
+.card{ background:var(--card); border:1px solid #e7ecf7; border-radius:16px; padding:14px; box-shadow:0 8px 18px rgba(2,6,23,.05);}
+.q-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:6px; }
+.q-no{ background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; border-radius:10px; padding:6px 10px; font-size:.85rem; }
+.q-topic{ color:#0f766e; background:#d1fae5; border-radius:10px; padding:4px 10px; font-weight:700; font-size:.8rem; }
+.q-text{ margin:10px 0 8px; font-size:1.02rem; }
+.options{ display:flex; flex-direction:column; gap:8px; }
+.option{ display:flex; align-items:center; gap:10px; padding:10px; border:1px solid #e7ecf7; border-radius:12px; transition:transform .05s ease, border-color .2s ease; background:#fafcff; }
+.option:hover{ transform:translateY(-1px); border-color:#c7d2fe; }
+.option input{ accent-color:#3b82f6; transform:scale(1.2); }
+.badge{ font-weight:800; font-size:.9rem; min-width:28px; height:28px; display:grid; place-items:center; color:#fff; background:linear-gradient(135deg,var(--accent4),var(--accent2)); border-radius:999px; }
+.reveal{ display:flex; align-items:center; gap:10px; margin-top:8px; }
+.answer{ font-weight:800; color:#0b7a53; }
+.correct{ outline:2px solid var(--good); }
+.wrong{ outline:2px solid var(--bad); }
+.reset-note{ color:var(--muted); font-size:.85rem; margin-left:6px; }
+</style>
+</head>
+<body>
+  <header class="header">
+    <div class="title">సామాన్య జ్ఞానం — Interactive MCQ Quiz (Telugu)</div>
+    <div class="meta">Updated on 07 Nov 2025 • 19 Questions • Click to reveal answers</div>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <div>
+        <button class="btn" onclick="calculateScore()">మార్కులు లెక్కించండి</button>
+        <button class="btn secondary" onclick="revealAll()">అన్నీ చూపించు</button>
+        <button class="btn ghost" onclick="resetQuiz()">రిసెట్</button>
+        <span class="reset-note" id="result"></span>
+      </div>
+    </div>
+
+    <div class="cards">
+      
+        <section class="card" data-correct="B" id="q1">
+          <div class="q-head">
+            <div class="q-no">Q1</div>
+            <div class="q-topic">Current Affairs</div>
+          </div>
+          <h3 class="q-text">భారతదేశం యొక్క 53వ ప్రధాన న్యాయమూర్తిగా (CJI) ఎవరు నియమితులయ్యారు?</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q1" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">జస్టిస్ డి.వై. చంద్రచూడ్</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q1" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">జస్టిస్ సూర్యకాంత్</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q1" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">జస్టిస్ సంజీవ్ ఖన్నా</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q1" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">జస్టిస్ బి.వి. నాగరత్న</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('1')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-1" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="A" id="q2">
+          <div class="q-head">
+            <div class="q-no">Q2</div>
+            <div class="q-topic">Current Affairs</div>
+          </div>
+          <h3 class="q-text">ఇటీవల టెరిటోరియల్ ఆర్మీలో గౌరవ లెఫ్టినెంట్ కల్నల్ బిరుదు ఎవరికీ అందింది?</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q2" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">నీర్జ చోప్రా</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q2" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">ఎం.ఎస్. ధోనీ</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q2" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">అభినవ్ బింద్రా</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q2" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">కపిల్ దేవ్</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('2')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-2" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="C" id="q3">
+          <div class="q-head">
+            <div class="q-no">Q3</div>
+            <div class="q-topic">Current Affairs</div>
+          </div>
+          <h3 class="q-text">భారతదేశంలో సుప్రీంకోర్టు నియమించిన కమిటీకి సభ్యురాలిగా ఎంపికైన తొలి ట్రాన్స్‌జెండర్ ఎవరు?</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q3" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">జోయితా మోండల్</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q3" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">లక్ష్మీ నారాయణ త్రిపాఠి</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q3" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">అక్కై పద్మశాలి</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q3" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">గౌరి సావంత్</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('3')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-3" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="D" id="q4">
+          <div class="q-head">
+            <div class="q-no">Q4</div>
+            <div class="q-topic">Current Affairs</div>
+          </div>
+          <h3 class="q-text">2025 మెక్సికో గ్రాండ్ ప్రీని ఎవరు గెలిచారు; దాంతో ఎఫ్1 ప్రపంచ చాంపియన్‌షిప్ పాయింట్ల పట్టికలో ముందంజలోకి వచ్చారు?</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q4" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">చార్ల్స్ లెక్లెర్క్</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q4" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">లూయిస్ హామిల్టన్</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q4" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">మ్యాక్స్ వెర్‌స్టాపెన్</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q4" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">లాండో నారిస్</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('4')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-4" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="A" id="q5">
+          <div class="q-head">
+            <div class="q-no">Q5</div>
+            <div class="q-topic">Current Affairs</div>
+          </div>
+          <h3 class="q-text">యూరోపియన్ క్లబ్ కప్ 2025లో డబుల్ గోల్డ్ సాధించిన భారత శతరంజ్ క్రీడాకారుల జంట ఏది?</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q5" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">డి. గుకేష్ మరియు దివ్య దేశ్ముఖ్</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q5" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">ఆర్. ప్రజ్ఞానంద మరియు కోనేరు హంపి</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q5" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">విదిత్ గుజరాఠీ మరియు వైశాలి రమేశ్‌బాబు</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q5" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">అర్జున్ ఎరిగైసి మరియు తానియా సచ్దేవ్</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('5')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-5" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="B" id="q6">
+          <div class="q-head">
+            <div class="q-no">Q6</div>
+            <div class="q-topic">Current Affairs</div>
+          </div>
+          <h3 class="q-text">ఇంటర్ మయామితో రికార్డు బ్రేకింగ్ సీజన్ తర్వాత 2025 MLS గోల్డెన్ బూట్ ఎవరు గెలుచుకున్నారు?</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q6" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">క్రిస్టియానో రొనాల్డో</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q6" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">లియోనెల్ మెస్సీ</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q6" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">కిలియన్ ఎంబాపే</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q6" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">ఎర్లింగ్ హాలాండ్</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('6')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-6" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="D" id="q7">
+          <div class="q-head">
+            <div class="q-no">Q7</div>
+            <div class="q-topic">Current Affairs</div>
+          </div>
+          <h3 class="q-text">‘ది బర్నింగ్ ఎర్త్’ పుస్తకానికి 2025 British Academy Book Prize అవార్డు ఎవరికీ లభించింది?</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q7" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">సల్మాన్ రుష్దీ</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q7" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">అరుంధతి రాయ్</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q7" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">ఝుంపా లాహిరి</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q7" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">సునీల్ అమృత్</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('7')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-7" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="B" id="q8">
+          <div class="q-head">
+            <div class="q-no">Q8</div>
+            <div class="q-topic">Current Affairs</div>
+          </div>
+          <h3 class="q-text">కాజీరంగ జాతీయ పార్కులో వన్యప్రాణి సంరక్షణ, ఈకో-మ్యానేజ్‌మెంట్‌లో విశేష కృషికి 2025 Global Sustainability Award ఎవరికీ దక్కింది?</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q8" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">వందనా శివ</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q8" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">సోనాలి ఘోష్</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q8" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">మేధా పాఠ్కర్</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q8" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">సునీతా నరేన్</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('8')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-8" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="C" id="q9">
+          <div class="q-head">
+            <div class="q-no">Q9</div>
+            <div class="q-topic">History</div>
+          </div>
+          <h3 class="q-text">మహాత్మా గాంధీ 1930లో చేసిన దాండీ యాత్ర (నమక్ సత్యాగ్రహం) ప్రధానంగా ఏ బ్రిటిష్ చట్టానికి వ్యతిరేకంగా జరిగింది?</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q9" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">రౌలట్ చట్టం</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q9" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">వెర్నాక్యులర్ ప్రెస్ చట్టం</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q9" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">ఉప్పు చట్టం</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q9" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">ఆర్మ్స్ చట్టం</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('9')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-9" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="A" id="q10">
+          <div class="q-head">
+            <div class="q-no">Q10</div>
+            <div class="q-topic">History</div>
+          </div>
+          <h3 class="q-text">లేహ్‌లో 1991లో ప్రారంభించబడిన శాంతి స్థూపం నిర్మాణం ఎవరి ఆధ్వర్యంలో జరిగింది?</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q10" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">భిక్షు గ్యోమ్యో నకమురా</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q10" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">దలైలామా</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q10" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">చక్రవర్తి అఖిహితో</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q10" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">నిచిదాత్సు ఫుజీ</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('10')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-10" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="B" id="q11">
+          <div class="q-head">
+            <div class="q-no">Q11</div>
+            <div class="q-topic">History</div>
+          </div>
+          <h3 class="q-text">క్రింది మహాజనపదాలలో ఏది నేటి గయా మరియు పట్టణా ప్రాంతాలకు సరిపోలుతుంది?</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q11" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">అంగ</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q11" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">మగధ</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q11" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">కాశీ</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q11" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">వత్స</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('11')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-11" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="D" id="q12">
+          <div class="q-head">
+            <div class="q-no">Q12</div>
+            <div class="q-topic">Geography</div>
+          </div>
+          <h3 class="q-text">శ్రీలంకలో ఎత్తైన పర్వతం ఏది? (ఎత్తు: 2,524 మీటర్లు)</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q12" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">ఆడమ్స్ పీక్</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q12" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">కిరిగల్పొట్ట</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q12" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">తొటుపోల కండ</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q12" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">పిదురుతలాగల (మౌంట్ పెడ్రో)</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('12')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-12" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="A" id="q13">
+          <div class="q-head">
+            <div class="q-no">Q13</div>
+            <div class="q-topic">Geography</div>
+          </div>
+          <h3 class="q-text">భూమి స్థలమండలాన్ని నిర్మించే ప్రధాన టెక్టోనిక్ ఫలకాల (tectonic plates) సంఖ్య ఎంత?</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q13" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">7</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q13" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">8</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q13" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">6</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q13" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">9</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('13')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-13" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="B" id="q14">
+          <div class="q-head">
+            <div class="q-no">Q14</div>
+            <div class="q-topic">Geography</div>
+          </div>
+          <h3 class="q-text">భూకంప సమయంలో ఉత్పన్నమయ్యే ప్రకంపనలను ఏమంటారు?</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q14" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">టెక్టోనిక్ తరంగాలు</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q14" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">భూకంప తరంగాలు</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q14" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">భూపొర తరంగాలు</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q14" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">షాక్ తరంగాలు</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('14')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-14" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="D" id="q15">
+          <div class="q-head">
+            <div class="q-no">Q15</div>
+            <div class="q-topic">Geography</div>
+          </div>
+          <h3 class="q-text">మైట్లు, టిక్కుల (mites &amp; ticks) అధ్యయనానికి సంబంధించిన శాస్త్రశాఖ ఏమని పిలుస్తారు? (అకరీనా క్రమం కూడా కలిపి)</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q15" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">మైకాలజీ</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q15" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">ఎంటమాలజీ</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q15" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">పరాసిటాలజీ</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q15" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">అకారాలజీ</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('15')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-15" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="D" id="q16">
+          <div class="q-head">
+            <div class="q-no">Q16</div>
+            <div class="q-topic">Polity</div>
+          </div>
+          <h3 class="q-text">2000లో ఏర్పాటు చేసిన ఎం.ఎన్. వెంకటచలయ్య కమిషన్ ఏ ముఖ్య పత్రం యొక్క పనిచేసే విధానాన్ని సమీక్షించేందుకు ఏర్పడింది?</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q16" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">భారతీయ దండ సంహిత (IPC)</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q16" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">ప్రజా ప్రతినిధిత్వ చట్టం</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q16" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">మౌలిక కర్తవ్యాల ఘోషణ</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q16" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">భారత రాజ్యాంగం</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('16')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-16" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="B" id="q17">
+          <div class="q-head">
+            <div class="q-no">Q17</div>
+            <div class="q-topic">Polity</div>
+          </div>
+          <h3 class="q-text">భారత రాజ్యాంగంలోని ఏ అనుచ్ఛేదం ‘ఎక్స్ పోస్ట్ ఫాక్టో’ చట్టాల నుండి రక్షణను అందిస్తుంది? (చేసినప్పుడు నేరం కాని కృత్యానికి శిక్ష లేదు)</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q17" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">అనుచ్ఛేదం 19</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q17" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">అనుచ్ఛేదం 20</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q17" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">అనుచ్ఛేదం 21</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q17" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">అనుచ్ఛేదం 22</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('17')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-17" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="A" id="q18">
+          <div class="q-head">
+            <div class="q-no">Q18</div>
+            <div class="q-topic">Polity</div>
+          </div>
+          <h3 class="q-text">భారత న్యాయ వ్యవస్థలో ‘నాన్-కాగ్నిజబుల్’ నేరం సరైన నిర్వచనం ఏది?</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q18" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">పోలీసులు వారెంట్ లేకుండా అరెస్ట్ చేయలేని నేరం</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q18" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">వారెంట్ లేకుండానే అరెస్ట్ చేయగల నేరం</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q18" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">హత్య, అత్యాచారం వంటి ఘోర నేరం</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q18" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">కేవలం సెషన్స్ కోర్టు విచారించే నేరం</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('18')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-18" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <section class="card" data-correct="C" id="q19">
+          <div class="q-head">
+            <div class="q-no">Q19</div>
+            <div class="q-topic">Polity</div>
+          </div>
+          <h3 class="q-text">1949లో స్థాపించబడిన స్వయంప్రతిపత్తి కలిగిన Indian Parliamentary Group కు పదవీ హోదా ప్రకారం (ex-officio) అధ్యక్షుడు ఎవరు?</h3>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q19" value="A" />
+              <span class="badge">A</span>
+              <span class="opt-text">భారత ప్రధాని</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q19" value="B" />
+              <span class="badge">B</span>
+              <span class="opt-text">భారత ఉపరాష్ట్రపతి</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q19" value="C" />
+              <span class="badge">C</span>
+              <span class="opt-text">లోక్‌సభాధ్యక్షుడు</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q19" value="D" />
+              <span class="badge">D</span>
+              <span class="opt-text">రాజ్యసభాధ్యక్షుడు</span>
+            </label></div>
+          <div class="reveal">
+            <button class="btn reveal-btn" onclick="reveal('19')">సమాధానం చూపు</button>
+            <span class="answer" id="ans-19" aria-live="polite"></span>
+          </div>
+        </section>
+    </div>
+
+    <div class="footer meta" style="text-align:center; margin:20px 0 10px;">
+      సూచన: ముందుగా “అన్నీ చూపించు” నొక్కి రివిజన్ చేసుకోండి; తర్వాత “రిసెట్” చేసి మళ్లీ ప్రయత్నించండి.
+    </div>
+  </main>
+
+<script>
+function reveal(id){
+  const card = document.getElementById('q'+id);
+  const ans = card.getAttribute('data-correct');
+  const ansSpan = document.getElementById('ans-'+id);
+  ansSpan.textContent = 'సమాధానం: ' + ans;
+}
+
+function revealAll(){
+  document.querySelectorAll('.card').forEach((card, idx)=>{
+    const id = idx+1;
+    const ans = card.getAttribute('data-correct');
+    const ansSpan = document.getElementById('ans-'+id);
+    if(ansSpan) ansSpan.textContent = 'సమాధానం: ' + ans;
+  });
+}
+
+function calculateScore(){
+  let score = 0;
+  const total = document.querySelectorAll('.card').length;
+  document.querySelectorAll('.option').forEach(el=>{ el.classList.remove('correct','wrong'); });
+
+  document.querySelectorAll('.card').forEach((card)=>{
+    const correct = card.getAttribute('data-correct');
+    let chosen = null;
+    const radios = card.querySelectorAll('input[type=radio]');
+    radios.forEach(r=>{ if(r.checked) chosen = r.value; });
+    if(chosen){
+      if(chosen === correct){ 
+        score += 1; 
+        const label = card.querySelector('input[type=radio]:checked').closest('.option');
+        if(label) label.classList.add('correct');
+      } else {
+        const chosenLabel = card.querySelector('input[type=radio]:checked').closest('.option');
+        if(chosenLabel) chosenLabel.classList.add('wrong');
+        const correctLabel = card.querySelector('input[type=radio][value='+correct+']').closest('.option');
+        if(correctLabel) correctLabel.classList.add('correct');
+      }
+    }
+  });
+  document.getElementById('result').textContent = `Score: ${score} / ${total}`;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function resetQuiz(){
+  document.getElementById('result').textContent='';
+  document.querySelectorAll('input[type=radio]').forEach(r=> r.checked = false);
+  document.querySelectorAll('.answer').forEach(a=> a.textContent = '');
+  document.querySelectorAll('.option').forEach(el=> el.classList.remove('correct','wrong'));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
